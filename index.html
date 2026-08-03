@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="tr-TR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cups &amp; Clouds — Dijital Pazarlama Denetim & Eylem Panosu</title>
+    <meta
+      name="description"
+      content="Cups & Clouds için site denetimi, SEO analizi, dijital pazarlama eksikleri, entegrasyon checklist'i, rakip analizi, strateji, yol haritası ve bütçe hesaplama panosu."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    x-data="{ tabs: [
+      {id:'genel', label:'Genel Bakış'},
+      {id:'denetim', label:'Site & SEO Denetimi'},
+      {id:'entegrasyon', label:'Entegrasyon Listesi'},
+      {id:'rakip', label:'Rakip Analizi'},
+      {id:'strateji', label:'Strateji'},
+      {id:'yol', label:'Yol Haritası'},
+      {id:'butce', label:'Bütçe Hesaplama'},
+      {id:'uygulama', label:'Uygulama Rehberi'}
+    ] }"
+    x-init="$store.nav.init()"
+  >
+    <!-- ============ HEADER ============ -->
+    <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur border-b border-espresso-100">
+      <div class="container-pad">
+        <div class="flex items-center justify-between h-[68px] gap-4">
+          <button @click="$store.nav.go('genel')" class="flex items-center gap-3 shrink-0">
+            <span class="grid place-items-center w-11 h-11 rounded-xl2 bg-espresso-800 text-cream text-[1.4rem] shadow-flat">☕</span>
+            <span class="text-left leading-tight">
+              <span class="block font-black text-[1.15rem] text-espresso-900">Cups &amp; Clouds</span>
+              <span class="block text-[0.98rem] text-espresso-500 -mt-0.5">Dijital Pazarlama Panosu</span>
+            </span>
+          </button>
+
+          <!-- Masaüstü nav -->
+          <nav class="hidden lg:flex items-center gap-1 overflow-x-auto">
+            <template x-for="t in tabs" :key="t.id">
+              <button class="tab-btn" :class="$store.nav.tab===t.id && 'tab-btn-active'" @click="$store.nav.go(t.id)" x-text="t.label"></button>
+            </template>
+          </nav>
+
+          <!-- Mobil menü butonu -->
+          <button class="lg:hidden btn-ghost !px-4 !py-2" @click="$store.nav.mobileOpen = !$store.nav.mobileOpen" aria-label="Menü">
+            <span x-text="$store.nav.mobileOpen ? '✕' : '☰'"></span> Menü
+          </button>
+        </div>
+
+        <!-- Mobil nav -->
+        <nav x-show="$store.nav.mobileOpen" x-cloak class="lg:hidden pb-4 grid grid-cols-2 gap-2">
+          <template x-for="t in tabs" :key="t.id">
+            <button class="tab-btn text-left !rounded-xl2" :class="$store.nav.tab===t.id && 'tab-btn-active'" @click="$store.nav.go(t.id)" x-text="t.label"></button>
+          </template>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container-pad py-10 sm:py-14">
+
+      <!-- ================= GENEL BAKIŞ ================= -->
+      <section x-show="$store.nav.tab==='genel'" x-cloak class="reveal space-y-10">
+        <div>
+          <span class="eyebrow">Yönetici Özeti</span>
+          <h1 class="text-[2.2rem] sm:text-[2.8rem] font-black leading-tight max-w-3xl">
+            Sağlam bir temel var — ama dijital pazarlamanın motoru henüz çalışmıyor.
+          </h1>
+          <p class="mt-4 text-[1.2rem] text-espresso-600 max-w-3xl">
+            Bu pano, <b>cupsandclouds.com</b> sitesinin bugünkü durumunu tek tek inceleyip
+            neyin kurulu, neyin eksik olduğunu gösterir; ardından adım adım bir eylem planı,
+            rakip karşılaştırması, strateji ve bütçe hesaplayıcı sunar. Amaç net:
+            26 şubeli bir kahve markasını, dijitalde büyük zincirlerin önüne geçirmek.
+          </p>
+        </div>
+
+        <!-- Skor kartları -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" x-data="seo">
+          <div class="card !p-6">
+            <div class="text-[1rem] text-espresso-500 font-semibold uppercase tracking-wide">SEO Puanı</div>
+            <div class="mt-1 flex items-end gap-2">
+              <span class="text-[2.6rem] font-black leading-none" x-text="overall"></span>
+              <span class="text-[1.1rem] text-espresso-400 mb-1">/100</span>
+            </div>
+            <div class="mt-1 font-semibold" :class="band(overall).cls" x-text="band(overall).label"></div>
+          </div>
+          <div class="card !p-6">
+            <div class="text-[1rem] text-espresso-500 font-semibold uppercase tracking-wide">Kurulu Ölçümleme</div>
+            <div class="mt-1 text-[2.6rem] font-black leading-none text-ok">2</div>
+            <div class="mt-1 text-espresso-500">GTM + GA4 hazır</div>
+          </div>
+          <div class="card !p-6">
+            <div class="text-[1rem] text-espresso-500 font-semibold uppercase tracking-wide">Eksik Piksel/Araç</div>
+            <div class="mt-1 text-[2.6rem] font-black leading-none text-bad">8+</div>
+            <div class="mt-1 text-espresso-500">Meta, Metrica, TikTok…</div>
+          </div>
+          <div class="card !p-6">
+            <div class="text-[1rem] text-espresso-500 font-semibold uppercase tracking-wide">Online Satış</div>
+            <div class="mt-1 text-[2.6rem] font-black leading-none text-warn">Yok</div>
+            <div class="mt-1 text-espresso-500">Mağaza altyapısı kapalı</div>
+          </div>
+        </div>
+
+        <!-- En kritik 5 bulgu -->
+        <div class="card">
+          <h2 class="text-[1.6rem] font-black">Hemen dikkat isteyen 5 konu</h2>
+          <p class="mt-1 text-espresso-500">Küçük emekle en büyük etkiyi verecek "hızlı kazanımlar".</p>
+          <ol class="mt-5 space-y-4">
+            <li class="flex gap-4">
+              <span class="shrink-0 grid place-items-center w-9 h-9 rounded-full bg-bad/10 text-bad font-black">1</span>
+              <p><b>robots.txt yabancı dilleri engelliyor.</b> İngilizce ve Arapça sayfalar Google'a kapalı — turist ve yabancı müşteri trafiği baştan kesilmiş. Tek satırlık düzeltme.</p>
+            </li>
+            <li class="flex gap-4">
+              <span class="shrink-0 grid place-items-center w-9 h-9 rounded-full bg-bad/10 text-bad font-black">2</span>
+              <p><b>Dönüşüm takibi yok.</b> GA4 kurulu ama franchise başvurusu, iletişim ve "yol tarifi" gibi değerli aksiyonlar ölçülmüyor. Hangi kanalın işe yaradığını göremiyoruz.</p>
+            </li>
+            <li class="flex gap-4">
+              <span class="shrink-0 grid place-items-center w-9 h-9 rounded-full bg-bad/10 text-bad font-black">3</span>
+              <p><b>Meta Pixel yok.</b> Instagram bir kahve markasının 1 numaralı kanalı; piksel olmadan reklam optimize edilemez, siteyi gezenlere geri dönüş yapılamaz.</p>
+            </li>
+            <li class="flex gap-4">
+              <span class="shrink-0 grid place-items-center w-9 h-9 rounded-full bg-warn/10 text-warn font-black">4</span>
+              <p><b>Yerel SEO zayıf.</b> 26 şube için şube sayfaları ve Google İşletme Profili optimizasyonu eksik — "yakınımda kahve" aramalarında görünmüyoruz.</p>
+            </li>
+            <li class="flex gap-4">
+              <span class="shrink-0 grid place-items-center w-9 h-9 rounded-full bg-warn/10 text-warn font-black">5</span>
+              <p><b>Başlık ve açıklamalar boş/zayıf.</b> Ana sayfa başlığı "Cups &amp; Clouds - Cups &amp; Clouds"; meta açıklama yok. Arama sonucundaki tıklama oranını doğrudan düşürüyor.</p>
+            </li>
+          </ol>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <button class="btn-primary" @click="$store.nav.go('entegrasyon')">Tam listeyi gör →</button>
+            <button class="btn-ghost" @click="$store.nav.go('butce')">Bütçeyi hesapla</button>
+          </div>
+        </div>
+
+        <!-- Nasıl okunmalı -->
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="card">
+            <div class="text-[1.8rem]">🧭</div>
+            <h3 class="mt-2 text-[1.3rem] font-bold">Bu pano nedir?</h3>
+            <p class="mt-2 text-espresso-600">Hem yol haritası, hem görev listesi, hem strateji, hem de uygulama rehberi. Tek yerden yürüteceğin bir kontrol paneli.</p>
+          </div>
+          <div class="card">
+            <div class="text-[1.8rem]">✅</div>
+            <h3 class="mt-2 text-[1.3rem] font-bold">Kutucuklar nasıl işler?</h3>
+            <p class="mt-2 text-espresso-600">Tespit edebildiğim "kurulu" işler baştan işaretli gelir. Yapılmayanlar boştur; sen tamamladıkça işaretlersin, tarayıcın hatırlar.</p>
+          </div>
+          <div class="card">
+            <div class="text-[1.8rem]">🎯</div>
+            <h3 class="mt-2 text-[1.3rem] font-bold">Odak neresi?</h3>
+            <p class="mt-2 text-espresso-600">Tüm plan Türkiye pazarına göre kurgulandı: yerel arama, Instagram/TikTok, franchise adayı bulma ve şubeye müşteri getirme.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DENETİM ================= -->
+      <section x-show="$store.nav.tab==='denetim'" x-cloak class="reveal space-y-10" x-data="seo">
+        <div>
+          <span class="eyebrow">Site & SEO Denetimi</span>
+          <h1 class="text-[2rem] sm:text-[2.4rem] font-black">Sitenin bugünkü röntgeni</h1>
+          <p class="mt-3 text-[1.15rem] text-espresso-600 max-w-3xl">
+            Site <b>WordPress + Elementor + Yoast SEO</b> ile kurulu, Hostinger'da barınıyor ve Cloudflare CDN arkasında.
+            Üç dilli: Türkçe, İngilizce, Arapça. Aşağıda ne bulduğumuzu tek tek görebilirsin.
+          </p>
+        </div>
+
+        <!-- SEO skor + gauge -->
+        <div class="card grid md:grid-cols-[220px_1fr] gap-8 items-center">
+          <div class="grid place-items-center">
+            <div class="relative w-[180px] h-[180px]">
+              <svg viewBox="0 0 120 120" class="w-full h-full -rotate-90">
+                <circle cx="60" cy="60" r="52" fill="none" stroke="#ece2d6" stroke-width="12" />
+                <circle cx="60" cy="60" r="52" fill="none" :stroke="overall<=40?'#d1523f':overall<=60?'#d9902a':overall<=80?'#5ba6cb':'#2e9e6b'"
+                        stroke-width="12" stroke-linecap="round" :stroke-dasharray="circ" :stroke-dashoffset="dash(overall)" />
+              </svg>
+              <div class="absolute inset-0 grid place-items-center rotate-0">
+                <div class="text-center">
+                  <div class="text-[2.6rem] font-black leading-none" x-text="overall"></div>
+                  <div class="text-[0.95rem] text-espresso-400">/ 100</div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 font-bold text-center" :class="band(overall).cls" x-text="band(overall).label"></div>
+          </div>
+          <div>
+            <h2 class="text-[1.4rem] font-bold">Kategori kırılımı</h2>
+            <p class="text-espresso-500 mt-1">Puan, sekiz başlığın ortalamasıdır. Her başlık ayrı ayrı iyileştirilebilir.</p>
+            <div class="mt-4 space-y-3.5">
+              <template x-for="s in scores" :key="s.label">
+                <div>
+                  <div class="flex justify-between items-baseline">
+                    <span class="font-semibold" x-text="s.label"></span>
+                    <span class="font-bold" x-text="s.score + ' / 100'"></span>
+                  </div>
+                  <div class="mt-1 h-2.5 rounded-full bg-espresso-100 overflow-hidden">
+                    <div class="h-full rounded-full" :class="barColor(s.score)" :style="`width:${s.score}%`"></div>
+                  </div>
+                  <p class="mt-1 text-[1.02rem] text-espresso-500" x-text="s.note"></p>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sayfa envanteri + sitemap -->
+        <div class="grid lg:grid-cols-2 gap-5">
+          <div class="card">
+            <h2 class="text-[1.4rem] font-bold">Site haritası (tespit edilen sayfalar)</h2>
+            <p class="text-espresso-500 mt-1">Yoast sitemap ve menüden çıkarıldı. Her sayfa 3 dilde (TR / EN / AR) mevcut.</p>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2.5 text-[1.08rem]">
+              <li class="flex items-center gap-2">🏠 Anasayfa <code class="text-espresso-400">/</code></li>
+              <li class="flex items-center gap-2">📋 Menü <code class="text-espresso-400">/menu/</code></li>
+              <li class="flex items-center gap-2">🤝 Franchise <code class="text-espresso-400">/franchise/</code></li>
+              <li class="flex items-center gap-2">📍 Şubeler <code class="text-espresso-400">/subeler/</code></li>
+              <li class="flex items-center gap-2">📖 Hikayemiz <code class="text-espresso-400">/hikayemiz/</code></li>
+              <li class="flex items-center gap-2">💚 Sosyal Sorumluluk <code class="text-espresso-400">/sosyal-sorumluluk/</code></li>
+              <li class="flex items-center gap-2">💼 Kariyer <code class="text-espresso-400">/kariyer/</code></li>
+              <li class="flex items-center gap-2">✉️ İletişim <code class="text-espresso-400">/iletisim/</code></li>
+              <li class="flex items-center gap-2">📝 Blog <code class="text-espresso-400">/blog/</code> (4 yazı)</li>
+              <li class="flex items-center gap-2 text-bad">🛒 Mağaza <code class="text-espresso-400">/shop/</code> → 404 (yok)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2 class="text-[1.4rem] font-bold">Öne çıkan teknik bulgular</h2>
+            <ul class="mt-4 space-y-3">
+              <li class="flex gap-3"><span class="badge-bad shrink-0">Hata</span><span>robots.txt <code>/en/</code> ve <code>/ar/</code>'ı engelliyor; hreflang ise bu dilleri işaret ediyor. Çelişki, çok dilli SEO'yu boşa çıkarıyor.</span></li>
+              <li class="flex gap-3"><span class="badge-bad shrink-0">Hata</span><span>Meta açıklama yok; başlık marka adını iki kez tekrarlıyor. Çoklu H1 mevcut.</span></li>
+              <li class="flex gap-3"><span class="badge-warn shrink-0">Eksik</span><span>Şubeler için <b>LocalBusiness</b> ve menü için <b>Menu</b> yapısal verisi yok.</span></li>
+              <li class="flex gap-3"><span class="badge-warn shrink-0">Eksik</span><span>Sitemap robots.txt'e bağlı değil; Search Console gönderimi doğrulanamadı.</span></li>
+              <li class="flex gap-3"><span class="badge-ok shrink-0">İyi</span><span>HTTPS, canonical, mobil viewport, Cloudflare CDN ve Yoast sitemap mevcut. Görsellerde alt metni var.</span></li>
+              <li class="flex gap-3"><span class="badge-ok shrink-0">İyi</span><span>GTM + GA4 kurulu; ileri ölçümleme için sağlam bir zemin hazır.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ENTEGRASYON CHECKLIST ================= -->
+      <section x-show="$store.nav.tab==='entegrasyon'" x-cloak class="reveal space-y-8" x-data="checklist">
+        <div>
+          <span class="eyebrow">Entegrasyon & Görev Listesi</span>
+          <h1 class="text-[2rem] sm:text-[2.4rem] font-black">Ne kurulu, ne eksik?</h1>
+          <p class="mt-3 text-[1.15rem] text-espresso-600 max-w-3xl">
+            Soldaki kutu <b>tamamlanma</b> durumudur: kurulu işler işaretli gelir, yapılmayanlar boştur — sen yaptıkça işaretle.
+            Sağdaki açıklama, o maddenin <b>bugünkü gerçek durumunu</b> anlatır.
+          </p>
+        </div>
+
+        <!-- İlerleme -->
+        <div class="card !py-6 sticky top-[76px] z-30">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <div class="text-[1.05rem] text-espresso-500">Toplam ilerleme</div>
+              <div class="text-[1.8rem] font-black"><span x-text="totalDone"></span> / <span x-text="totalItems"></span> madde</div>
+            </div>
+            <div class="flex-1 min-w-[220px]">
+              <div class="h-3 rounded-full bg-espresso-100 overflow-hidden">
+                <div class="h-full bg-espresso-800 rounded-full transition-all duration-500" :style="`width:${percent}%`"></div>
+              </div>
+              <div class="mt-1 text-right font-bold" x-text="percent + '% tamamlandı'"></div>
+            </div>
+            <button class="btn-ghost !py-2" @click="reset()">↺ Sıfırla</button>
+          </div>
+        </div>
+
+        <!-- Gruplar -->
+        <template x-for="g in groups" :key="g.key">
+          <div class="card">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div class="max-w-2xl">
+                <h2 class="text-[1.45rem] font-black" x-text="g.title"></h2>
+                <p class="mt-1 text-espresso-500" x-text="g.desc"></p>
+              </div>
+              <span class="chip bg-espresso-50 text-espresso-600 font-bold">
+                <span x-text="groupDone(g.key)"></span>/<span x-text="groupTotal(g.key)"></span>
+              </span>
+            </div>
+
+            <ul class="mt-5 divide-y divide-espresso-100">
+              <template x-for="it in g.items" :key="it.id">
+                <li class="py-4 flex gap-4">
+                  <!-- checkbox -->
+                  <button
+                    @click="toggle(it.id)"
+                    class="shrink-0 mt-0.5 w-7 h-7 rounded-lg border-2 grid place-items-center transition-colors"
+                    :class="checked[it.id] ? 'bg-espresso-800 border-espresso-800 text-cream' : 'border-espresso-300 hover:border-espresso-500 text-transparent'"
+                    :aria-pressed="checked[it.id]"
+                    :aria-label="it.title"
+                  >✓</button>
+
+                  <div class="flex-1 min-w-0">
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+                      <span class="font-bold text-[1.12rem]" :class="checked[it.id] && 'line-through text-espresso-400'" x-text="it.title"></span>
+                      <span :class="badgeClass(it.status)" x-text="badgeText(it.status)"></span>
+                      <span x-show="!it.detected" class="chip bg-cloud-100 text-cloud-700 text-[0.98rem]">Sen kontrol et</span>
+                    </div>
+                    <p class="mt-1.5 text-espresso-600 text-[1.06rem]" x-text="it.note"></p>
+                  </div>
+                </li>
+              </template>
+            </ul>
+          </div>
+        </template>
+
+        <p class="text-center text-espresso-400 text-[1.02rem]">
+          İşaretlerin bu tarayıcıda saklanır. Başka cihazda açarsan sıfırdan başlar.
+        </p>
+      </section>
+
+      <!-- ================= RAKİP ANALİZİ ================= -->
+      <section x-show="$store.nav.tab==='rakip'" x-cloak class="reveal space-y-10">
+        <div>
+          <span class="eyebrow">Rakip Analizi · Türkiye</span>
+          <h1 class="text-[2rem] sm:text-[2.4rem] font-black">Sahada kimlerle yarışıyoruz?</h1>
+          <p class="mt-3 text-[1.15rem] text-espresso-600 max-w-3xl">
+            Türkiye kahve zinciri pazarı hızla büyüyor ve kalabalıklaşıyor. Büyük oyuncular şube sayısında önde;
+            ama dijitalin bazı alanları (yerel arama, franchise adayı hunisi, niş topluluk içeriği) hâlâ zayıf işleniyor.
+            Fark yaratacağımız yer tam olarak burası.
+          </p>
+        </div>
+
+        <div class="card overflow-x-auto">
+          <table class="tbl min-w-[720px]">
+            <thead>
+              <tr>
+                <th>Marka</th>
+                <th>Konum (yaklaşık)</th>
+                <th>Şube gücü</th>
+                <th>Dijital olgunluk</th>
+                <th>Zayıf noktası (bizim fırsatımız)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-bold">Espressolab</td>
+                <td>Pazar lideri grubunda</td>
+                <td>~337 şube, 14 ülke</td>
+                <td><span class="badge-ok">Yüksek</span></td>
+                <td>Büyük ve kurumsal; yerelde her semtte kişiselleşmiş, samimi ilişki kurmakta zorlanır.</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Kahve Dünyası</td>
+                <td>Köklü lider</td>
+                <td>~343 şube</td>
+                <td><span class="badge-ok">Yüksek</span></td>
+                <td>Çikolata/perakende odaklı; genç, "third-wave" kahve kültürü tonu daha zayıf.</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Nevada Cafe</td>
+                <td>Hızlı büyüyen franchise</td>
+                <td>Agresif franchise</td>
+                <td><span class="badge-warn">Orta</span></td>
+                <td>Hızlı büyüme kalite/marka algısında dalgalanma yaratıyor; dijital anlatı dağınık.</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Coffy</td>
+                <td>Uygun fiyat, hızlı yayılım</td>
+                <td>Gelir paylaşımlı model</td>
+                <td><span class="badge-warn">Orta-Yüksek</span></td>
+                <td>Fiyat odaklı konum; deneyim/topluluk ve premium his sunmuyor.</td>
+              </tr>
+              <tr class="bg-espresso-50/60">
+                <td class="font-black text-espresso-900">Cups &amp; Clouds</td>
+                <td>İstanbul odaklı butik zincir</td>
+                <td>~26 şube (meydan okuyan)</td>
+                <td><span class="badge-bad">Düşük (ama potansiyeli yüksek)</span></td>
+                <td><b>Avantaj:</b> çevik, samimi, niş topluluk (ör. motor & kahve buluşmaları) kurabilir; dijitali hızlı kurarsa yerelde öne geçer.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="card">
+            <div class="text-[1.8rem]">⚡</div>
+            <h3 class="mt-2 text-[1.3rem] font-bold">Çeviklik</h3>
+            <p class="mt-2 text-espresso-600">26 şube, 340 şubeden çok daha hızlı karar alır ve kampanya dener. Küçük olmak, dijitalde bir avantaja çevrilebilir.</p>
+          </div>
+          <div class="card">
+            <div class="text-[1.8rem]">📍</div>
+            <h3 class="mt-2 text-[1.3rem] font-bold">Yerel hâkimiyet</h3>
+            <p class="mt-2 text-espresso-600">Devler "genel"e reklam verir; biz her semtte "buradaki en iyi kahve" olacak şekilde yerel aramayı domine edebiliriz.</p>
+          </div>
+          <div class="card">
+            <div class="text-[1.8rem]">🫂</div>
+            <h3 class="mt-2 text-[1.3rem] font-bold">Topluluk</h3>
+            <p class="mt-2 text-espresso-600">Sitede zaten "Coffee Ride" (motor & kahve) içeriği var. Devlerin taklit edemeyeceği samimi topluluklar bizim en güçlü kozumuz.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= STRATEJİ ================= -->
+      <section x-show="$store.nav.tab==='strateji'" x-cloak class="reveal space-y-10">
+        <div>
+          <span class="eyebrow">Stratejik Eylem Planı · Türkiye</span>
+          <h1 class="text-[2rem] sm:text-[2.4rem] font-black">İki cepheden büyüme</h1>
+          <p class="mt-3 text-[1.15rem] text-espresso-600 max-w-3xl">
+            İki yol birlikte yürür: (1) devlerle aynı sahada, onların zayıf olduğu yerlerden vurmak;
+            (2) kimsenin tam sahiplenmediği yeni bir alan açıp orada tek marka olmak.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <!-- Doğrudan rekabet -->
+          <div class="card border-t-4 border-espresso-700">
+            <h2 class="text-[1.5rem] font-black">Cephe 1 — Meydan Okuma Planı</h2>
+            <p class="text-espresso-500 mt-1">Var olan talebi rakiplerden almak: aynı sahada, daha iyi dijital işçilikle.</p>
+            <ul class="mt-4 space-y-3">
+              <li class="flex gap-3"><span class="text-espresso-700 font-black">1.</span><span><b>Yerel arama hâkimiyeti:</b> her şube için ayrı açılış sayfası + Google İşletme Profili optimizasyonu. "Ortaköy kahve", "Çekmeköy kafe" gibi aramalarda ilk sırada çıkmak.</span></li>
+              <li class="flex gap-3"><span class="text-espresso-700 font-black">2.</span><span><b>Agresif yeniden pazarlama:</b> Meta + Google retargeting ile siteyi/Instagram'ı gezenlere düşük maliyetli geri dönüş; devler bunu semt bazında yapmaz.</span></li>
+              <li class="flex gap-3"><span class="text-espresso-700 font-black">3.</span><span><b>Sadakat & tekrar ziyaret:</b> QR menü + WhatsApp/SMS ile "10. kahve bizden" tarzı basit sadakat; müşteri başına maliyeti düşürür.</span></li>
+              <li class="flex gap-3"><span class="text-espresso-700 font-black">4.</span><span><b>Rakip karşılaştırma içeriği:</b> "third-wave kahve nedir", "espresso mu filtre mi" gibi bilgi içerikleriyle arama trafiğini yakalayıp markayı otorite yapmak.</span></li>
+            </ul>
+          </div>
+
+          <!-- Farklılaşma -->
+          <div class="card border-t-4 border-cloud-400">
+            <h2 class="text-[1.5rem] font-black">Cephe 2 — Farklılaşma Planı</h2>
+            <p class="text-espresso-500 mt-1">Yeni talep yaratmak: rakiplerin oynamadığı alanda tek marka olmak.</p>
+            <ul class="mt-4 space-y-3">
+              <li class="flex gap-3"><span class="text-cloud-500 font-black">1.</span><span><b>Topluluk markası:</b> "Coffee Ride" (motor & kahve) buluşmalarını düzenli seriye dönüştürmek; hobi topluluklarıyla (bisiklet, koşu, kitap) şube etkinlikleri.</span></li>
+              <li class="flex gap-3"><span class="text-cloud-500 font-black">2.</span><span><b>Deneyim + içerik:</b> barista atölyeleri, "evde demleme" video serisi, şube ambiyansı — devlerin tek tipliğine karşı "her şubede bir hikâye".</span></li>
+              <li class="flex gap-3"><span class="text-cloud-500 font-black">3.</span><span><b>Franchise'i bir ürün gibi pazarlamak:</b> yatırımcıya özel açılış sayfası, hesaplı getiri anlatımı, LinkedIn/Google arama reklamları. Rakipler franchise'i dijitalde zayıf işler.</span></li>
+              <li class="flex gap-3"><span class="text-cloud-500 font-black">4.</span><span><b>Online paketli kahve + hediye:</b> kendi kavrulmuş çekirdeğini ve merch'ini satan mini e-ticaret; hem gelir hem de "markayı eve götür" bağı.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Üç pazarlama kolu -->
+        <div>
+          <h2 class="text-[1.7rem] font-black">Üç pazarlama kolu</h2>
+          <p class="text-espresso-500 mt-1">Organik, ücretli ve influencer birbirini besler: içerik güveni kurar, reklam ölçekler, influencer erişimi patlatır.</p>
+          <div class="grid md:grid-cols-3 gap-5 mt-5">
+            <div class="card">
+              <div class="chip bg-cloud-100 text-cloud-700 font-bold">Organik Sosyal</div>
+              <h3 class="mt-3 text-[1.25rem] font-bold">Güven & süreklilik</h3>
+              <ul class="mt-3 space-y-2 text-espresso-600 text-[1.05rem]">
+                <li>• Haftada 4–5 Reels/TikTok (ürün, barista, mekân, kullanıcı içeriği)</li>
+                <li>• #cupsandclouds etiketiyle UGC toplama ve paylaşma</li>
+                <li>• Şube ekiplerinden düzenli görsel akışı</li>
+                <li>• Google İşletme Profili gönderileri</li>
+              </ul>
+              <p class="mt-3 text-[1.02rem] text-espresso-500">Hedef: bedava erişim, marka sıcaklığı, reklam için hazır içerik havuzu.</p>
+            </div>
+            <div class="card">
+              <div class="chip bg-espresso-100 text-espresso-700 font-bold">Ücretli PPC</div>
+              <h3 class="mt-3 text-[1.25rem] font-bold">Ölçek & talep</h3>
+              <ul class="mt-3 space-y-2 text-espresso-600 text-[1.05rem]">
+                <li>• Meta Ads: yerel erişim + retargeting + franchise formu</li>
+                <li>• Google Ads: "yakınımda kahve", "kahve franchise" araması</li>
+                <li>• TikTok Ads: genç kitleye ucuz erişim</li>
+                <li>• Yandex Direct: TR aramada ek görünürlük</li>
+              </ul>
+              <p class="mt-3 text-[1.02rem] text-espresso-500">Hedef: ölçülebilir dönüşüm, şubeye trafik, franchise adayı.</p>
+            </div>
+            <div class="card">
+              <div class="chip bg-warn/15 text-warn font-bold">Influencer</div>
+              <h3 class="mt-3 text-[1.25rem] font-bold">Erişim & güven transferi</h3>
+              <ul class="mt-3 space-y-2 text-espresso-600 text-[1.05rem]">
+                <li>• Mikro (10–50B) yerel/semt influencer'ları → şube ziyareti</li>
+                <li>• Orta (100–500B) kahve/lifestyle içerik üreticileri</li>
+                <li>• Barter + performans (indirim kodu ile ölçüm)</li>
+                <li>• "Coffee Ride" için moto/gezi içerik üreticileri</li>
+              </ul>
+              <p class="mt-3 text-[1.02rem] text-espresso-500">Hedef: gerçek insan güveni, viral içerik, yeni şubelere açılış ivmesi.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= YOL HARİTASI ================= -->
+      <section x-show="$store.nav.tab==='yol'" x-cloak class="reveal space-y-8">
+        <div>
+          <span class="eyebrow">Yol Haritası</span>
+          <h1 class="text-[2rem] sm:text-[2.4rem] font-black">Adım adım 12 ay</h1>
+          <p class="mt-3 text-[1.15rem] text-espresso-600 max-w-3xl">
+            Önce ölçüm ve hızlı SEO düzeltmeleri (bedava kazanç), sonra reklam motorunu ateşleme,
+            ardından e-ticaret ve ölçekleme. Her faz bir öncekinin üstüne kurulur.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Faz 0 -->
+          <div class="card border-l-4 border-bad">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="chip bg-bad/10 text-bad font-bold">0–30 gün</span>
+              <h2 class="text-[1.45rem] font-black">Faz 1 · Temizlik & Ölçüm</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2 mt-4 text-[1.06rem]">
+              <p>▸ robots.txt düzeltmesi (/en/, /ar/ aç)</p>
+              <p>▸ Başlık + meta açıklama + tek H1 düzeltmeleri</p>
+              <p>▸ GA4 dönüşüm/olay takibi (franchise, iletişim, yol tarifi)</p>
+              <p>▸ Search Console + Yandex Webmaster kaydı</p>
+              <p>▸ Yandex Metrica + Webvisor (oturum kaydı) kurulumu</p>
+              <p>▸ Microsoft Clarity (ısı haritası) kurulumu</p>
+              <p>▸ Consent Mode v2 / KVKK çerez düzeni</p>
+              <p>▸ Sitemap'i robots.txt'e bağla</p>
+            </div>
+          </div>
+
+          <!-- Faz 1 -->
+          <div class="card border-l-4 border-warn">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="chip bg-warn/10 text-warn font-bold">30–60 gün</span>
+              <h2 class="text-[1.45rem] font-black">Faz 2 · Piksel & İlk Reklamlar</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2 mt-4 text-[1.06rem]">
+              <p>▸ Meta Business + Pixel + Conversions API</p>
+              <p>▸ TikTok Business + Pixel</p>
+              <p>▸ Google Ads dönüşüm etiketini tamamla/test et</p>
+              <p>▸ İlk Meta kampanyaları: yerel erişim + retargeting</p>
+              <p>▸ Google Ads: yerel arama + "franchise" kampanyası</p>
+              <p>▸ Organik içerik takvimi (haftada 4–5 içerik)</p>
+              <p>▸ İlk mikro-influencer işbirlikleri (indirim kodlu)</p>
+              <p>▸ Franchise açılış sayfası + form optimizasyonu</p>
+            </div>
+          </div>
+
+          <!-- Faz 2 -->
+          <div class="card border-l-4 border-cloud-400">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="chip bg-cloud-100 text-cloud-700 font-bold">60–90 gün</span>
+              <h2 class="text-[1.45rem] font-black">Faz 3 · Yerel SEO & Ölçekleme</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2 mt-4 text-[1.06rem]">
+              <p>▸ Şube bazlı açılış sayfaları (semt semt)</p>
+              <p>▸ LocalBusiness + Menu yapısal verisi</p>
+              <p>▸ Google İşletme Profili optimizasyonu (26 şube)</p>
+              <p>▸ Kazanan reklamları ölçekle, zayıfları kes</p>
+              <p>▸ Orta ölçekli influencer kampanyası</p>
+              <p>▸ "Coffee Ride" topluluk serisi + etkinlik içeriği</p>
+              <p>▸ Düzenli blog (haftada 1) + e-bülten başlangıcı</p>
+              <p>▸ Yandex Direct testleri</p>
+            </div>
+          </div>
+
+          <!-- Faz 3 -->
+          <div class="card border-l-4 border-ok">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="chip bg-ok/10 text-ok font-bold">3–6 ay</span>
+              <h2 class="text-[1.45rem] font-black">Faz 4 · E-ticaret & Katalog</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2 mt-4 text-[1.06rem]">
+              <p>▸ WooCommerce mağaza (paketli kahve + merch)</p>
+              <p>▸ DataLayer e-ticaret olayları (view_item, purchase)</p>
+              <p>▸ Google Merchant Center + ürün feed'i (Shopping/PMax)</p>
+              <p>▸ Meta & TikTok ürün kataloğu (dinamik reklam)</p>
+              <p>▸ Criteo / AdRoll dinamik retargeting (opsiyonel)</p>
+              <p>▸ Sepeti terk edenlere otomatik kampanya</p>
+            </div>
+          </div>
+
+          <!-- Faz 4 -->
+          <div class="card border-l-4 border-espresso-700">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="chip bg-espresso-100 text-espresso-700 font-bold">6–12 ay</span>
+              <h2 class="text-[1.45rem] font-black">Faz 5 · Marka & Sürdürülebilir Büyüme</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2 mt-4 text-[1.06rem]">
+              <p>▸ CRM + sadakat programı (tekrar ziyaret)</p>
+              <p>▸ Sürekli A/B testleri ve aylık raporlama</p>
+              <p>▸ Yeni şube açılışlarına dijital lansman kiti</p>
+              <p>▸ Yıllık içerik/kampanya takvimi (sezonluk)</p>
+              <p>▸ Influencer'ı sürekli programa dönüştür</p>
+              <p>▸ Uluslararası (EN/AR) SEO'yu büyüt</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= BÜTÇE HESAPLAMA ================= -->
+      <section x-show="$store.nav.tab==='butce'" x-cloak class="reveal space-y-8" x-data="budget">
+        <div>
+          <span class="eyebrow">Bütçe Hesaplama</span>
+          <h1 class="text-[2rem] sm:text-[2.4rem] font-black">Aylık bütçe planlayıcı</h1>
+          <p class="mt-3 text-[1.15rem] text-espresso-600 max-w-3xl">
+            Aylık toplam bütçeni gir; kanalları aç/kapat ve dağılımı ayarla. Tahmini erişim, tıklama, dönüşüm ve
+            ROAS anında hesaplanır. Varsayımlar Türkiye pazarına göre muhafazakâr seçildi; hepsini değiştirebilirsin.
+          </p>
+        </div>
+
+        <!-- Girişler -->
+        <div class="grid lg:grid-cols-3 gap-5">
+          <div class="card">
+            <label class="block font-bold text-[1.1rem]">Aylık toplam bütçe (₺)</label>
+            <input type="number" min="0" step="1000" x-model.number="total"
+                   class="mt-2 w-full rounded-xl2 border-2 border-espresso-200 px-4 py-3 text-[1.3rem] font-bold focus:border-espresso-600 outline-none" />
+            <input type="range" min="10000" max="500000" step="5000" x-model.number="total" class="mt-3 w-full accent-espresso-700" />
+            <div class="mt-1 text-espresso-500 text-[1.02rem]">Sürükleyerek de ayarlayabilirsin (10B–500B ₺).</div>
+          </div>
+          <div class="card">
+            <label class="block font-bold text-[1.1rem]">Site dönüşüm oranı (%)</label>
+            <input type="number" min="0" step="0.1" x-model.number="cvr"
+                   class="mt-2 w-full rounded-xl2 border-2 border-espresso-200 px-4 py-3 text-[1.2rem] font-bold focus:border-espresso-600 outline-none" />
+            <p class="mt-2 text-espresso-500 text-[1.02rem]">Tıklayan 100 kişiden kaçı aksiyon/satış yapıyor. Yeni sitede %1–3 gerçekçidir.</p>
+          </div>
+          <div class="card">
+            <label class="block font-bold text-[1.1rem]">Ortalama müşteri değeri (₺)</label>
+            <input type="number" min="0" step="10" x-model.number="aov"
+                   class="mt-2 w-full rounded-xl2 border-2 border-espresso-200 px-4 py-3 text-[1.2rem] font-bold focus:border-espresso-600 outline-none" />
+            <p class="mt-2 text-espresso-500 text-[1.02rem]">Bir dönüşümün ortalama getirisi (online sepet veya ortalama adisyon).</p>
+          </div>
+        </div>
+
+        <!-- Kanal dağılımı -->
+        <div class="card">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <h2 class="text-[1.45rem] font-black">Kanal dağılımı</h2>
+            <div class="flex items-center gap-3">
+              <span class="chip font-bold" :class="allocSum===100 ? 'badge-ok' : 'badge-warn'">
+                Toplam pay: <span x-text="allocSum"></span>%
+              </span>
+              <button class="btn-ghost !py-2" @click="normalize()">%100'e getir</button>
+            </div>
+          </div>
+
+          <div class="mt-5 overflow-x-auto">
+            <table class="tbl min-w-[760px]">
+              <thead>
+                <tr>
+                  <th>Aç</th><th>Kanal</th><th>Tür</th><th>Pay %</th><th>Aylık ₺</th><th>Tahmini erişim</th><th>Tıklama</th>
+                </tr>
+              </thead>
+              <tbody>
+                <template x-for="c in channels" :key="c.id">
+                  <tr>
+                    <td>
+                      <input type="checkbox" x-model="c.enabled" class="w-6 h-6 accent-espresso-700" />
+                    </td>
+                    <td>
+                      <div class="font-bold" :class="!c.enabled && 'text-espresso-300 line-through'" x-text="c.name"></div>
+                      <div class="text-espresso-500 text-[1rem]" x-text="c.note"></div>
+                    </td>
+                    <td><span class="chip text-[0.98rem]" :class="kindClass(c.kind)" x-text="kindLabel(c.kind)"></span></td>
+                    <td>
+                      <input type="number" min="0" max="100" x-model.number="c.alloc" :disabled="!c.enabled"
+                             class="w-20 rounded-lg border-2 border-espresso-200 px-2 py-1.5 font-bold disabled:opacity-40" />
+                    </td>
+                    <td class="font-bold" x-text="fmt(amount(c))"></td>
+                    <td x-text="c.cpm>0 ? num(impressions(c)) : '—'"></td>
+                    <td x-text="c.cpm>0 ? num(clicks(c)) : '—'"></td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-3 text-espresso-500 text-[1.02rem]">
+            Not: Organik içerik, SEO ve araç/yönetim satırları "işçilik" bütçesidir; doğrudan tıklama üretmez ama
+            tüm kanalların verimini artırır. Erişim/tıklama yalnızca reklam kanallarında hesaplanır.
+          </p>
+        </div>
+
+        <!-- Sonuç kartları -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="card !p-6">
+            <div class="text-[1rem] text-espresso-500 font-semibold uppercase tracking-wide">Reklam harcaması</div>
+            <div class="mt-1 text-[1.9rem] font-black" x-text="fmt(paidSpend)"></div>
+            <div class="text-espresso-500">Meta+Google+TikTok+Influencer</div>
+          </div>
+          <div class="card !p-6">
+            <div class="text-[1rem] text-espresso-500 font-semibold uppercase tracking-wide">Tahmini tıklama / ay</div>
+            <div class="mt-1 text-[1.9rem] font-black text-cloud-600" x-text="num(totalClicks)"></div>
+            <div class="text-espresso-500"><span x-text="num(totalImpr)"></span> gösterim</div>
+          </div>
+          <div class="card !p-6">
+            <div class="text-[1rem] text-espresso-500 font-semibold uppercase tracking-wide">Tahmini dönüşüm</div>
+            <div class="mt-1 text-[1.9rem] font-black text-warn" x-text="num(orders)"></div>
+            <div class="text-espresso-500">≈ <span x-text="fmt(cpl)"></span> / dönüşüm</div>
+          </div>
+          <div class="card !p-6 bg-espresso-800 text-cream border-espresso-800">
+            <div class="text-[1rem] text-cream/70 font-semibold uppercase tracking-wide">Tahmini ROAS</div>
+            <div class="mt-1 text-[1.9rem] font-black" x-text="roas.toFixed(2) + 'x'"></div>
+            <div class="text-cream/70">Gelir ≈ <span x-text="fmt(revenue)"></span></div>
+          </div>
+        </div>
+
+        <!-- 12 ay projeksiyon -->
+        <div class="card">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <h2 class="text-[1.45rem] font-black">12 aylık projeksiyon</h2>
+            <label class="flex items-center gap-3 text-[1.05rem]">
+              Aylık büyüme:
+              <input type="range" min="0" max="25" step="1" x-model.number="growth" class="accent-espresso-700 w-40" />
+              <span class="font-bold w-12" x-text="growth + '%'"></span>
+            </label>
+          </div>
+          <div class="mt-5 grid sm:grid-cols-3 gap-5">
+            <div class="rounded-xl2 bg-cream p-5">
+              <div class="text-espresso-500">Yıllık toplam harcama</div>
+              <div class="text-[1.7rem] font-black" x-text="fmt(annualSpend)"></div>
+            </div>
+            <div class="rounded-xl2 bg-cream p-5">
+              <div class="text-espresso-500">Yıllık tahmini gelir</div>
+              <div class="text-[1.7rem] font-black text-ok" x-text="fmt(annualRevenue)"></div>
+            </div>
+            <div class="rounded-xl2 bg-cream p-5">
+              <div class="text-espresso-500">Yıllık tahmini ROAS</div>
+              <div class="text-[1.7rem] font-black" x-text="(annualSpend>0 ? (annualRevenue/annualSpend) : 0).toFixed(2) + 'x'"></div>
+            </div>
+          </div>
+
+          <!-- Basit çubuk grafik -->
+          <div class="mt-6 flex items-end gap-1.5 h-40">
+            <template x-for="r in projection" :key="r.m">
+              <div class="flex-1 flex flex-col items-center gap-1 group">
+                <div class="w-full rounded-t bg-espresso-300 group-hover:bg-espresso-600 transition-colors"
+                     :style="`height:${Math.max(4, (r.revenue/annualRevenue)*100)}%`"
+                     :title="'Ay '+r.m+': '+fmt(r.revenue)"></div>
+                <span class="text-[0.9rem] text-espresso-400" x-text="r.m"></span>
+              </div>
+            </template>
+          </div>
+          <p class="mt-3 text-espresso-500 text-[1.02rem]">
+            Çubuklar kümülatif (birikimli) tahmini geliri gösterir. Bu bir tahmindir; gerçek sonuç kreatif kalitesi,
+            teklif ve mevsime göre değişir. Ölçüm kurulduğunda bu varsayımları gerçek verinle güncelleyeceğiz.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= UYGULAMA REHBERİ ================= -->
+      <section x-show="$store.nav.tab==='uygulama'" x-cloak class="reveal space-y-8">
+        <div>
+          <span class="eyebrow">Pragmatik Uygulama Rehberi</span>
+          <h1 class="text-[2rem] sm:text-[2.4rem] font-black">Her işi nasıl yaparız?</h1>
+          <p class="mt-3 text-[1.15rem] text-espresso-600 max-w-3xl">
+            Teknik işleri sade adımlara böldük. İyi haber: GTM zaten kurulu olduğu için piksellerin çoğu
+            <b>koda dokunmadan</b>, tek panelden eklenir. Sırayla ilerle.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-5" x-data="guides">
+          <template x-for="guide in list" :key="guide.id">
+            <div class="card self-start">
+              <button class="w-full flex items-center gap-3 text-left" @click="toggle(guide.id)">
+                <span class="text-[1.6rem]" x-text="guide.icon"></span>
+                <span class="flex-1 text-[1.25rem] font-black" x-text="guide.title"></span>
+                <span class="text-espresso-400 text-[1.4rem]" x-text="open===guide.id ? '−' : '+'"></span>
+              </button>
+              <ol x-show="open===guide.id" x-cloak x-transition.duration.250ms class="mt-4 space-y-2.5 list-none">
+                <template x-for="(s,i) in guide.steps" :key="i">
+                  <li class="flex gap-3">
+                    <span class="shrink-0 grid place-items-center w-7 h-7 rounded-full bg-espresso-100 text-espresso-700 font-bold text-[1rem]" x-text="i+1"></span>
+                    <span class="text-espresso-700 text-[1.06rem]" x-text="s"></span>
+                  </li>
+                </template>
+              </ol>
+            </div>
+          </template>
+        </div>
+
+        <div class="card bg-cloud-50 border-cloud-200">
+          <h2 class="text-[1.35rem] font-black">Genel altın kural</h2>
+          <p class="mt-2 text-espresso-700">
+            Sıralama önemli: <b>önce ölç, sonra reklam ver.</b> Piksel ve dönüşüm takibi olmadan başlatılan reklam,
+            hangi liranın kazandırdığını göstermez. İlk 30 günü ölçüm altyapısına ayır; sonraki her ay bu yatırımın
+            karşılığını fazlasıyla alırsın.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-espresso-100 mt-10">
+      <div class="container-pad py-8 flex flex-wrap items-center justify-between gap-4 text-espresso-500">
+        <p class="text-[1.02rem]">☕ Cups &amp; Clouds · Dijital Pazarlama Denetim & Eylem Panosu · Türkiye pazarı</p>
+        <p class="text-[1.02rem]">Denetim tarihi: 03.08.2026 · canlı site + GTM + sitemap analizi</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

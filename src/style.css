@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Cups & Clouds — Dijital Pazarlama Panosu
+   Flat 2.0 · Roboto · min gövde metni 1.1rem · bol boşluk
+   ============================================================ */
+
+@layer base {
+  :root {
+    /* 1rem = 17px → gövde metni 1.15rem ≈ 19.5px, hiçbir metin 1.1rem altına inmez */
+    font-size: 17px;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cream text-espresso-800;
+    font-weight: 400;
+    font-size: 1.15rem;      /* asgari gövde 1.1rem üstünde */
+    line-height: 1.7;
+    letter-spacing: 0.1px;
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-espresso-900;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+  }
+
+  p { max-width: 72ch; }
+
+  a { text-decoration: none; }
+
+  ::selection { background: theme('colors.espresso.200'); }
+
+  /* Odak erişilebilirliği (UX) */
+  :focus-visible {
+    outline: 3px solid theme('colors.cloud.400');
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  /* İnce, sıcak kaydırma çubuğu */
+  ::-webkit-scrollbar { width: 12px; height: 12px; }
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.espresso.200');
+    border-radius: 999px;
+    border: 3px solid theme('colors.cream');
+  }
+}
+
+@layer components {
+  .container-pad { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+
+  .card {
+    @apply bg-white rounded-xl2 shadow-flat border border-espresso-100/70 p-6 sm:p-8;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[1.05rem] font-medium;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-medium
+           transition-all duration-150 text-[1.1rem];
+  }
+  .btn-primary { @apply btn bg-espresso-800 text-cream hover:bg-espresso-900 shadow-flat; }
+  .btn-ghost   { @apply btn bg-white text-espresso-800 border border-espresso-200 hover:border-espresso-400; }
+
+  /* Sekme (tab) navigasyonu */
+  .tab-btn {
+    @apply whitespace-nowrap rounded-full px-4 py-2.5 text-[1.05rem] font-medium
+           text-espresso-600 hover:text-espresso-900 hover:bg-espresso-50 transition-colors;
+  }
+  .tab-btn-active {
+    @apply bg-espresso-800 text-cream hover:bg-espresso-900 hover:text-cream shadow-flat;
+  }
+
+  /* Bölüm başlığı eyebrow */
+  .eyebrow {
+    @apply inline-block text-[1.02rem] font-semibold tracking-wide uppercase text-cloud-500 mb-2;
+  }
+
+  /* Durum rozetleri */
+  .badge-ok   { @apply chip bg-ok/10 text-ok; }
+  .badge-warn { @apply chip bg-warn/10 text-warn; }
+  .badge-bad  { @apply chip bg-bad/10 text-bad; }
+
+  /* Tablo */
+  .tbl { @apply w-full border-collapse text-[1.08rem]; }
+  .tbl th { @apply text-left font-semibold text-espresso-900 py-3 px-3 border-b-2 border-espresso-100; }
+  .tbl td { @apply align-top py-3 px-3 border-b border-espresso-100/70; }
+}
+
+/* Yumuşak giriş animasyonu (UX, reduce-motion'a saygılı) */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { animation: fadeUp 0.5s ease both; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+[x-cloak] { display: none !important; }
