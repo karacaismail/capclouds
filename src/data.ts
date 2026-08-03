@@ -356,7 +356,7 @@ export interface Guide {
 export const guides: Guide[] = [
   {
     id: "meta",
-    icon: "📘",
+    icon: "ph-facebook-logo",
     title: "Meta Pixel + Conversions API",
     steps: [
       "business.facebook.com üzerinden Meta Business hesabı ve Reklam Hesabı aç.",
@@ -369,7 +369,7 @@ export const guides: Guide[] = [
   },
   {
     id: "metrica",
-    icon: "📊",
+    icon: "ph-chart-line",
     title: "Yandex Metrica + Webvisor (oturum kaydı)",
     steps: [
       "metrica.yandex.com’da ücretsiz hesap aç, yeni sayıcı (counter) oluştur, alan adını gir.",
@@ -381,7 +381,7 @@ export const guides: Guide[] = [
   },
   {
     id: "ga4",
-    icon: "🎯",
+    icon: "ph-target",
     title: "GA4 dönüşüm & olay takibi",
     steps: [
       "GA4’te (zaten kurulu) Yönetici → Etkinlikler bölümünü aç.",
@@ -393,7 +393,7 @@ export const guides: Guide[] = [
   },
   {
     id: "clarity",
-    icon: "🔥",
+    icon: "ph-fire",
     title: "Microsoft Clarity (ısı haritası, ücretsiz)",
     steps: [
       "clarity.microsoft.com’da ücretsiz proje oluştur.",
@@ -404,7 +404,7 @@ export const guides: Guide[] = [
   },
   {
     id: "robots",
-    icon: "🛠️",
+    icon: "ph-wrench",
     title: "SEO hızlı düzeltmeleri",
     steps: [
       "robots.txt’ten ‘Disallow: /en/’ ve ‘Disallow: /ar/’ satırlarını kaldır.",
@@ -416,7 +416,7 @@ export const guides: Guide[] = [
   },
   {
     id: "local",
-    icon: "📍",
+    icon: "ph-map-pin",
     title: "Yerel SEO & İşletme Profili",
     steps: [
       "Her şube için Google İşletme Profili talep et/doğrula (sahiplen).",

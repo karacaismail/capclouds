@@ -38,11 +38,11 @@
     <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur border-b border-espresso-100">
       <div class="container-pad">
         <div class="flex items-center justify-between h-[68px] gap-4">
-          <button @click="$store.nav.go('genel')" class="flex items-center gap-3 shrink-0">
-            <span class="grid place-items-center w-11 h-11 rounded-xl2 bg-espresso-800 text-cream text-[1.4rem] shadow-flat">☕</span>
-            <span class="text-left leading-tight">
-              <span class="block font-black text-[1.15rem] text-espresso-900">Cups &amp; Clouds</span>
-              <span class="block text-[0.98rem] text-espresso-500 -mt-0.5">Dijital Pazarlama Panosu</span>
+          <button @click="$store.nav.go('genel')" class="flex items-center gap-3 min-w-0">
+            <span class="grid place-items-center w-11 h-11 shrink-0 rounded-xl2 bg-espresso-800 text-cream text-[1.4rem] shadow-flat"><i class="ph ph-coffee"></i></span>
+            <span class="text-left leading-tight min-w-0">
+              <span class="block font-black text-[1.15rem] text-espresso-900 truncate">Cups &amp; Clouds</span>
+              <span class="block text-[0.98rem] text-espresso-500 -mt-0.5 truncate hidden sm:block">Dijital Pazarlama Panosu</span>
             </span>
           </button>
 
@@ -54,8 +54,9 @@
           </nav>
 
           <!-- Mobil menü butonu -->
-          <button class="lg:hidden btn-ghost !px-4 !py-2" @click="$store.nav.mobileOpen = !$store.nav.mobileOpen" aria-label="Menü">
-            <span x-text="$store.nav.mobileOpen ? '✕' : '☰'"></span> Menü
+          <button class="lg:hidden btn-ghost !px-4 !py-2.5 shrink-0 whitespace-nowrap" @click="$store.nav.mobileOpen = !$store.nav.mobileOpen" aria-label="Menü">
+            <i class="ph text-[1.35rem]" :class="$store.nav.mobileOpen ? 'ph-x' : 'ph-list'"></i>
+            <span>Menü</span>
           </button>
         </div>
 
@@ -139,7 +140,7 @@
             </li>
           </ol>
           <div class="mt-6 flex flex-wrap gap-3">
-            <button class="btn-primary" @click="$store.nav.go('entegrasyon')">Tam listeyi gör →</button>
+            <button class="btn-primary" @click="$store.nav.go('entegrasyon')">Tam listeyi gör <i class="ph ph-arrow-right"></i></button>
             <button class="btn-ghost" @click="$store.nav.go('butce')">Bütçeyi hesapla</button>
           </div>
         </div>
@@ -147,17 +148,17 @@
         <!-- Nasıl okunmalı -->
         <div class="grid md:grid-cols-3 gap-5">
           <div class="card">
-            <div class="text-[1.8rem]">🧭</div>
+            <div class="text-[1.8rem]"><i class="ph ph-compass text-espresso-700"></i></div>
             <h3 class="mt-2 text-[1.3rem] font-bold">Bu pano nedir?</h3>
             <p class="mt-2 text-espresso-600">Hem yol haritası, hem görev listesi, hem strateji, hem de uygulama rehberi. Tek yerden yürüteceğin bir kontrol paneli.</p>
           </div>
           <div class="card">
-            <div class="text-[1.8rem]">✅</div>
+            <div class="text-[1.8rem]"><i class="ph ph-check-square text-espresso-700"></i></div>
             <h3 class="mt-2 text-[1.3rem] font-bold">Kutucuklar nasıl işler?</h3>
             <p class="mt-2 text-espresso-600">Tespit edebildiğim "kurulu" işler baştan işaretli gelir. Yapılmayanlar boştur; sen tamamladıkça işaretlersin, tarayıcın hatırlar.</p>
           </div>
           <div class="card">
-            <div class="text-[1.8rem]">🎯</div>
+            <div class="text-[1.8rem]"><i class="ph ph-target text-espresso-700"></i></div>
             <h3 class="mt-2 text-[1.3rem] font-bold">Odak neresi?</h3>
             <p class="mt-2 text-espresso-600">Tüm plan Türkiye pazarına göre kurgulandı: yerel arama, Instagram/TikTok, franchise adayı bulma ve şubeye müşteri getirme.</p>
           </div>
@@ -219,16 +220,16 @@
             <h2 class="text-[1.4rem] font-bold">Site haritası (tespit edilen sayfalar)</h2>
             <p class="text-espresso-500 mt-1">Yoast sitemap ve menüden çıkarıldı. Her sayfa 3 dilde (TR / EN / AR) mevcut.</p>
             <ul class="mt-4 grid sm:grid-cols-2 gap-2.5 text-[1.08rem]">
-              <li class="flex items-center gap-2">🏠 Anasayfa <code class="text-espresso-400">/</code></li>
-              <li class="flex items-center gap-2">📋 Menü <code class="text-espresso-400">/menu/</code></li>
-              <li class="flex items-center gap-2">🤝 Franchise <code class="text-espresso-400">/franchise/</code></li>
-              <li class="flex items-center gap-2">📍 Şubeler <code class="text-espresso-400">/subeler/</code></li>
-              <li class="flex items-center gap-2">📖 Hikayemiz <code class="text-espresso-400">/hikayemiz/</code></li>
-              <li class="flex items-center gap-2">💚 Sosyal Sorumluluk <code class="text-espresso-400">/sosyal-sorumluluk/</code></li>
-              <li class="flex items-center gap-2">💼 Kariyer <code class="text-espresso-400">/kariyer/</code></li>
-              <li class="flex items-center gap-2">✉️ İletişim <code class="text-espresso-400">/iletisim/</code></li>
-              <li class="flex items-center gap-2">📝 Blog <code class="text-espresso-400">/blog/</code> (4 yazı)</li>
-              <li class="flex items-center gap-2 text-bad">🛒 Mağaza <code class="text-espresso-400">/shop/</code> → 404 (yok)</li>
+              <li class="flex items-center gap-2"><i class="ph ph-house text-cloud-500 shrink-0"></i> Anasayfa <code class="text-espresso-400">/</code></li>
+              <li class="flex items-center gap-2"><i class="ph ph-list-bullets text-cloud-500 shrink-0"></i> Menü <code class="text-espresso-400">/menu/</code></li>
+              <li class="flex items-center gap-2"><i class="ph ph-handshake text-cloud-500 shrink-0"></i> Franchise <code class="text-espresso-400">/franchise/</code></li>
+              <li class="flex items-center gap-2"><i class="ph ph-map-pin text-cloud-500 shrink-0"></i> Şubeler <code class="text-espresso-400">/subeler/</code></li>
+              <li class="flex items-center gap-2"><i class="ph ph-book-open text-cloud-500 shrink-0"></i> Hikayemiz <code class="text-espresso-400">/hikayemiz/</code></li>
+              <li class="flex items-center gap-2"><i class="ph ph-heart text-cloud-500 shrink-0"></i> Sosyal Sorumluluk <code class="text-espresso-400">/sosyal-sorumluluk/</code></li>
+              <li class="flex items-center gap-2"><i class="ph ph-briefcase text-cloud-500 shrink-0"></i> Kariyer <code class="text-espresso-400">/kariyer/</code></li>
+              <li class="flex items-center gap-2"><i class="ph ph-envelope-simple text-cloud-500 shrink-0"></i> İletişim <code class="text-espresso-400">/iletisim/</code></li>
+              <li class="flex items-center gap-2"><i class="ph ph-article text-cloud-500 shrink-0"></i> Blog <code class="text-espresso-400">/blog/</code> (4 yazı)</li>
+              <li class="flex items-center gap-2 text-bad"><i class="ph ph-shopping-cart text-bad shrink-0"></i> Mağaza <code class="text-espresso-400">/shop/</code> → 404 (yok)</li>
             </ul>
           </div>
           <div class="card">
@@ -269,7 +270,7 @@
               </div>
               <div class="mt-1 text-right font-bold" x-text="percent + '% tamamlandı'"></div>
             </div>
-            <button class="btn-ghost !py-2" @click="reset()">↺ Sıfırla</button>
+            <button class="btn-ghost !py-2" @click="reset()"><i class="ph ph-arrow-counter-clockwise"></i> Sıfırla</button>
           </div>
         </div>
 
@@ -296,7 +297,7 @@
                     :class="checked[it.id] ? 'bg-espresso-800 border-espresso-800 text-cream' : 'border-espresso-300 hover:border-espresso-500 text-transparent'"
                     :aria-pressed="checked[it.id]"
                     :aria-label="it.title"
-                  >✓</button>
+                  ><i class="ph ph-check text-[1.1rem]"></i></button>
 
                   <div class="flex-1 min-w-0">
                     <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -329,8 +330,8 @@
           </p>
         </div>
 
-        <div class="card overflow-x-auto">
-          <table class="tbl min-w-[720px]">
+        <div class="card table-scroll">
+          <table class="tbl resp-table md:min-w-[720px]">
             <thead>
               <tr>
                 <th>Marka</th>
@@ -343,38 +344,38 @@
             <tbody>
               <tr>
                 <td class="font-bold">Espressolab</td>
-                <td>Pazar lideri grubunda</td>
-                <td>~337 şube, 14 ülke</td>
-                <td><span class="badge-ok">Yüksek</span></td>
-                <td>Büyük ve kurumsal; yerelde her semtte kişiselleşmiş, samimi ilişki kurmakta zorlanır.</td>
+                <td data-label="Konum">Pazar lideri grubunda</td>
+                <td data-label="Şube gücü">~337 şube, 14 ülke</td>
+                <td data-label="Dijital olgunluk"><span class="badge-ok">Yüksek</span></td>
+                <td data-label="Bizim fırsatımız">Büyük ve kurumsal; yerelde her semtte kişiselleşmiş, samimi ilişki kurmakta zorlanır.</td>
               </tr>
               <tr>
                 <td class="font-bold">Kahve Dünyası</td>
-                <td>Köklü lider</td>
-                <td>~343 şube</td>
-                <td><span class="badge-ok">Yüksek</span></td>
-                <td>Çikolata/perakende odaklı; genç, "third-wave" kahve kültürü tonu daha zayıf.</td>
+                <td data-label="Konum">Köklü lider</td>
+                <td data-label="Şube gücü">~343 şube</td>
+                <td data-label="Dijital olgunluk"><span class="badge-ok">Yüksek</span></td>
+                <td data-label="Bizim fırsatımız">Çikolata/perakende odaklı; genç, "third-wave" kahve kültürü tonu daha zayıf.</td>
               </tr>
               <tr>
                 <td class="font-bold">Nevada Cafe</td>
-                <td>Hızlı büyüyen franchise</td>
-                <td>Agresif franchise</td>
-                <td><span class="badge-warn">Orta</span></td>
-                <td>Hızlı büyüme kalite/marka algısında dalgalanma yaratıyor; dijital anlatı dağınık.</td>
+                <td data-label="Konum">Hızlı büyüyen franchise</td>
+                <td data-label="Şube gücü">Agresif franchise</td>
+                <td data-label="Dijital olgunluk"><span class="badge-warn">Orta</span></td>
+                <td data-label="Bizim fırsatımız">Hızlı büyüme kalite/marka algısında dalgalanma yaratıyor; dijital anlatı dağınık.</td>
               </tr>
               <tr>
                 <td class="font-bold">Coffy</td>
-                <td>Uygun fiyat, hızlı yayılım</td>
-                <td>Gelir paylaşımlı model</td>
-                <td><span class="badge-warn">Orta-Yüksek</span></td>
-                <td>Fiyat odaklı konum; deneyim/topluluk ve premium his sunmuyor.</td>
+                <td data-label="Konum">Uygun fiyat, hızlı yayılım</td>
+                <td data-label="Şube gücü">Gelir paylaşımlı model</td>
+                <td data-label="Dijital olgunluk"><span class="badge-warn">Orta-Yüksek</span></td>
+                <td data-label="Bizim fırsatımız">Fiyat odaklı konum; deneyim/topluluk ve premium his sunmuyor.</td>
               </tr>
               <tr class="bg-espresso-50/60">
                 <td class="font-black text-espresso-900">Cups &amp; Clouds</td>
-                <td>İstanbul odaklı butik zincir</td>
-                <td>~26 şube (meydan okuyan)</td>
-                <td><span class="badge-bad">Düşük (ama potansiyeli yüksek)</span></td>
-                <td><b>Avantaj:</b> çevik, samimi, niş topluluk (ör. motor & kahve buluşmaları) kurabilir; dijitali hızlı kurarsa yerelde öne geçer.</td>
+                <td data-label="Konum">İstanbul odaklı butik zincir</td>
+                <td data-label="Şube gücü">~26 şube (meydan okuyan)</td>
+                <td data-label="Dijital olgunluk"><span class="badge-bad">Düşük (ama potansiyeli yüksek)</span></td>
+                <td data-label="Bizim fırsatımız"><b>Avantaj:</b> çevik, samimi, niş topluluk (ör. motor &amp; kahve buluşmaları) kurabilir; dijitali hızlı kurarsa yerelde öne geçer.</td>
               </tr>
             </tbody>
           </table>
@@ -382,17 +383,17 @@
 
         <div class="grid md:grid-cols-3 gap-5">
           <div class="card">
-            <div class="text-[1.8rem]">⚡</div>
+            <div class="text-[1.8rem]"><i class="ph ph-lightning text-espresso-700"></i></div>
             <h3 class="mt-2 text-[1.3rem] font-bold">Çeviklik</h3>
             <p class="mt-2 text-espresso-600">26 şube, 340 şubeden çok daha hızlı karar alır ve kampanya dener. Küçük olmak, dijitalde bir avantaja çevrilebilir.</p>
           </div>
           <div class="card">
-            <div class="text-[1.8rem]">📍</div>
+            <div class="text-[1.8rem]"><i class="ph ph-map-pin text-cloud-500 shrink-0"></i></div>
             <h3 class="mt-2 text-[1.3rem] font-bold">Yerel hâkimiyet</h3>
             <p class="mt-2 text-espresso-600">Devler "genel"e reklam verir; biz her semtte "buradaki en iyi kahve" olacak şekilde yerel aramayı domine edebiliriz.</p>
           </div>
           <div class="card">
-            <div class="text-[1.8rem]">🫂</div>
+            <div class="text-[1.8rem]"><i class="ph ph-users-three text-espresso-700"></i></div>
             <h3 class="mt-2 text-[1.3rem] font-bold">Topluluk</h3>
             <p class="mt-2 text-espresso-600">Sitede zaten "Coffee Ride" (motor & kahve) içeriği var. Devlerin taklit edemeyeceği samimi topluluklar bizim en güçlü kozumuz.</p>
           </div>
@@ -624,31 +625,34 @@
             </div>
           </div>
 
-          <div class="mt-5 overflow-x-auto">
-            <table class="tbl min-w-[760px]">
+          <div class="mt-5 table-scroll">
+            <table class="tbl resp-table md:min-w-[760px]">
               <thead>
                 <tr>
-                  <th>Aç</th><th>Kanal</th><th>Tür</th><th>Pay %</th><th>Aylık ₺</th><th>Tahmini erişim</th><th>Tıklama</th>
+                  <th>Kanal</th><th>Aç</th><th>Tür</th><th>Pay %</th><th>Aylık ₺</th><th>Tahmini erişim</th><th>Tıklama</th>
                 </tr>
               </thead>
               <tbody>
                 <template x-for="c in channels" :key="c.id">
                   <tr>
-                    <td>
-                      <input type="checkbox" x-model="c.enabled" class="w-6 h-6 accent-espresso-700" />
-                    </td>
-                    <td>
+                    <td data-label="Kanal">
                       <div class="font-bold" :class="!c.enabled && 'text-espresso-300 line-through'" x-text="c.name"></div>
-                      <div class="text-espresso-500 text-[1rem]" x-text="c.note"></div>
+                      <div class="text-espresso-500 text-[1rem] font-normal" x-text="c.note"></div>
                     </td>
-                    <td><span class="chip text-[0.98rem]" :class="kindClass(c.kind)" x-text="kindLabel(c.kind)"></span></td>
-                    <td>
+                    <td data-label="Aç">
+                      <label class="inline-flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" x-model="c.enabled" class="w-6 h-6 accent-espresso-700" />
+                        <span class="md:hidden text-espresso-500" x-text="c.enabled ? 'Açık' : 'Kapalı'"></span>
+                      </label>
+                    </td>
+                    <td data-label="Tür"><span class="chip text-[0.98rem]" :class="kindClass(c.kind)" x-text="kindLabel(c.kind)"></span></td>
+                    <td data-label="Pay %">
                       <input type="number" min="0" max="100" x-model.number="c.alloc" :disabled="!c.enabled"
                              class="w-20 rounded-lg border-2 border-espresso-200 px-2 py-1.5 font-bold disabled:opacity-40" />
                     </td>
-                    <td class="font-bold" x-text="fmt(amount(c))"></td>
-                    <td x-text="c.cpm>0 ? num(impressions(c)) : '—'"></td>
-                    <td x-text="c.cpm>0 ? num(clicks(c)) : '—'"></td>
+                    <td data-label="Aylık ₺" class="font-bold" x-text="fmt(amount(c))"></td>
+                    <td data-label="Tahmini erişim" x-text="c.cpm>0 ? num(impressions(c)) : '—'"></td>
+                    <td data-label="Tıklama" x-text="c.cpm>0 ? num(clicks(c)) : '—'"></td>
                   </tr>
                 </template>
               </tbody>
@@ -837,8 +841,8 @@
             </div>
           </div>
 
-          <div class="mt-6 overflow-x-auto">
-            <table class="tbl min-w-[680px]">
+          <div class="mt-6 table-scroll">
+            <table class="tbl resp-table md:min-w-[680px]">
               <thead>
                 <tr><th>İş</th><th>AI olmadan</th><th>AI ile</th></tr>
               </thead>
@@ -846,8 +850,8 @@
                 <template x-for="(r,i) in efficiency" :key="i">
                   <tr>
                     <td class="font-bold" x-text="r.task"></td>
-                    <td class="text-espresso-500" x-text="r.without"></td>
-                    <td><span class="chip bg-ok/10 text-ok" x-text="r.withAI"></span></td>
+                    <td data-label="AI olmadan" class="text-espresso-500" x-text="r.without"></td>
+                    <td data-label="AI ile"><span class="chip bg-ok/10 text-ok" x-text="r.withAI"></span></td>
                   </tr>
                 </template>
               </tbody>
@@ -959,7 +963,7 @@
           <template x-for="guide in list" :key="guide.id">
             <div class="card self-start">
               <button class="w-full flex items-center gap-3 text-left" @click="toggle(guide.id)">
-                <span class="text-[1.6rem]" x-text="guide.icon"></span>
+                <i class="ph text-[1.7rem] text-espresso-700" :class="guide.icon"></i>
                 <span class="flex-1 text-[1.25rem] font-black" x-text="guide.title"></span>
                 <span class="text-espresso-400 text-[1.4rem]" x-text="open===guide.id ? '−' : '+'"></span>
               </button>
@@ -990,7 +994,7 @@
     <!-- ============ FOOTER ============ -->
     <footer class="border-t border-espresso-100 mt-10">
       <div class="container-pad py-8 flex flex-wrap items-center justify-between gap-4 text-espresso-500">
-        <p class="text-[1.02rem]">☕ Cups &amp; Clouds · Dijital Pazarlama Denetim & Eylem Panosu · Türkiye pazarı</p>
+        <p class="text-[1.02rem] flex items-center gap-2"><i class="ph ph-coffee"></i> Cups &amp; Clouds · Dijital Pazarlama Denetim & Eylem Panosu · Türkiye pazarı</p>
         <p class="text-[1.02rem]">Denetim tarihi: 03.08.2026 · canlı site + GTM + sitemap analizi</p>
       </div>
     </footer>

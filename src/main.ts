@@ -1,4 +1,5 @@
 import Alpine from "alpinejs";
+import "@phosphor-icons/web/regular";
 import "./style.css";
 import {
   groups,
