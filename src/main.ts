@@ -6,6 +6,12 @@ import {
   defaultChannels,
   conversionDefaults,
   guides,
+  yatirimItems,
+  isletmeItems,
+  efficiencyRows,
+  teamCompare,
+  pazar,
+  franchiseFunnel,
   type BudgetChannel,
 } from "./data";
 
@@ -235,6 +241,58 @@ Alpine.data("guides", () => ({
   open: "meta" as string,
   toggle(id: string) {
     this.open = this.open === id ? "" : id;
+  },
+}));
+
+/* -------- Finansal plan bileşeni -------- */
+Alpine.data("finance", () => ({
+  yatirim: yatirimItems.map((i) => ({ ...i })),
+  isletme: isletmeItems.map((i) => ({ ...i })),
+  efficiency: efficiencyRows,
+  team: teamCompare,
+  pazar,
+  franchiseFunnel,
+  capture: pazar.defaultCapture,
+  fmt: TRY,
+  num: NUM,
+
+  get yatirimTotal() {
+    return this.yatirim.reduce((a, i) => a + Number(i.amount), 0);
+  },
+  get isletmeTotal() {
+    return this.isletme.reduce((a, i) => a + Number(i.amount), 0);
+  },
+  get isletmeAnnual() {
+    return this.isletmeTotal * 12;
+  },
+  get year1Total() {
+    // 1. yıl toplam operasyon maliyeti (reklam harcaması hariç)
+    return this.yatirimTotal + this.isletmeAnnual;
+  },
+  get saveMonthly() {
+    return Math.max(0, this.team.classicCost - this.team.leanCost);
+  },
+  get savePct() {
+    return this.team.classicCost > 0
+      ? Math.round((this.saveMonthly / this.team.classicCost) * 100)
+      : 0;
+  },
+  // Pazar hunisi
+  get somPeople() {
+    return (this.pazar.hedef.people * this.capture) / 100;
+  },
+  get hedefPct() {
+    return (this.pazar.hedef.people / this.pazar.toplam.people) * 100;
+  },
+  get somPctOfTotal() {
+    return (this.somPeople / this.pazar.toplam.people) * 100;
+  },
+  // Gerçekçi hedeften türetilen 12–18 ay hedefleri
+  get somCustomers() {
+    return this.somPeople * 0.03; // anlamlı temasın ~%3'ü müşteri/taraftar
+  },
+  get somFranchise() {
+    return this.somPeople * 0.0003; // ~%0,03 nitelikli franchise adayı
   },
 }));
 

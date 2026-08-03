@@ -427,3 +427,75 @@ export const guides: Guide[] = [
     ],
   },
 ];
+
+/* ---------- FİNANSAL PLAN (yalnızca dijital pazarlama) ---------- */
+export interface MoneyItem {
+  label: string;
+  amount: number;
+  note: string;
+}
+
+/* Yatırım Harcamaları — tek seferlik kurulum/altyapı yatırımı */
+export const yatirimItems: MoneyItem[] = [
+  { label: "Web & SEO teknik düzeltmeleri", amount: 25000, note: "robots.txt, başlık/meta açıklama, yapısal veri, sayfa hızı, tek H1 düzeni." },
+  { label: "Ölçüm & piksel kurulumu", amount: 35000, note: "GTM etiketleri, GA4 dönüşüm, Meta Pixel + sunucu ölçümü, TikTok, Yandex Metrica, ısı haritası." },
+  { label: "Şube sayfaları & yerel arama kurulumu", amount: 45000, note: "26 şube için açılış sayfası + yerel işletme yapısal verisi + İşletme Profili düzeni." },
+  { label: "Online mağaza altyapısı kurulumu", amount: 60000, note: "Mağaza, ödeme/kargo, ürün kataloğu, e-ticaret olayları, ürün besleme (feed)." },
+  { label: "Marka içerik başlangıç kiti", amount: 50000, note: "İlk profesyonel foto/video prodüksiyonu + tasarım şablon sistemi." },
+  { label: "AI araç kurulumu & otomasyon", amount: 20000, note: "İçerik/görsel üretimi, otomatik yanıt (chatbot), otomatik raporlama akışları." },
+];
+
+/* Aylık İşletme Giderleri — tekrar eden operasyon (REKLAM HARCAMASI HARİÇ) */
+export const isletmeItems: MoneyItem[] = [
+  { label: "Dijital pazarlama sorumlusu (1 kişi)", amount: 45000, note: "Çekirdek ekip: tüm kanalları yöneten tek sorumlu. Ekibin orkestra şefi." },
+  { label: "İçerik üretici / tasarımcı (yarı zamanlı)", amount: 25000, note: "Reels/TikTok kurgu ve görsel tasarım — AI araçlarıyla hızlandırılmış." },
+  { label: "Aylık video/foto prodüksiyon", amount: 15000, note: "Şube çekimleri, ürün ve kampanya içerikleri." },
+  { label: "Araç & yazılım abonelikleri (AI dahil)", amount: 8000, note: "AI içerik/tasarım, e-posta, SEO ve raporlama araçları. Metrica/Clarity ücretsiz." },
+  { label: "Influencer & işbirliği koordinasyonu", amount: 10000, note: "Barter + küçük ödemeler; indirim koduyla ölçülür." },
+  { label: "Yönetim, strateji & raporlama", amount: 12000, note: "Aylık optimizasyon, A/B test, performans raporu (danışman/ajans desteği)." },
+];
+
+/* Minimum ekip — AI olmadan vs AI ile verimlilik karşılaştırması */
+export interface EfficiencyRow {
+  task: string;
+  without: string;
+  withAI: string;
+}
+export const efficiencyRows: EfficiencyRow[] = [
+  { task: "Sosyal medya içerik metni & takvim", without: "1 tam zamanlı içerik editörü", withAI: "AI taslak + 1 kişi düzenleme (yarı süre)" },
+  { task: "Reklam görseli & varyant üretimi", without: "1 tasarımcı, günler süren revizyon", withAI: "AI ile dakikalar içinde onlarca varyant" },
+  { task: "Reklam metni & A/B varyantları", without: "Ajans copywriter", withAI: "AI üretir, sorumlu seçer/onaylar" },
+  { task: "Aylık performans raporu", without: "Yarım gün manuel derleme", withAI: "Otomatik akış + AI özet, dakikalar" },
+  { task: "Müşteri sorularına ilk yanıt", without: "Mesai içi personel", withAI: "7/24 AI chatbot, gerekince insana devir" },
+  { task: "Blog & yerel SEO içerikleri", without: "Dış kaynak yazar başı ücret", withAI: "AI taslak + editör kontrolü, düşük maliyet" },
+];
+
+/* Verimlilik özeti (kaba karşılaştırma) */
+export const teamCompare = {
+  classicPeople: 5,
+  classicCost: 240000, // AI'siz tahmini aylık ekip maliyeti (₺)
+  leanPeople: 2, // çekirdek + yarı zamanlı, AI destekli
+  leanCost: 115000, // aylık işletme gideri toplamı ile uyumlu
+};
+
+/* Pazar büyüklüğü — dijital pazarlama hunisi (kişi bazlı, Türkiye) */
+export const pazar = {
+  toplam: {
+    people: 30000000,
+    label: "Toplam Ulaşılabilir Pazar",
+    note: "Türkiye'de düzenli kahve tüketen ve sosyal medyada aktif geniş kitle. Teorik en geniş çerçeve.",
+  },
+  hedef: {
+    people: 4500000,
+    label: "Hedeflenebilir Pazar",
+    note: "Şube ağının olduğu iller (ağırlıkla İstanbul), 18–40 yaş, üçüncü dalga/premium kahveye ilgili, dijitalde erişilebilir kitle.",
+  },
+  defaultCapture: 7, // hedeflenebilir pazarın %'si — 12–18 ayda anlamlı dijital temas
+};
+
+/* Franchise mini-huni (yüksek değerli dijital hedef) */
+export const franchiseFunnel = [
+  { label: "Kafe/F&B yatırımına ilgi duyan girişimci havuzu", value: "≈ 200.000 kişi" },
+  { label: "Bütçe & bölge uygun, ulaşılabilir adaylar", value: "≈ 25.000 kişi" },
+  { label: "Yılda nitelikli franchise başvurusu (gerçekçi hedef)", value: "≈ 300–500 aday" },
+];
