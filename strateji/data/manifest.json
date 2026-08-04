@@ -92,8 +92,10 @@
       "id": "05e",
       "icon": "ph-tiktok-logo",
       "baslik": "05e · TikTok",
-      "ozet": "Genç kitle, ucuz erişim.",
-      "amac": "Genç kitle, ucuz erişim.",
+      "ozet": "Genç kitleye en ucuz erişim + viral kahve içeriği.",
+      "amac": "Kısa video ile marka bilinirliği ve genç kitlede erişimi düşük maliyetle büyütmek.",
+      "status": "CONDITIONAL_GO",
+      "kritikKPI": "CPM en düşük · erişim +%300",
       "file": "05e.json"
     },
     {
@@ -142,8 +144,10 @@
       "id": "05k",
       "icon": "ph-tag",
       "baslik": "05k · Google Tag Manager",
-      "ozet": "Etiket mimarisi.",
-      "amac": "Etiket mimarisi.",
+      "ozet": "Tüm ölçümün omurgası: pikselleri koda dokunmadan, tek panelden yönet.",
+      "amac": "Standart dataLayer + Consent Mode v2 ile tüm kanalların ölçümünü güvenle beslemek.",
+      "status": "CONDITIONAL_GO",
+      "kritikKPI": "Consent v2 + dataLayer sözleşmesi canlı",
       "file": "05k.json"
     },
     {

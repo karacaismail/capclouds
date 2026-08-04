@@ -1,28 +1,89 @@
 {
+  "__handAuthored": true,
   "id": "05k",
   "icon": "ph-tag",
   "baslik": "05k · Google Tag Manager",
-  "ozet": "Etiket mimarisi.",
-  "amac": "Etiket mimarisi.",
+  "ozet": "Tüm ölçümün omurgası: pikselleri koda dokunmadan, tek panelden yönet.",
+  "amac": "Standart dataLayer + Consent Mode v2 ile tüm kanalların ölçümünü güvenle beslemek.",
+  "status": "CONDITIONAL_GO",
+  "kritikKPI": "Consent v2 + dataLayer sözleşmesi canlı",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Etiket mimarisi.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Kurulu (GTM-KZKJWLZM). Tüm piksel/etiketler tek panelden, koda dokunmadan yönetilir."
-        },
-        {
-          "type": "list",
-          "ordered": false,
-          "items": [
-            "DataLayer standardı, olay/dönüşüm eşlemesi.",
-            "Consent Mode v2 (KVKK/Google için zorunlu)."
-          ]
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Hangi kararı üretir?", "blocks": [
+      { "type": "paragraph", "text": "GTM zaten **kurulu (GTM-KZKJWLZM)**. Bu bir avantaj: Meta/TikTok/Metrica/Clarity ve dönüşümler koda dokunmadan buradan eklenir. Eksik: standart **dataLayer sözleşmesi** ve **Consent Mode v2**. Bunlar tamamlanınca tüm kanallar güvenle ölçülür." },
+      { "type": "decision", "gate": "CONDITIONAL_GO", "rationale": "Altyapı var ama dataLayer standardı ve Consent Mode v2 olmadan ölçüm dağınık/uyumsuz olur.", "condition": "dataLayer sözleşmesi + Consent v2 canlıya alınınca GO.", "owner": "Tolga", "deadline": "G18" }
+    ]},
+    { "id": "is-gerekcesi", "title": "2 · İş Gerekçesi", "summary": "Neden GTM?", "blocks": [
+      { "type": "list", "items": ["Tek panel: geliştiriciye bağımlılık olmadan etiket yönetimi.", "Tutarlı dataLayer → tüm piksel/analitik aynı doğru veriyi alır.", "Consent Mode v2 → KVKK/Google uyumu + ölçüm kaybını azaltma."] }
+    ]},
+    { "id": "mevcut-durum", "title": "3 · Mevcut Durum ve Eksikler", "summary": "Bugün ne var?", "blocks": [
+      { "type": "evidence", "items": [ { "claim": "GTM-KZKJWLZM kurulu", "confidence": "fact", "sourceId": "S1" }, { "claim": "GA4 (G-KRHM7XRYPF) GTM üzerinden yükleniyor", "confidence": "fact", "sourceId": "S1" }, { "claim": "Standart dataLayer sözleşmesi ve Consent Mode v2 net değil", "confidence": "estimate", "sourceId": "S1" } ] }
+    ]},
+    { "id": "hedef-kitle", "title": "4 · Kimler Kullanır (İç)", "summary": "Kullanım senaryosu.", "blocks": [
+      { "type": "paragraph", "text": "GTM iç bir araçtır: Tolga (yönetici), Uzman (etiket talebi/test). Çıktısı tüm dış kanalları besler." }
+    ]},
+    { "id": "funnel-gorevi", "title": "5 · Funnel İçindeki Görevi", "summary": "Ölçüm altyapısı.", "blocks": [
+      { "type": "paragraph", "text": "GTM funnel'ın kendisi değil; **tüm funnel'ın ölçüm sinir sistemidir.** Her aşamadaki olayı doğru araca iletir." }
+    ]},
+    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne gerekli?", "blocks": [
+      { "type": "list", "items": ["GTM + GA4 erişimi (var)", "Sitede dataLayer'ı basacak tema/eklenti kancaları", "KVKK aydınlatma + CMP (consent banner)"] }
+    ]},
+    { "id": "hesap-yetki", "title": "7 · Hesap ve Yetki", "summary": "Kim neye erişir?", "blocks": [
+      { "type": "table", "headers": ["Rol", "GTM erişimi"], "rows": [ ["Tolga", "Yayınlama (publish)"], ["Uzman", "Düzenleme (workspace)"], ["Grafiker/Operasyon", "Yok"] ] }
+    ]},
+    { "id": "kurulum", "title": "8 · Kurulum / Düzeltme Adımları", "summary": "Sıra.", "blocks": [
+      { "type": "list", "ordered": true, "items": ["dataLayer sözleşmesini tanımla (aşağıdaki alt bölüm).", "Tıklama tetikleyicileri: form, tel:, wa.me, yol tarifi.", "GA4 event etiketleri + Meta/TikTok/Metrica/Clarity etiketleri.", "Consent Mode v2 kur (izin→etiket davranışı).", "GTM Önizleme + DebugView ile uçtan uca test, sonra yayınla."] }
+    ]},
+    { "id": "kampanya-mimarisi", "title": "9 · Etiket & Tetikleyici Mimarisi", "summary": "Standart nasıl?", "blocks": [
+      { "type": "paragraph", "text": "GTM'in omurgası: tutarlı dataLayer + net etiket/tetikleyici + consent." }
+    ], "sections": [
+      { "id": "datalayer-sozlesme", "title": "DataLayer Sözleşmesi", "summary": "Tek doğru veri kaynağı.", "blocks": [
+        { "type": "table", "headers": ["Event (dataLayer)", "Ne zaman", "Parametre"], "rows": [ ["generate_lead", "Franchise formu gönderimi", "form_id"], ["contact", "tel/wa/iletişim", "method"], ["yol_tarifi", "Yol tarifi tıklaması", "sube"], ["view_item / purchase", "E-ticaret (Faz 4)", "value, currency"] ] }
+      ]},
+      { "id": "etiketler", "title": "Etiketler", "summary": "Hangi araçlar buradan yüklenir.", "blocks": [
+        { "type": "list", "items": ["GA4 config + event", "Meta Pixel + CAPI köprüsü", "TikTok Pixel", "Yandex Metrica (Özel HTML)", "Microsoft Clarity", "Google Ads dönüşüm/remarketing"] }
+      ]},
+      { "id": "tetikleyiciler", "title": "Tetikleyiciler", "summary": "Ne olayında ateşlenir.", "blocks": [
+        { "type": "list", "items": ["All Pages (config)", "Özel dataLayer event'leri (generate_lead vb.)", "Link click (tel/wa/yol tarifi)", "Form submit"] }
+      ]},
+      { "id": "consent", "title": "Consent Mode v2", "summary": "İzin → etiket davranışı.", "blocks": [
+        { "type": "list", "items": ["ad_storage / analytics_storage / ad_user_data / ad_personalization sinyalleri", "CMP (banner) izinleri GTM'e bağlanır", "İzin yoksa modellenmiş/anonim ölçüm", "**KVKK zorunlu**"] }
+      ]}
+    ]},
+    { "id": "tracking", "title": "10 · Ölçüm Doğrulama", "summary": "Doğru mu ölçüyoruz?", "blocks": [
+      { "type": "list", "items": ["GTM Preview + GA4 DebugView", "Meta Pixel Helper / Test Events", "Consent senaryoları (izinli/izinsiz) testi"] }
+    ]},
+    { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler.", "blocks": [
+      { "type": "table", "headers": ["Terim", "Anlam"], "rows": [ ["dataLayer", "Sayfa→GTM veri kanalı"], ["Tag", "Etiket (araç kodu)"], ["Trigger", "Tetikleyici (koşul)"], ["Consent Mode", "İzin sinyali sistemi"] ] }
+    ]},
+    { "id": "butce", "title": "12 · Bütçe ve Kaynak", "summary": "Maliyet.", "blocks": [
+      { "type": "callout", "variant": "ok", "text": "GTM ücretsiz. Maliyet = kurulum işçiliği + (opsiyonel) CMP/CAPI gateway aboneliği. Yatırım kaleminde 'Ölçüm & piksel kurulumu'." }
+    ]},
+    { "id": "kpi", "title": "13 · KPI ve Hedefler", "summary": "Başarı.", "blocks": [
+      { "type": "kpi", "rows": [ { "metric": "Standart dataLayer canlı", "baseline": "yok", "target": "G18", "frequency": "Tek sefer", "owner": "Tolga" }, { "metric": "Consent Mode v2", "baseline": "kısmi", "target": "tam uyum", "frequency": "Tek sefer", "owner": "Tolga" }, { "metric": "Etiket doğruluk (test geçen)", "baseline": "—", "target": "%100", "frequency": "Sürüm başına", "owner": "Uzman" } ] }
+    ]},
+    { "id": "test-backlog", "title": "14 · Test Backlog'u", "summary": "Neyi test?", "blocks": [
+      { "type": "list", "items": ["Her yeni etiket → Preview/DebugView", "Consent izinli/izinsiz davranış", "Çift ateşleme (duplicate) kontrolü", "Cross-domain (varsa) ölçüm"] }
+    ]},
+    { "id": "scale-pause-kill", "title": "15 · Sürüm / Geri Alma (ECA)", "summary": "Hata olursa?", "blocks": [
+      { "type": "eca", "id": "ECA-GTM", "event": "Yeni sürüm sonrası dönüşüm ölçümü bozuldu", "condition": "Regresyon doğrulandı", "action": "Önceki sürüme geri al (version rollback), düzelt, tekrar test" }
+    ]},
+    { "id": "kvkk-risk", "title": "16 · KVKK, Güvenlik ve Risk", "summary": "Uyum.", "blocks": [
+      { "type": "list", "items": ["Consent Mode v2 + CMP zorunlu; izinsiz kişisel veri gönderimi yok.", "Özel HTML etiketlerinde güvenlik (yalnız güvenilir kod).", "Yayınlama yetkisi sınırlı (Tolga)."] }
+    ]},
+    { "id": "plan-30-60-90", "title": "17 · 30/60/90 Günlük Plan", "summary": "Takvim.", "blocks": [
+      { "type": "timeline", "items": [ { "when": "0-30", "what": "dataLayer sözleşmesi + tetikleyiciler + Consent v2 + GA4 event", "owner": "Tolga" }, { "when": "30-60", "what": "Meta/TikTok/Metrica/Clarity/Ads etiketleri", "owner": "Tolga+Uzman" }, { "when": "60-90", "what": "E-ticaret dataLayer (view_item/purchase) hazırlığı", "owner": "Tolga" } ] }
+    ]},
+    { "id": "raci", "title": "18 · RACI", "summary": "Rol.", "blocks": [
+      { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [ ["Etiket/tetikleyici", "Tolga", "Tolga", "Uzman", "GM"], ["Consent/KVKK", "Tolga", "GM", "Hukuk", "—"], ["Yayınlama", "Tolga", "Tolga", "—", "Uzman"] ] }
+    ]},
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [
+      { "type": "list", "items": ["Tüm kanallar (05c/05d/05e/05f/05g) GTM'e bağlı", "CMP/consent banner", "Site tema dataLayer kancaları"] }
+    ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds GTM konteyner analizi (GTM-KZKJWLZM, GA4)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" }, { "id": "S2", "title": "Google Tag Manager + Consent Mode v2 dokümantasyonu", "url": "https://support.google.com/tagmanager", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }

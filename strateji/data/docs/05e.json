@@ -1,28 +1,88 @@
 {
+  "__handAuthored": true,
   "id": "05e",
   "icon": "ph-tiktok-logo",
   "baslik": "05e · TikTok",
-  "ozet": "Genç kitle, ucuz erişim.",
-  "amac": "Genç kitle, ucuz erişim.",
+  "ozet": "Genç kitleye en ucuz erişim + viral kahve içeriği.",
+  "amac": "Kısa video ile marka bilinirliği ve genç kitlede erişimi düşük maliyetle büyütmek.",
+  "status": "CONDITIONAL_GO",
+  "kritikKPI": "CPM en düşük · erişim +%300",
+  "owner": "Grafiker + Uzman",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Genç kitle, ucuz erişim.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "TikTok Business + **Pixel** + Reels/short video stratejisi."
-        },
-        {
-          "type": "list",
-          "ordered": false,
-          "items": [
-            "Genç kitleye en ucuz erişim, viral potansiyel.",
-            "Piksel şimdiden kurulmalı ki reklam başlayınca veri hazır olsun."
-          ]
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Hangi kararı üretir?", "blocks": [
+      { "type": "paragraph", "text": "TikTok, genç kitleye en ucuz erişim ve viral potansiyeldir. Kahve/kafe içeriği burada güçlüdür. **Pixel şimdiden kurulmalı** ki reklam başlayınca veri hazır olsun. İçerik motoru kurulunca reklam GO." },
+      { "type": "decision", "gate": "CONDITIONAL_GO", "rationale": "Organik içerik motoru kurulmadan reklam kâr etmez; önce içerik ritmi + pixel.", "condition": "Haftalık içerik ritmi + Pixel kurulunca reklam GO.", "owner": "Grafiker", "deadline": "G28" }
+    ]},
+    { "id": "is-gerekcesi", "title": "2 · İş Gerekçesi", "summary": "Neden TikTok?", "blocks": [
+      { "type": "list", "items": ["En ucuz erişim (düşük CPM) + viral kaldıraç.", "18-30 yaş kahve kitlesinin merkezi.", "Barista/mekân/ürün içeriği doğal olarak video-dostu."] }
+    ]},
+    { "id": "mevcut-durum", "title": "3 · Mevcut Durum ve Eksikler", "summary": "Bugün ne var?", "blocks": [
+      { "type": "evidence", "items": [ { "claim": "Sitede TikTok Pixel yok", "confidence": "fact", "sourceId": "S1" }, { "claim": "Düzenli kısa-video içerik sistemi yok", "confidence": "estimate" } ] }
+    ]},
+    { "id": "hedef-kitle", "title": "4 · Hedef Kitle ve Kullanım Senaryosu", "summary": "Kimi hedefliyoruz?", "blocks": [
+      { "type": "list", "items": ["18-30 yaş, şehirli, kahve/kafe kültürüne meraklı.", "Trend/ses/challenge takipçileri.", "Yerel keşif yapan (semt kafe arayan) genç."] }
+    ]},
+    { "id": "funnel-gorevi", "title": "5 · Funnel İçindeki Görevi", "summary": "Hangi aşama?", "blocks": [
+      { "type": "paragraph", "text": "TikTok ağırlıkla **Farkındalık** kurar; güçlü içerik İlgi'yi ve mekân ziyaretini tetikler. Dönüşüm ölçümü için Pixel + link-in-bio." }
+    ]},
+    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne gerekli?", "blocks": [
+      { "type": "list", "items": ["TikTok Business hesabı + Pixel (GTM ile)", "İçerik üretim kapasitesi (çekim/kurgu)", "Consent/KVKK"] }
+    ]},
+    { "id": "hesap-yetki", "title": "7 · Hesap ve Yetki", "summary": "Kim neye erişir?", "blocks": [
+      { "type": "table", "headers": ["Rol", "Erişim"], "rows": [ ["Grafiker", "İçerik + yayın"], ["Uzman", "Reklam ops + pixel"], ["Tolga", "Yönetici"], ["Ödeme", "GM"] ] }
+    ]},
+    { "id": "kurulum", "title": "8 · Kurulum Adımları", "summary": "Sıra.", "blocks": [
+      { "type": "list", "ordered": true, "items": ["TikTok Business + hesap doğrulama.", "TikTok Pixel oluştur, GTM ile ekle.", "Olaylar: ViewContent, Contact, Lead.", "İçerik takvimi + ilk 3 video (bkz. içerik mimarisi).", "Küçük bütçeyle Spark Ads testi (organik güçlü içeriği yükselt)."] }
+    ]},
+    { "id": "kampanya-mimarisi", "title": "9 · İçerik & Kampanya Mimarisi", "summary": "Ne üretiyoruz, ne yükseltiyoruz?", "blocks": [
+      { "type": "paragraph", "text": "Önce organik içerik motoru, sonra kazananları reklama dönüştür." }
+    ], "sections": [
+      { "id": "organik-reels", "title": "Organik Kısa Video", "summary": "İçerik motoru.", "blocks": [
+        { "type": "list", "items": ["**Temalar:** barista sırları, mekân, yeni ürün, kullanıcı içeriği, Coffee Ride.", "**Ritim:** haftada 4-5 video.", "**Ölçüm:** erişim, izlenme süresi, kaydetme/paylaşma.", "**Kill/scale:** tutan temayı çoğalt, tutmayanı bırak."] }
+      ]},
+      { "id": "spark-ads", "title": "Spark Ads (Organik Yükseltme)", "summary": "Kazananı ölçekle.", "blocks": [
+        { "type": "list", "items": ["**Nedir:** iyi performanslı organik videoyu reklamla yükseltmek.", "**Neden:** en verimli TikTok reklam formatı.", "**Ölçüm:** CPM, erişim, tıklama.", "**Durdur:** CPM yüksek + etkileşim düşükse başka içeriğe geç."] }
+      ]},
+      { "id": "retargeting-tt", "title": "Retargeting", "summary": "Etkileşeni geri çağır.", "blocks": [
+        { "type": "list", "items": ["**Kitle:** video etkileşimi, profil ziyareti, site ziyareti (pixel).", "**Ölçüm:** geri dönüş.", "**Not:** kitle küçükse beklet."] }
+      ]}
+    ]},
+    { "id": "tracking", "title": "10 · Tracking, Events ve Conversions", "summary": "Neyi ölçüyoruz?", "blocks": [
+      { "type": "table", "headers": ["Event", "Tür", "Kaynak"], "rows": [ ["ViewContent (menü)", "Mikro", "TikTok Pixel"], ["Contact/Lead", "Dönüşüm", "TikTok Pixel"], ["Video etkileşim", "Farkındalık", "TikTok analytics"] ] }
+    ]},
+    { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler.", "blocks": [
+      { "type": "table", "headers": ["Terim", "Anlam"], "rows": [ ["Spark Ads", "Organik videoyu reklamla yükseltme"], ["CPM", "Bin gösterim maliyeti"], ["Watch time", "İzlenme süresi"], ["Hook", "İlk 3 sn dikkat kancası"] ] }
+    ]},
+    { "id": "butce", "title": "12 · Bütçe (düşük/baz/yüksek)", "summary": "Ne kadar?", "blocks": [
+      { "type": "table", "headers": ["Senaryo", "Aylık TikTok", "Odak"], "rows": [ ["Düşük", "₺5.000", "Organik + Spark test"], ["Baz", "₺8.000", "Spark + retargeting"], ["Yüksek", "₺14.000", "Ölçekleme + kampanya"] ] },
+      { "type": "callout", "variant": "warn", "text": "İçerik prodüksiyon maliyeti ayrı (işletme gideri). Rakamlar **planlama varsayımıdır**." }
+    ]},
+    { "id": "kpi", "title": "13 · KPI ve Hedefler", "summary": "Başarı.", "blocks": [
+      { "type": "kpi", "rows": [ { "metric": "Erişim/ay", "baseline": "baz", "target": "+%300", "frequency": "Haftalık", "owner": "Grafiker" }, { "metric": "CPM", "baseline": "—", "target": "kanallar içinde en düşük", "frequency": "Haftalık", "owner": "Uzman" }, { "metric": "Kaydetme/paylaşma", "baseline": "0", "target": "artan", "frequency": "Haftalık", "owner": "Grafiker" } ] }
+    ]},
+    { "id": "test-backlog", "title": "14 · Test Backlog'u", "summary": "Neyi test?", "blocks": [
+      { "type": "list", "items": ["Hook (ilk 3 sn) varyasyonu", "Tema: barista vs mekân vs ürün", "Ses/trend kullanımı", "Spark vs standart reklam"] }
+    ]},
+    { "id": "scale-pause-kill", "title": "15 · Scale / Pause / Kill (ECA)", "summary": "Ne büyüt/durdur?", "blocks": [
+      { "type": "eca", "id": "ECA-TT-Scale", "event": "Bir video organik olarak patladı (yüksek erişim)", "condition": "Marka güvenli + tutarlı", "action": "Spark Ads ile yükselt, benzer içerik üret" },
+      { "type": "eca", "id": "ECA-TT-Kill", "event": "İçerik teması 3 hafta erişim üretmedi", "condition": "Format sorunu doğrulandı", "action": "Temayı bırak, yeni format dene" }
+    ]},
+    { "id": "kvkk-risk", "title": "16 · KVKK, Güvenlik ve Marka Riski", "summary": "Uyum.", "blocks": [
+      { "type": "list", "items": ["Consent/pixel izni.", "Trend/challenge marka güvenliği (uygunsuz içerikten kaçın).", "Çalışan/müşteri görüntüsünde rıza."] }
+    ]},
+    { "id": "plan-30-60-90", "title": "17 · 30/60/90 Günlük Plan", "summary": "Takvim.", "blocks": [
+      { "type": "timeline", "items": [ { "when": "0-30", "what": "Pixel + içerik takvimi + ilk 8-10 video", "owner": "Grafiker" }, { "when": "30-60", "what": "Spark Ads testi + kazanan temaları çoğalt", "owner": "Grafiker+Uzman" }, { "when": "60-90", "what": "Retargeting + ölçekleme", "owner": "Uzman" } ] }
+    ]},
+    { "id": "raci", "title": "18 · RACI", "summary": "Rol.", "blocks": [
+      { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [ ["İçerik üretimi", "Grafiker", "Tolga", "—", "—"], ["Reklam ops", "Uzman", "Tolga", "Grafiker", "GM"], ["Pixel", "Tolga", "Tolga", "Uzman", "—"] ] }
+    ]},
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [
+      { "type": "list", "items": ["İçerik üretim sistemi (kapasite)", "05k GTM/Pixel", "05m marka kimliği (görsel dil)", "06 bütçe"] }
+    ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds site denetimi (TikTok Pixel yok)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" }, { "id": "S2", "title": "TikTok for Business — Pixel & Spark Ads", "url": "https://ads.tiktok.com/help", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }
