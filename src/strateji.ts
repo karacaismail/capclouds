@@ -5,6 +5,7 @@ import { BarChart, PieChart, FunnelChart } from "echarts/charts";
 import { GridComponent, TooltipComponent, LegendComponent } from "echarts/components";
 import { CanvasRenderer } from "echarts/renderers";
 import * as S from "./strateji-data";
+import dokumanlar from "../strateji/data/dokumanlar.json";
 
 echarts.use([BarChart, PieChart, FunnelChart, GridComponent, TooltipComponent, LegendComponent, CanvasRenderer]);
 
@@ -16,37 +17,44 @@ const PALETTE = ["#6f4e37", "#8c6440", "#5ba6cb", "#d9902a", "#2e9e6b", "#2f6e97
 const GANTT_RENK = ["#d1523f", "#d9902a", "#5ba6cb", "#2e9e6b", "#6f4e37", "#241a13", "#8c6440"];
 const { TRY, NUM } = S;
 
-/* ---------- DOKÜMAN LİSTESİ ---------- */
-const docs = [
-  ["ph-list-checks", "00 · Yönetici Özeti", "00-yonetici-ozeti.md"],
-  ["ph-compass", "01 · Vizyon · Misyon · Değerler", "01-vizyon-misyon-degerler.md"],
-  ["ph-tree-structure", "02 · Organizasyon · İK · İş Akışları", "02-organizasyon-ik-is-akislari.md"],
-  ["ph-chart-pie-slice", "03 · Pazar Analizi", "03-pazar-analizi.md"],
-  ["ph-users-three", "04 · Rakip & Rekabet Analizi", "04-rakip-analizi.md"],
-  ["ph-megaphone", "05 · Dijital Pazarlama Stratejisi", "05-dijital-pazarlama-stratejisi.md"],
-  ["ph-magnifying-glass", "05a · SEO", "kanallar/seo.md"],
-  ["ph-stack", "05b · Programatik SEO", "kanallar/programatik-seo.md"],
-  ["ph-google-logo", "05c · Google Ads", "kanallar/google-ads.md"],
-  ["ph-meta-logo", "05d · Meta Business + Pixel", "kanallar/meta-business-pixel.md"],
-  ["ph-tiktok-logo", "05e · TikTok", "kanallar/tiktok.md"],
-  ["ph-chart-line", "05f · Yandex Metrica", "kanallar/yandex-metrica.md"],
-  ["ph-fire", "05g · Hotjar / Clarity", "kanallar/hotjar.md"],
-  ["ph-arrows-clockwise", "05h · Criteo", "kanallar/criteo.md"],
-  ["ph-broadcast", "05i · AdRoll", "kanallar/adroll.md"],
-  ["ph-target", "05j · Remarketing", "kanallar/remarketing.md"],
-  ["ph-tag", "05k · Google Tag Manager", "kanallar/google-tag-manager.md"],
-  ["ph-shopping-cart", "05l · WooCommerce & Web UI", "kanallar/woocommerce-web-ui.md"],
-  ["ph-palette", "05m · Marka Kimliği (sıfırdan)", "kanallar/marka-kimligi.md"],
-  ["ph-coins", "06 · Finansal Plan", "06-finansal-plan.md"],
-  ["ph-warning-diamond", "07 · Gap & Bilinmeyen-Bilinmeyenler", "07-gap-analizi-unknown-unknowns.md"],
-  ["ph-calendar-check", "08 · Zaman Planı & Gantt", "08-zaman-plani-gantt.md"],
-  ["ph-shield-check", "09 · Durum Tespiti (Due Diligence)", "09-durum-tespiti-due-diligence.md"],
-];
+/* ---------- DOKÜMAN LİSTESİ (JSON tabanlı, accordion) ---------- */
+interface Dok { id: string; icon: string; baslik: string; ozet: string; detay: string; }
 const dl = document.getElementById("doclist");
-if (dl) dl.innerHTML = docs.map(([i, t, f]) =>
-  `<a class="card !p-4 flex items-center gap-3 hover:border-espresso-400 transition-colors" href="${REPO}${f}" target="_blank" rel="noopener">
-    <span class="grid place-items-center w-10 h-10 shrink-0 rounded-xl2 bg-espresso-50 text-espresso-700 text-[1.3rem]"><i class="ph ${i}"></i></span>
-    <span class="font-bold text-[1.05rem] min-w-0 flex-1">${t}</span><i class="ph ph-arrow-right text-espresso-400"></i></a>`).join("");
+if (dl) {
+  dl.innerHTML = (dokumanlar as Dok[]).map((d, idx) => `
+    <div class="acc-item card !p-0 overflow-hidden" data-idx="${idx}">
+      <button type="button" class="acc-head w-full flex items-center gap-3 p-4 text-left" aria-expanded="false">
+        <span class="grid place-items-center w-10 h-10 shrink-0 rounded-xl2 bg-espresso-50 text-espresso-700 text-[1.3rem]"><i class="ph ${d.icon}"></i></span>
+        <span class="min-w-0 flex-1">
+          <span class="block font-bold text-[1.05rem]">${d.baslik}</span>
+          <span class="block text-espresso-400 text-[0.95rem]">${d.ozet}</span>
+        </span>
+        <i class="ph ph-caret-down acc-caret text-espresso-400 text-[1.25rem] shrink-0"></i>
+      </button>
+      <div class="acc-panel px-4 pb-4" hidden>
+        <div class="acc-detay pt-3 border-t border-espresso-100 text-espresso-700">${d.detay}</div>
+      </div>
+    </div>`).join("");
+
+  const items = Array.from(dl.querySelectorAll<HTMLElement>(".acc-item"));
+  const closeAll = () => items.forEach((it) => {
+    it.querySelector(".acc-panel")!.setAttribute("hidden", "");
+    it.querySelector(".acc-head")!.setAttribute("aria-expanded", "false");
+    it.classList.remove("acc-open");
+  });
+  items.forEach((it) => {
+    it.querySelector(".acc-head")!.addEventListener("click", () => {
+      const panel = it.querySelector(".acc-panel")!;
+      const isOpen = !panel.hasAttribute("hidden");
+      closeAll();
+      if (!isOpen) {
+        panel.removeAttribute("hidden");
+        it.querySelector(".acc-head")!.setAttribute("aria-expanded", "true");
+        it.classList.add("acc-open");
+      }
+    });
+  });
+}
 
 /* ---------- VERİ MODELİ ---------- */
 interface Row { label: string; amount: number; note?: string }

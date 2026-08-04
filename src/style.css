@@ -208,4 +208,16 @@
   .resp-table td[data-label] > * { text-align: right; }
 }
 
+/* ---- Accordion (strateji dokümanları) ---- */
+.acc-head { cursor: pointer; }
+.acc-head:hover { background: #faf7f2; }
+.acc-caret { transition: transform 0.2s ease; }
+.acc-open .acc-caret { transform: rotate(180deg); }
+.acc-open { border-color: #c2a07d; }
+.acc-detay p { margin: 0 0 0.6rem; }
+.acc-detay ul { list-style: disc; padding-left: 1.25rem; margin: 0.4rem 0 0.6rem; }
+.acc-detay li { margin-bottom: 0.3rem; }
+.acc-detay b { color: #241a13; }
+.acc-detay > :last-child { margin-bottom: 0; }
+
 [x-cloak] { display: none !important; }

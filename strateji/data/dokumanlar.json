@@ -1,0 +1,163 @@
+[
+  {
+    "id": "00",
+    "icon": "ph-list-checks",
+    "baslik": "00 · Yönetici Özeti",
+    "ozet": "Tek sayfada 12 aylık strateji.",
+    "detay": "<p><b>Durum:</b> Cups & Clouds sahada güçlü (26+ şube, güçlü konseptler) ama dijitalde görünmez: SEO ~42/100, ölçüm yarım, online mağaza yok.</p><p><b>Hedef sırası:</b> Ölç → piksel → reklam → yerel SEO → e-ticaret → marka & topluluk.</p><ul><li><b>İlk hamle:</b> Ay 1 ölçüm altyapısı + hızlı SEO düzeltmeleri (bedava kazanç).</li><li><b>Kuzey Yıldızı:</b> yerel arama payı, tekrar ziyaret, franchise nitelikli aday.</li><li><b>1. yıl bütçesi (reklam hariç):</b> ~₺2,56 milyon (yatırım + işletme + diğer).</li></ul>"
+  },
+  {
+    "id": "01",
+    "icon": "ph-compass",
+    "baslik": "01 · Vizyon · Misyon · Değerler",
+    "ozet": "Neden varız, nasıl hareket ederiz?",
+    "detay": "<p><b>Vizyon (10 yıl):</b> Türkiye'nin, büyük zincirin gücünü yerel bir kahvecinin sıcaklığıyla birleştiren en sevilen butik kahve topluluğu olmak; her şubede o semtin buluşma noktası hâline gelmek.</p><p><b>Misyon:</b> Erişilebilir fiyatla butik kalitede kahve/fırın deneyimini; sıcak, yerel, topluluk odaklı mekânlarda sunmak; bunu ölçülebilir dijital altyapıyla büyütmek.</p><p><b>Değerler:</b></p><ul><li>Yerel Sıcaklık · Kanıtla Yönet · Şeffaflık</li><li>Topluluk &gt; Tek Seferlik Satış · Kalite Tavizsiz · Küçük ama Hızlı</li></ul><p><b>Kırmızı çizgiler:</b> kalite/gıda güvenliği tavizi yok, franchise'ta kanıtsız getiri vaadi yok, KVKK ihlali yok, sahte yorum/bot yok.</p>"
+  },
+  {
+    "id": "02",
+    "icon": "ph-tree-structure",
+    "baslik": "02 · Organizasyon · İK · İş Akışları",
+    "ozet": "Kim, neyi, hangi süreçle yapar?",
+    "detay": "<p><b>Org şema:</b> Genel Müdür › <b>Tolga Akşen (Dijital Pazarlama Lideri)</b> › (Uzman adayı + Grafiker). Operasyon/Şube GM'ye bağlı; Tolga'ya içerik akışı sağlar.</p><p><b>İK (ilk 3 ay):</b> Ay 1 Tolga başlar + uzman adayı ilanı; Ay 2 uzman işe alım + eğitim, grafiker ilanı; Ay 3 grafiker marka kimliği uygulamasına başlar, ekip tam operasyonel.</p><p><b>İş akışları:</b> haftalık içerik üretimi · reklam kampanyası (test-önce) · franchise adayı (lead) hunisi. RACI ve tek Karar Günlüğü ile.</p>"
+  },
+  {
+    "id": "03",
+    "icon": "ph-chart-pie-slice",
+    "baslik": "03 · Pazar Analizi",
+    "ozet": "Pazar ne kadar büyük, kimi hedefleriz?",
+    "detay": "<p>Pazar büyüklüğü <b>üç katmanda</b> (jargon terimleri kullanılmadan) raporlanır:</p><ul><li><b>Toplam Ulaşılabilir Pazar:</b> ≈ 30.000.000 kişi (TR'de düzenli kahve tüketen + dijitalde aktif).</li><li><b>Hedeflenebilir Pazar:</b> ≈ 4.500.000 kişi (şube illeri, 18–40, premium/üçüncü dalga ilgili).</li><li><b>Gerçekçi Hedef Pazar (12–18 ay):</b> ≈ 315.000 kişi (anlamlı dijital temas).</li></ul><p>Ayrıca talep gerçekliği, segment kartları ve kanal erişim gerçekliği. Sayılar canlı grafikte de yer alır.</p>"
+  },
+  {
+    "id": "04",
+    "icon": "ph-users-three",
+    "baslik": "04 · Rakip & Rekabet Analizi",
+    "ozet": "Kimlerle, nasıl yarışırız?",
+    "detay": "<p><b>Pazar:</b> ~4.813 zincir şube, Avrupa'nın en kalabalık 4. pazarı; katmanlaşıyor. Dört grup: ulusal liderler (Starbucks, Kahve Dünyası, Espressolab), değer+teknoloji (Coffy, Nevada, Arabica), butik (Kronotrop, Petra, Walter's), bölgesel meydan okuyanlar (Cups & Clouds).</p><p><b>En yakın dijital tehdit:</b> Coffy (fiyat bandımıza yakın + en güçlü yerli dijital).</p><p><b>Savunulabilir boşluk:</b> \"butik his + erişilebilir fiyat + güçlü yerel topluluk + dijital verimlilik\". Rakiplerin hiçbiri bu dördünü aynı anda tutamıyor.</p><p>İkinci cephe: franchise yatırımcısı için şeffaf getiri anlatısı.</p>"
+  },
+  {
+    "id": "05",
+    "icon": "ph-megaphone",
+    "baslik": "05 · Dijital Pazarlama Stratejisi (Genel)",
+    "ozet": "Genel dijitalleşme stratejisi.",
+    "detay": "<p>Her kanalın ayrı stratejisi vardır; toplamı <b>genel dijitalleşme ve dijital dünyayı güçlendirme stratejisidir.</b></p><p><b>Huni:</b> Farkındalık (TikTok/Meta organik+reklam) → İlgi (SEO/içerik) → Değerlendirme (yerel SEO/retargeting) → Aksiyon (şube ziyareti/franchise/online satış) → Sadakat (topluluk/CRM).</p><p>Alt kanallar aşağıdaki 05a–05m maddelerinde tek tek açılır.</p>"
+  },
+  {
+    "id": "05a",
+    "icon": "ph-magnifying-glass",
+    "baslik": "05a · SEO",
+    "ozet": "Organik görünürlük.",
+    "detay": "<p><b>Kapsam:</b> teknik SEO (robots/title/meta/tek H1/hız), on-page, içerik, yerel SEO ve link.</p><ul><li>Acil: robots.txt'in /en/ ve /ar/ engelini kaldır; sitemap'i robots'a bağla.</li><li>Başlık + meta açıklamaları anahtar kelimeyle yeniden yaz.</li><li>Aylık içerik takvimi + hedef anahtar kelimeler.</li></ul><p>Hedef: SEO puanı 42 → 60 → 70 → 80.</p>"
+  },
+  {
+    "id": "05b",
+    "icon": "ph-stack",
+    "baslik": "05b · Programatik SEO",
+    "ozet": "Ölçekli şube/semt sayfaları.",
+    "detay": "<p>Şablon + veri ile <b>her şube/semt için ölçekli sayfa üretimi</b> (ör. \"Ortaköy kahve\", \"Çekmeköy kafe\").</p><ul><li>LocalBusiness/Cafe yapısal verisi (schema).</li><li>Tutarlı iç linkleme ve semt bazlı içerik blokları.</li><li>26 şube = 26+ yüksek niyetli yerel sayfa.</li></ul>"
+  },
+  {
+    "id": "05c",
+    "icon": "ph-google-logo",
+    "baslik": "05c · Google Ads (AdWords)",
+    "ozet": "Arama + Performance Max.",
+    "detay": "<p><b>Arama:</b> marka + jenerik (\"yakınımda kahve\") + \"kahve franchise\" niyetli aramalar. <b>PMax:</b> geniş erişim + dönüşüm.</p><ul><li>Ön koşul: dönüşüm izleme (GA4 + Ads etiketi) kurulu olmalı.</li><li>Bütçe/teklif: küçük başla, A/B test, kazananı ölçekle.</li></ul>"
+  },
+  {
+    "id": "05d",
+    "icon": "ph-meta-logo",
+    "baslik": "05d · Meta Business + Pixel",
+    "ozet": "Instagram/Facebook reklam & ölçüm.",
+    "detay": "<p>Business Manager + <b>Pixel + Conversions API</b> (iOS kaybını azaltır) + katalog.</p><ul><li>Hedef kitleler: yerel erişim, ilgi alanı, benzer kitle, retargeting.</li><li>Kafe markası için 1 numaralı kanal; piksel olmadan optimize edilemez.</li></ul>"
+  },
+  {
+    "id": "05e",
+    "icon": "ph-tiktok-logo",
+    "baslik": "05e · TikTok",
+    "ozet": "Genç kitle, ucuz erişim.",
+    "detay": "<p>TikTok Business + <b>Pixel</b> + Reels/short video stratejisi.</p><ul><li>Genç kitleye en ucuz erişim, viral potansiyel.</li><li>Piksel şimdiden kurulmalı ki reklam başlayınca veri hazır olsun.</li></ul>"
+  },
+  {
+    "id": "05f",
+    "icon": "ph-chart-line",
+    "baslik": "05f · Yandex Metrica",
+    "ozet": "TR analitik + Webvisor.",
+    "detay": "<p>Ücretsiz TR analitik; <b>Webvisor (oturum kaydı)</b>, ısı haritası ve form analizi verir.</p><ul><li>GTM ile \"Özel HTML\" olarak kurulur; Webvisor/ısı haritası açılır.</li><li>KVKK çerez metnine eklenir.</li></ul>"
+  },
+  {
+    "id": "05g",
+    "icon": "ph-fire",
+    "baslik": "05g · Hotjar / Clarity",
+    "ozet": "Isı haritası & oturum kaydı.",
+    "detay": "<p>Isı haritası + oturum kaydı + funnel/form analizi ile <b>UX iyileştirme döngüsü</b>.</p><p>Microsoft Clarity ücretsizdir; GTM galerisinden hızlı kurulur. Ziyaretçinin nerede takılıp çıktığını gösterir.</p>"
+  },
+  {
+    "id": "05h",
+    "icon": "ph-arrows-clockwise",
+    "baslik": "05h · Criteo",
+    "ozet": "Dinamik retargeting.",
+    "detay": "<p>Dinamik yeniden pazarlama; <b>e-ticaret/katalog ön koşuludur.</b></p><ul><li>Online satış açılana kadar beklemeli (2. faz).</li><li>ROAS odaklı; \"baktığın ürünü\" gösteren format.</li></ul>"
+  },
+  {
+    "id": "05i",
+    "icon": "ph-broadcast",
+    "baslik": "05i · AdRoll",
+    "ozet": "Çapraz platform retargeting.",
+    "detay": "<p>Çapraz platform retargeting; katalog gerektirir.</p><p>TR'de Meta + Google retargeting çoğu ihtiyacı karşılar; AdRoll <b>opsiyonel/ileri faz</b> olarak işaretlidir.</p>"
+  },
+  {
+    "id": "05j",
+    "icon": "ph-target",
+    "baslik": "05j · Remarketing Stratejisi",
+    "ozet": "Geri kazanım hunisi.",
+    "detay": "<p>Segment bazlı geri kazanım: site ziyaretçisi, sepeti terk eden, franchise formunu yarıda bırakan.</p><ul><li>Frekans/kapak (frequency cap) ile bıkkınlık önlenir.</li><li>Meta + Google retargeting ile düşük maliyetli geri dönüş.</li></ul>"
+  },
+  {
+    "id": "05k",
+    "icon": "ph-tag",
+    "baslik": "05k · Google Tag Manager",
+    "ozet": "Etiket mimarisi.",
+    "detay": "<p>Kurulu (GTM-KZKJWLZM). Tüm piksel/etiketler tek panelden, koda dokunmadan yönetilir.</p><ul><li>DataLayer standardı, olay/dönüşüm eşlemesi.</li><li>Consent Mode v2 (KVKK/Google için zorunlu).</li></ul>"
+  },
+  {
+    "id": "05l",
+    "icon": "ph-shopping-cart",
+    "baslik": "05l · WooCommerce & Web UI",
+    "ozet": "Site ne kadar değişmeli?",
+    "detay": "<p><b>Mevcut:</b> WordPress + Elementor (ağır) + Yoast; online mağaza yok (shop/cart 404).</p><ul><li>Elementor yükü + görseller mobil hızı düşürüyor → sıkıştırma, tembel yükleme, önbellek.</li><li>WooCommerce ile paketli kahve + merch satışı → tüm katalog/retargeting'in önünü açar.</li><li>Gerçek mobil-öncelik: UI mobil için sadeleştirilmeli.</li></ul>"
+  },
+  {
+    "id": "05m",
+    "icon": "ph-palette",
+    "baslik": "05m · Marka Kimliği (sıfırdan)",
+    "ozet": "Neden sıfırdan inşa?",
+    "detay": "<p><b>Neden sıfırdan?</b> Bugün tutarlı bir logo/renk/tipografi sistemi, ses tonu ve uygulama kılavuzu yok; her şube/kanal farklı görünüyor. Tutarsız kimlik, reklam veriminin ve prestijin önündeki en büyük engel.</p><ul><li>Logo + renk paleti + tipografi sistemi.</li><li>Ses tonu ve içerik dili.</li><li><b>Marka uygulama kılavuzu (brand book):</b> şubeden sosyal medyaya tek dil.</li></ul>"
+  },
+  {
+    "id": "06",
+    "icon": "ph-coins",
+    "baslik": "06 · Finansal Plan",
+    "ozet": "Yatırım + işletme + diğer.",
+    "detay": "<p><b>Üç kalem:</b></p><ul><li><b>Yatırım (tek seferlik):</b> ~₺255.000 (web/SEO, ölçüm-piksel, şube sayfaları, online mağaza, marka kimliği, AI otomasyon).</li><li><b>Aylık işletme:</b> ~₺180.000/ay → ~₺2,16M/yıl (ekip, prodüksiyon, araç, yönetim).</li><li><b>Diğer:</b> ~₺149.000 (nakit tamponu, eğitim, lisans, yasal).</li></ul><p><b>1. yıl toplam (reklam hariç):</b> ~₺2,56M. Reklam bütçesi ayrı. Rakamlar canlı grafik+tablodan güncellenir.</p>"
+  },
+  {
+    "id": "07",
+    "icon": "ph-warning-diamond",
+    "baslik": "07 · Gap & Bilinmeyen-Bilinmeyenler",
+    "ozet": "Ne eksik, göremediğimiz ne?",
+    "detay": "<p><b>(A) Gap:</b> mevcut vs. hedef durum; kanal kanal eksikler ve kapatma planı (ölçüm, piksel, yerel SEO, e-ticaret, marka).</p><p><b>(B) Bilinmeyen-bilinmeyenler:</b> marka/IP sahipliği, gizli borç, franchise churn, ilişkili taraf işlemleri, ruhsat/kira sürekliliği — bunları belge/soru talepleriyle 'bilinen'e çevir.</p>"
+  },
+  {
+    "id": "08",
+    "icon": "ph-calendar-check",
+    "baslik": "08 · Zaman Planı & Gantt",
+    "ozet": "40 gün → 12 hafta → çeyrekler.",
+    "detay": "<p>Kronoloji (yakın=detaylı, uzak=kaba): İlk 40 gün (gün-be-gün) → İlk 12 hafta (haftalık) → İlk 3 ay → İlk 6 ay → 2026 yıl sonu → 2026 çeyrekleri → 2027 çeyrekleri.</p><p>Üst seviye 5 faz: Ölçüm & SEO → Piksel & reklam → Yerel SEO & ölçekleme → E-ticaret & katalog → Marka & sürdürülebilir. Canlı Gantt grafiğinde görünür.</p>"
+  },
+  {
+    "id": "09",
+    "icon": "ph-shield-check",
+    "baslik": "09 · Durum Tespiti (Due Diligence)",
+    "ozet": "Ortaklık/risk çerçevesi.",
+    "detay": "<p>Bir ortaklık/yatırım kararı öncesi <b>risk haritası</b>: franchise mi/hisse ortaklığı mı ayrımı, bayrak tablosu, risk matrisi (R1–R10), bilinmeyen-bilinmeyenler, imza öncesi belge listesi, keskin sorular, Go/Bekle/Vazgeç çerçevesi.</p><p><i>Bu bir risk çerçevesidir; hukuki/mali tavsiye değildir.</i></p>"
+  }
+]
