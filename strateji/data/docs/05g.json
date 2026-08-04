@@ -1,0 +1,24 @@
+{
+  "id": "05g",
+  "icon": "ph-fire",
+  "baslik": "05g · Hotjar / Clarity",
+  "ozet": "Isı haritası & oturum kaydı.",
+  "amac": "Isı haritası & oturum kaydı.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Isı haritası & oturum kaydı.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Isı haritası + oturum kaydı + funnel/form analizi ile **UX iyileştirme döngüsü**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Microsoft Clarity ücretsizdir; GTM galerisinden hızlı kurulur. Ziyaretçinin nerede takılıp çıktığını gösterir."
+        }
+      ]
+    }
+  ]
+}

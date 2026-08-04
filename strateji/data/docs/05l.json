@@ -1,0 +1,29 @@
+{
+  "id": "05l",
+  "icon": "ph-shopping-cart",
+  "baslik": "05l · WooCommerce & Web UI",
+  "ozet": "Site ne kadar değişmeli?",
+  "amac": "Site ne kadar değişmeli?",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Site ne kadar değişmeli?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Mevcut:** WordPress + Elementor (ağır) + Yoast; online mağaza yok (shop/cart 404)."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Elementor yükü + görseller mobil hızı düşürüyor → sıkıştırma, tembel yükleme, önbellek.",
+            "WooCommerce ile paketli kahve + merch satışı → tüm katalog/retargeting'in önünü açar.",
+            "Gerçek mobil-öncelik: UI mobil için sadeleştirilmeli."
+          ]
+        }
+      ]
+    }
+  ]
+}

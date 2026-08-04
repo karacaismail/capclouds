@@ -1,0 +1,29 @@
+{
+  "id": "05b",
+  "icon": "ph-stack",
+  "baslik": "05b · Programatik SEO",
+  "ozet": "Ölçekli şube/semt sayfaları.",
+  "amac": "Ölçekli şube/semt sayfaları.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Ölçekli şube/semt sayfaları.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Şablon + veri ile **her şube/semt için ölçekli sayfa üretimi** (ör. \"Ortaköy kahve\", \"Çekmeköy kafe\")."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "LocalBusiness/Cafe yapısal verisi (schema).",
+            "Tutarlı iç linkleme ve semt bazlı içerik blokları.",
+            "26 şube = 26+ yüksek niyetli yerel sayfa."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cupsandclouds/strateji/doc.schema.json",
+  "title": "Strateji Dokümanı (kanonik, recursive sections)",
+  "type": "object",
+  "required": ["id", "icon", "baslik", "ozet", "sections"],
+  "additionalProperties": false,
+  "properties": {
+    "__handAuthored": { "type": "boolean" },
+    "id": { "type": "string", "minLength": 1 },
+    "icon": { "type": "string", "minLength": 1 },
+    "baslik": { "type": "string", "minLength": 1 },
+    "ozet": { "type": "string", "minLength": 1 },
+    "amac": { "type": "string" },
+    "status": { "$ref": "#/definitions/gateStatus" },
+    "kritikKPI": { "type": "string" },
+    "owner": { "type": "string" },
+    "decisionOwner": { "type": "string" },
+    "layer": { "enum": ["hazirlik", "icra"] },
+    "sections": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/section" } }
+  },
+  "definitions": {
+    "confidence": { "enum": ["fact", "estimate", "assumption", "unknown"] },
+    "gateStatus": { "enum": ["GO", "CONDITIONAL_GO", "HOLD", "NO_GO"] },
+    "section": {
+      "type": "object",
+      "required": ["id", "title"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string" },
+        "status": { "$ref": "#/definitions/gateStatus" },
+        "blocks": { "type": "array", "items": { "$ref": "#/definitions/block" } },
+        "sections": { "type": "array", "items": { "$ref": "#/definitions/section" } }
+      }
+    },
+    "block": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": { "enum": ["heading", "paragraph", "list", "table", "callout", "evidence", "decision", "kpi", "gate", "eca", "risk", "timeline", "chartReference", "sources"] }
+      },
+      "allOf": [
+        { "if": { "properties": { "type": { "const": "heading" } } }, "then": { "required": ["level", "text"], "properties": { "level": { "enum": [2, 3, 4] }, "text": { "type": "string" } } } },
+        { "if": { "properties": { "type": { "const": "paragraph" } } }, "then": { "required": ["text"] } },
+        { "if": { "properties": { "type": { "const": "list" } } }, "then": { "required": ["items"], "properties": { "items": { "type": "array", "minItems": 1, "items": { "type": "string" } } } } },
+        { "if": { "properties": { "type": { "const": "table" } } }, "then": { "required": ["headers", "rows"] } },
+        { "if": { "properties": { "type": { "const": "callout" } } }, "then": { "required": ["text"] } },
+        { "if": { "properties": { "type": { "const": "evidence" } } }, "then": { "required": ["items"], "properties": { "items": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["claim", "confidence"], "properties": { "confidence": { "$ref": "#/definitions/confidence" } } } } } } },
+        { "if": { "properties": { "type": { "const": "decision" } } }, "then": { "required": ["gate", "rationale"], "properties": { "gate": { "$ref": "#/definitions/gateStatus" } } } },
+        { "if": { "properties": { "type": { "const": "kpi" } } }, "then": { "required": ["rows"], "properties": { "rows": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["metric", "baseline", "target"] } } } } },
+        { "if": { "properties": { "type": { "const": "gate" } } }, "then": { "required": ["id", "question", "pass", "fail"] } },
+        { "if": { "properties": { "type": { "const": "eca" } } }, "then": { "required": ["event", "condition", "action"] } },
+        { "if": { "properties": { "type": { "const": "risk" } } }, "then": { "required": ["rows"], "properties": { "rows": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["risk", "signal", "mitigation"] } } } } },
+        { "if": { "properties": { "type": { "const": "timeline" } } }, "then": { "required": ["items"] } },
+        { "if": { "properties": { "type": { "const": "chartReference" } } }, "then": { "required": ["chartId", "title"] } },
+        { "if": { "properties": { "type": { "const": "sources" } } }, "then": { "required": ["sources"], "properties": { "sources": { "type": "array", "items": { "type": "object", "required": ["id", "title"] } } } } }
+      ]
+    }
+  }
+}

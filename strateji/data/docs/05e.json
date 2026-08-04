@@ -1,0 +1,28 @@
+{
+  "id": "05e",
+  "icon": "ph-tiktok-logo",
+  "baslik": "05e · TikTok",
+  "ozet": "Genç kitle, ucuz erişim.",
+  "amac": "Genç kitle, ucuz erişim.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Genç kitle, ucuz erişim.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "TikTok Business + **Pixel** + Reels/short video stratejisi."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Genç kitleye en ucuz erişim, viral potansiyel.",
+            "Piksel şimdiden kurulmalı ki reklam başlayınca veri hazır olsun."
+          ]
+        }
+      ]
+    }
+  ]
+}

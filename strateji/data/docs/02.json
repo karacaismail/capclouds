@@ -1,0 +1,28 @@
+{
+  "id": "02",
+  "icon": "ph-tree-structure",
+  "baslik": "02 · Organizasyon · İK · İş Akışları",
+  "ozet": "Kim, neyi, hangi süreçle yapar?",
+  "amac": "Kim, neyi, hangi süreçle yapar?",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Kim, neyi, hangi süreçle yapar?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Org şema:** Genel Müdür › **Tolga Akşen (Dijital Pazarlama Lideri)** › (Uzman adayı + Grafiker). Operasyon/Şube GM'ye bağlı; Tolga'ya içerik akışı sağlar."
+        },
+        {
+          "type": "paragraph",
+          "text": "**İK (ilk 3 ay):** Ay 1 Tolga başlar + uzman adayı ilanı; Ay 2 uzman işe alım + eğitim, grafiker ilanı; Ay 3 grafiker marka kimliği uygulamasına başlar, ekip tam operasyonel."
+        },
+        {
+          "type": "paragraph",
+          "text": "**İş akışları:** haftalık içerik üretimi · reklam kampanyası (test-önce) · franchise adayı (lead) hunisi. RACI ve tek Karar Günlüğü ile."
+        }
+      ]
+    }
+  ]
+}

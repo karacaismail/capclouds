@@ -1,0 +1,24 @@
+{
+  "id": "09",
+  "icon": "ph-shield-check",
+  "baslik": "09 · Durum Tespiti (Due Diligence)",
+  "ozet": "Ortaklık/risk çerçevesi.",
+  "amac": "Ortaklık/risk çerçevesi.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Ortaklık/risk çerçevesi.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bir ortaklık/yatırım kararı öncesi **risk haritası**: franchise mi/hisse ortaklığı mı ayrımı, bayrak tablosu, risk matrisi (R1–R10), bilinmeyen-bilinmeyenler, imza öncesi belge listesi, keskin sorular, Go/Bekle/Vazgeç çerçevesi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu bir risk çerçevesidir; hukuki/mali tavsiye değildir."
+        }
+      ]
+    }
+  ]
+}

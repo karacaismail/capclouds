@@ -1,0 +1,28 @@
+{
+  "id": "05f",
+  "icon": "ph-chart-line",
+  "baslik": "05f · Yandex Metrica",
+  "ozet": "TR analitik + Webvisor.",
+  "amac": "TR analitik + Webvisor.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "TR analitik + Webvisor.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ücretsiz TR analitik; **Webvisor (oturum kaydı)**, ısı haritası ve form analizi verir."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "GTM ile \"Özel HTML\" olarak kurulur; Webvisor/ısı haritası açılır.",
+            "KVKK çerez metnine eklenir."
+          ]
+        }
+      ]
+    }
+  ]
+}

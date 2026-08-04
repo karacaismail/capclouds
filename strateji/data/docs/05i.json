@@ -1,0 +1,24 @@
+{
+  "id": "05i",
+  "icon": "ph-broadcast",
+  "baslik": "05i · AdRoll",
+  "ozet": "Çapraz platform retargeting.",
+  "amac": "Çapraz platform retargeting.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Çapraz platform retargeting.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Çapraz platform retargeting; katalog gerektirir."
+        },
+        {
+          "type": "paragraph",
+          "text": "TR'de Meta + Google retargeting çoğu ihtiyacı karşılar; AdRoll **opsiyonel/ileri faz** olarak işaretlidir."
+        }
+      ]
+    }
+  ]
+}

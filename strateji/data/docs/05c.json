@@ -1,0 +1,155 @@
+{
+  "__handAuthored": true,
+  "id": "05c",
+  "icon": "ph-google-logo",
+  "baslik": "05c · Google Ads (AdWords)",
+  "ozet": "Niyetli aramayı yakalayıp şubeye trafik ve franchise adayı getir.",
+  "amac": "Yüksek niyetli 'yakınımda kahve' ve 'kahve franchise' aramalarını dönüşüme çevirmek.",
+  "status": "CONDITIONAL_GO",
+  "kritikKPI": "ROAS 3x · CPL ≤ ₺140",
+  "owner": "Dijital Pazarlama Uzmanı (adayı)",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
+  "sections": [
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Bu kanal hangi kararı üretir?", "blocks": [
+      { "type": "paragraph", "text": "Google Ads, **var olan talebi** (arama niyetini) yakaladığı için Cups & Clouds'un en hızlı geri dönüşlü kanalıdır. Öncelik: yerel arama + franchise adayı. **Ön koşul:** GA4 dönüşüm + Ads etiketi + Consent Mode v2 kurulu olmalı; aksi hâlde HOLD." },
+      { "type": "decision", "gate": "CONDITIONAL_GO", "rationale": "Talep ve niyet nettir; ancak dönüşüm izleme tamamlanmadan bütçe akıtmak körlemedir.", "condition": "GA4+Ads dönüşüm doğrulandıktan sonra GO (40 günlük planda G17-G20).", "owner": "Uzman adayı", "decisionOwner": "Genel Müdür", "deadline": "G20" }
+    ]},
+    { "id": "is-gerekcesi", "title": "2 · Neden Google Ads?", "summary": "İş gerekçesi.", "blocks": [
+      { "type": "list", "items": [
+        "**Niyet:** 'yakınımda kahve', 'Ortaköy kahve', 'kahve franchise' arayan kişi zaten satın alma/karar anındadır.",
+        "**Ölçülebilirlik:** her tıklama → dönüşüm → ROAS izlenebilir; devler bunu semt düzeyinde yapmıyor (bkz. 04).",
+        "**Franchise cephesi:** yatırımcı aramasını yakalamak, kahve müşterisinden kat kat değerli lead getirir."
+      ]}
+    ]},
+    { "id": "mevcut-durum", "title": "3 · Mevcut Durum ve Kanıtlar", "summary": "Bugün ne var, ne eksik?", "blocks": [
+      { "type": "evidence", "title": "Kanıt (F/E/A/U)", "items": [
+        { "claim": "GTM konteynerinde Ads/remarketing izleri var (kurulum kısmi)", "confidence": "fact", "sourceId": "S1" },
+        { "claim": "Net dönüşüm etiketi (AW-…) doğrulanamadı", "confidence": "fact", "sourceId": "S1" },
+        { "claim": "'Yakınımda kahve' hacmi İstanbul'da yüksek", "confidence": "estimate", "low": "orta", "base": "yüksek", "high": "çok yüksek", "formula": "Keyword Planner + Trends" },
+        { "claim": "Franchise arama hacmi düşük ama yüksek değerli", "confidence": "assumption" }
+      ]}
+    ]},
+    { "id": "hedef-kitle", "title": "4 · Hedef Kitle ve Arama Niyetleri", "summary": "Kimi, hangi niyette yakalıyoruz?", "blocks": [
+      { "type": "table", "headers": ["Kitle", "Niyet", "Örnek sorgu", "Aksiyon"], "rows": [
+        ["Yakındaki tüketici", "Ziyaret", "yakınımda kahve, Ortaköy kahve", "Yol tarifi / şube"],
+        ["Marka arayan", "Sadık müşteri", "cups and clouds", "Menü / şube"],
+        ["Yatırımcı", "Franchise", "kahve franchise, bayilik", "Franchise formu"],
+        ["Ürün arayan (ileride)", "Satın alma", "paket kahve al", "E-ticaret (Faz 4)"]
+      ]}
+    ]},
+    { "id": "funnel-gorevi", "title": "5 · Funnel İçindeki Görevi", "summary": "Hangi aşamaya hizmet eder?", "blocks": [
+      { "type": "paragraph", "text": "Google Ards ağırlıkla **Değerlendirme → Aksiyon** aşamasındadır: farkındalığı Meta/TikTok kurar, Ads niyeti kapatır. Remarketing ile Değerlendirme'ye geri çağırır." }
+    ]},
+    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne kurulu olmadan başlamayız?", "blocks": [
+      { "type": "list", "items": ["GA4 dönüşüm event'leri (generate_lead, contact, yol tarifi)", "Google Ads dönüşüm etiketi + Enhanced Conversions değerlendirmesi", "GTM dataLayer event sözleşmesi", "Consent Mode v2 (KVKK)", "Yeterli landing page (şube/franchise)"] },
+      { "type": "gate", "id": "GATE-Ads-Onkosul", "question": "Dönüşüm izleme uçtan uca test edildi mi?", "pass": "GA4 + Ads dönüşümü test tıklamasında düşüyor", "fail": "Dönüşüm görünmüyor → HOLD" }
+    ]},
+    { "id": "hesap-yetki", "title": "7 · Hesap ve Yetki Mimarisi", "summary": "Kim neye erişir?", "blocks": [
+      { "type": "table", "headers": ["Varlık", "Sahip", "Erişim"], "rows": [
+        ["Google Ads hesabı", "Şirket (MCC altında)", "Uzman: standart, Tolga: yönetici"],
+        ["Dönüşüm/etiket", "GTM (Tolga)", "Uzman: düzenleme talebi"],
+        ["Ödeme", "Genel Müdür", "Sadece GM"]
+      ]}
+    ]},
+    { "id": "kurulum", "title": "8 · Kurulum Adımları", "summary": "Nasıl kurulur? (sıra)", "blocks": [
+      { "type": "list", "ordered": true, "items": [
+        "Ads hesabı aç, MCC'ye bağla, faturalandırma (GM).",
+        "GA4 ↔ Ads bağla (dönüşüm içe aktar).",
+        "Dönüşüm etiketi + Enhanced Conversions kur, GTM ile bağla.",
+        "Consent Mode v2 doğrula.",
+        "Kampanya iskeletini kur (bkz. Kampanya Mimarisi), küçük bütçeyle başlat."
+      ]}
+    ]},
+    { "id": "kampanya-mimarisi", "title": "9 · Kampanya Mimarisi", "summary": "Hangi kampanyalar, hangi sırayla?", "blocks": [
+      { "type": "paragraph", "text": "Kampanyalar ayrı bütçe ve hedefle kurgulanır. Aşağıdaki her kampanya ayrı ayrı açılabilir." }
+    ], "sections": [
+      { "id": "marka-arama", "title": "Marka Arama Kampanyası", "summary": "Markayı arayanı rakibe kaptırma.", "blocks": [
+        { "type": "list", "items": ["**Nedir:** 'cups and clouds' vb. marka sorguları.", "**Neden:** ucuz, yüksek dönüşüm; rakip marka reklamına karşı savunma.", "**Kim/İş hedefi:** sadık/kararlı müşteri → menü/şube.", "**Ön koşul:** dönüşüm izleme.", "**Owner:** Uzman adayı · **Ne zaman:** G26.", "**Ölçüm:** marka CVR, CPC.", "**Eşik/ölçekle:** CVR yüksekse bütçe artır.", "**Durdur:** marka trafiği organik yeterse kıs.", "**Risk:** kendi organik trafiğini yamyamlama → izleme."] }
+      ]},
+      { "id": "jenerik-arama", "title": "Jenerik Yüksek Niyetli Arama", "summary": "'kahve dükkanı', 'specialty kahve' vb.", "blocks": [
+        { "type": "list", "items": ["**Nedir:** marka içermeyen niyetli sorgular.", "**Neden:** yeni müşteri edinimi.", "**Ön koşul:** güçlü landing + negatif kelime seti.", "**Owner:** Uzman · **Ne zaman:** G26+.", "**Ölçüm:** CPL, CVR.", "**Eşik:** CPL ≤ ₺180 → ölçekle; > eşik → duraklat.", "**Risk:** geniş eşleme israfı → arama terimi temizliği (haftalık)."] }
+      ]},
+      { "id": "yerel-arama", "title": "Yerel / 'Yakınımda Kahve'", "summary": "Semt bazlı, en yüksek getirili.", "blocks": [
+        { "type": "list", "items": ["**Nedir:** konum bazlı sorgular + lokasyon uzantıları.", "**Neden:** devlerin zayıf, bizim güçlü alanımız (04).", "**Kim:** yakındaki tüketici → yol tarifi/şube.", "**Ön koşul:** şube açılış sayfaları + İşletme Profili (05a/05b).", "**Owner:** Uzman + Tolga · **Ne zaman:** G29+.", "**Ölçüm:** yol tarifi/arama dönüşümü, şube trafiği.", "**Ölçekle:** kazanan semtlerde bütçe artır.", "**Risk:** yanlış konum hedefleme → yarıçap kontrolü."] }
+      ]},
+      { "id": "franchise-lead", "title": "Franchise Adayı Kampanyası", "summary": "Yüksek değerli yatırımcı lead'i.", "blocks": [
+        { "type": "list", "items": ["**Nedir:** 'kahve franchise/bayilik' aramaları + arama/RLSA.", "**Neden:** en yüksek değerli dönüşüm.", "**Ön koşul:** şeffaf franchise sayfası + getiri anlatımı.", "**Owner:** Uzman · **Karar:** GM · **Ne zaman:** G26.", "**Ölçüm:** nitelikli aday (CRM), CPL.", "**Eşik:** nitelikli aday CPL değere göre; nitelik düşükse mesaj/hedef revize.", "**Risk:** düşük nitelikli lead → form ön-eleme soruları."] }
+      ]},
+      { "id": "pmax", "title": "Performance Max", "summary": "Ne zaman açılmalı? (veri eşiği).", "blocks": [
+        { "type": "callout", "variant": "warn", "title": "PMax veri eşiği", "text": "PMax **erken açılmaz**. Ön koşul: son 30 günde yeterli dönüşüm sinyali (öneri ≥ 30 dönüşüm) + sağlıklı feed/asset. Aksi hâlde bütçeyi kör harcar." },
+        { "type": "list", "items": ["**Ne zaman:** dönüşüm eşiği + kreatif seti hazır olunca (Faz 2 sonu/Faz 3).", "**Owner:** Uzman · **Ölçüm:** ROAS, kanal kırılımı.", "**Durdur:** ROAS < 1.5x ve iyileşmiyorsa arama kampanyalarına geri dön."] }
+      ]},
+      { "id": "remarketing", "title": "Remarketing (RLSA + Display)", "summary": "Geri kazanım.", "blocks": [
+        { "type": "list", "items": ["**Audience:** siteyi/menüyü gezen, franchise formunu yarıda bırakan.", "**Neden:** düşük maliyetli geri dönüş.", "**Ön koşul:** Ads remarketing etiketi + kitle dolumu (≥ min. eşik).", "**Frekans:** kapak uygula (bıkkınlık).", "**Ölçüm:** geri dönüş ROAS.", "**Durdur:** frekans yüksek/ROAS düşük → kes."] }
+      ]},
+      { "id": "negatif-anahtar", "title": "Negatif Anahtar Kelime Mimarisi", "summary": "İsrafı kesen omurga.", "blocks": [
+        { "type": "list", "items": ["**Nedir:** alakasız aramaları (iş ilanı, ücretsiz, tarif, ödev) engelleyen liste.", "**Neden:** bütçe israfını keser, CVR'ı yükseltir.", "**Nasıl:** hesap düzeyi + kampanya düzeyi negatif listeler; haftalık arama terimi raporundan besle.", "**Owner:** Uzman · **Ölçüm:** israf oranı düşüşü.", "**Risk:** aşırı negatif → hacim kaybı; dengeli tut."] }
+      ]}
+    ]},
+    { "id": "tracking", "title": "10 · Tracking, Events ve Conversions", "summary": "Neyi dönüşüm sayıyoruz?", "blocks": [
+      { "type": "table", "headers": ["Event", "Tür", "Değer", "Kaynak"], "rows": [
+        ["generate_lead (franchise formu)", "Anahtar dönüşüm", "Yüksek", "GA4→Ads"],
+        ["contact (iletişim/tel/wa)", "Dönüşüm", "Orta", "GA4→Ads"],
+        ["yol_tarifi", "Mikro dönüşüm", "Orta", "GA4→Ads"],
+        ["purchase (Faz 4)", "Dönüşüm", "Yüksek", "DataLayer"]
+      ]},
+      { "type": "list", "items": ["**Enhanced Conversions:** değerlendir (hash'li first-party veri) → ölçüm kaybını azaltır.", "**Consent Mode v2:** izin durumu Ads'e yansımalı."] }
+    ]},
+    { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler netleşsin.", "blocks": [
+      { "type": "table", "headers": ["Kısaltma", "Anlam"], "rows": [
+        ["CPC", "Tıklama başı maliyet"], ["CTR", "Tıklama oranı"], ["CVR", "Dönüşüm oranı"],
+        ["CPL", "Lead başı maliyet"], ["CAC", "Müşteri edinme maliyeti"], ["ROAS", "Reklam harcaması getirisi"]
+      ]}
+    ]},
+    { "id": "butce", "title": "12 · Bütçe ve Teklif (düşük/baz/yüksek)", "summary": "Ne kadar, hangi senaryo?", "blocks": [
+      { "type": "table", "headers": ["Senaryo", "Aylık Ads", "Beklenti"], "rows": [
+        ["Düşük", "₺8.000", "Yalnız marka + yerel test"],
+        ["Baz", "₺12.000", "Marka+yerel+franchise, ölçekleme"],
+        ["Yüksek", "₺20.000", "+ jenerik + PMax (eşik sonrası)"]
+      ]},
+      { "type": "callout", "variant": "warn", "text": "Rakamlar **planlama varsayımıdır**; gerçek CPC/CVR ile güncellenecek. Teklif: dönüşüm değeri hedefli (tROAS/tCPA) — ama önce yeterli dönüşüm verisi." }
+    ]},
+    { "id": "kpi", "title": "13 · KPI, Baseline ve Hedefler", "summary": "Başarı nedir?", "blocks": [
+      { "type": "kpi", "rows": [
+        { "metric": "ROAS", "baseline": "—", "target": "1.6x → 2.2x → 3.0x", "frequency": "Haftalık", "owner": "Uzman" },
+        { "metric": "CPL (franchise)", "baseline": "—", "target": "≤ ₺220 → ₺140", "frequency": "Haftalık", "owner": "Uzman" },
+        { "metric": "Yerel dönüşüm/ay", "baseline": "0", "target": "artan", "frequency": "Haftalık", "owner": "Uzman" }
+      ]},
+      { "type": "chartReference", "chartId": "c-kanal", "title": "Bütçe dağılımı (Google Ads payı)", "note": "canlı", "datasetId": "kanal" }
+    ]},
+    { "id": "test-backlog", "title": "14 · Deney / A/B Test Backlog'u", "summary": "Neyi test edeceğiz?", "blocks": [
+      { "type": "list", "items": ["Reklam metni: 'yakındaki en iyi kahve' vs 'butik kahve molası'", "Landing: şube sayfası vs menü", "Teklif stratejisi: manuel CPC vs tCPA", "Uzantılar: konum + çağrı + form", "Franchise formu: kısa vs ön-elemeli"] }
+    ]},
+    { "id": "scale-pause-kill", "title": "15 · Scale / Pause / Kill (ECA)", "summary": "Ne zaman büyüt/durdur?", "blocks": [
+      { "type": "eca", "id": "ECA-Ads-Scale", "event": "Kampanya 2 hafta üst üste ROAS ≥ 2x", "condition": "Bütçe artışı hacmi öldürmüyor", "action": "Bütçeyi kademeli %20 artır" },
+      { "type": "eca", "id": "ECA-Ads-Kill", "event": "CPL eşik ×1.5 aşıldı", "condition": "Kreatif/hedef revizyonu 1 hafta sonuç vermedi", "action": "Kampanyayı duraklat, öğrenimi Karar Günlüğü'ne yaz" }
+    ]},
+    { "id": "kvkk-risk", "title": "16 · KVKK, Güvenlik ve Marka Riski", "summary": "Uyum ve itibar.", "blocks": [
+      { "type": "list", "items": ["Consent Mode v2 zorunlu; izinsiz remarketing yok.", "Brand safety: içerik/placement dışlama listeleri.", "Yanıltıcı/kanıtsız franchise getiri vaadi yasak (kırmızı çizgi, bkz. 01)."] }
+    ]},
+    { "id": "plan-30-60-90", "title": "17 · 30/60/90 Günlük Plan", "summary": "Uygulama takvimi.", "blocks": [
+      { "type": "timeline", "items": [
+        { "when": "0-30 gün", "what": "Dönüşüm kur, marka + yerel test kampanyası", "owner": "Uzman" },
+        { "when": "30-60 gün", "what": "Franchise + jenerik, arama terimi temizliği, ölçekleme", "owner": "Uzman" },
+        { "when": "60-90 gün", "what": "PMax (eşik sonrası), tCPA/tROAS'a geçiş, remarketing", "owner": "Uzman" }
+      ]}
+    ]},
+    { "id": "raci", "title": "18 · RACI", "summary": "Rol dağılımı.", "blocks": [
+      { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [
+        ["Kampanya kurulum/ops", "Uzman", "Tolga", "—", "GM"],
+        ["Bütçe onayı", "Tolga", "GM", "—", "—"],
+        ["Dönüşüm/etiket", "Tolga", "Tolga", "Uzman", "—"]
+      ]}
+    ]},
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [
+      { "type": "list", "items": ["05k GTM + dönüşüm izleme", "05a/05b şube/landing sayfaları", "01 kırmızı çizgiler (franchise vaadi)", "06 bütçe onayı"] }
+    ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kanıt kaynakları.", "blocks": [
+      { "type": "sources", "sources": [
+        { "id": "S1", "title": "Cups & Clouds GTM konteyner analizi (GTM-KZKJWLZM)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" },
+        { "id": "S2", "title": "Google Ads yardım — dönüşüm & Enhanced Conversions", "url": "https://support.google.com/google-ads", "accessedDate": "2026-08-04" }
+      ]}
+    ]}
+  ]
+}

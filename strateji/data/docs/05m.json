@@ -1,0 +1,29 @@
+{
+  "id": "05m",
+  "icon": "ph-palette",
+  "baslik": "05m · Marka Kimliği (sıfırdan)",
+  "ozet": "Neden sıfırdan inşa?",
+  "amac": "Neden sıfırdan inşa?",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Neden sıfırdan inşa?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Neden sıfırdan?** Bugün tutarlı bir logo/renk/tipografi sistemi, ses tonu ve uygulama kılavuzu yok; her şube/kanal farklı görünüyor. Tutarsız kimlik, reklam veriminin ve prestijin önündeki en büyük engel."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Logo + renk paleti + tipografi sistemi.",
+            "Ses tonu ve içerik dili.",
+            "**Marka uygulama kılavuzu (brand book):** şubeden sosyal medyaya tek dil."
+          ]
+        }
+      ]
+    }
+  ]
+}

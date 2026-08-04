@@ -1,0 +1,24 @@
+{
+  "id": "08",
+  "icon": "ph-calendar-check",
+  "baslik": "08 · Zaman Planı & Gantt",
+  "ozet": "40 gün → 12 hafta → çeyrekler.",
+  "amac": "40 gün → 12 hafta → çeyrekler.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "40 gün → 12 hafta → çeyrekler.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kronoloji (yakın=detaylı, uzak=kaba): İlk 40 gün (gün-be-gün) → İlk 12 hafta (haftalık) → İlk 3 ay → İlk 6 ay → 2026 yıl sonu → 2026 çeyrekleri → 2027 çeyrekleri."
+        },
+        {
+          "type": "paragraph",
+          "text": "Üst seviye 5 faz: Ölçüm & SEO → Piksel & reklam → Yerel SEO & ölçekleme → E-ticaret & katalog → Marka & sürdürülebilir. Canlı Gantt grafiğinde görünür."
+        }
+      ]
+    }
+  ]
+}

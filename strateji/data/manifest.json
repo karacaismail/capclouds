@@ -1,0 +1,192 @@
+{
+  "version": "3",
+  "updated": "2026-08-04",
+  "docs": [
+    {
+      "id": "00",
+      "icon": "ph-list-checks",
+      "baslik": "00 · Yönetici Özeti",
+      "ozet": "Tek sayfada 12 aylık strateji.",
+      "amac": "Tek sayfada 12 aylık strateji.",
+      "file": "00.json"
+    },
+    {
+      "id": "01",
+      "icon": "ph-compass",
+      "baslik": "01 · Vizyon · Misyon · Değerler",
+      "ozet": "Neden varız, nasıl hareket ederiz? (karar filtresi)",
+      "amac": "Neden varız, nasıl hareket ederiz? (karar filtresi)",
+      "file": "01.json"
+    },
+    {
+      "id": "02",
+      "icon": "ph-tree-structure",
+      "baslik": "02 · Organizasyon · İK · İş Akışları",
+      "ozet": "Kim, neyi, hangi süreçle yapar?",
+      "amac": "Kim, neyi, hangi süreçle yapar?",
+      "file": "02.json"
+    },
+    {
+      "id": "03",
+      "icon": "ph-chart-pie-slice",
+      "baslik": "03 · Pazar Analizi",
+      "ozet": "Pazar ne kadar büyük, kimi hedefleriz?",
+      "amac": "Pazar ne kadar büyük, kimi hedefleriz?",
+      "file": "03.json"
+    },
+    {
+      "id": "04",
+      "icon": "ph-users-three",
+      "baslik": "04 · Rakip & Rekabet Analizi",
+      "ozet": "Kimlerle, nasıl yarışırız?",
+      "amac": "Kimlerle, nasıl yarışırız?",
+      "file": "04.json"
+    },
+    {
+      "id": "05",
+      "icon": "ph-megaphone",
+      "baslik": "05 · Dijital Pazarlama Stratejisi (Genel)",
+      "ozet": "Genel dijitalleşme stratejisi.",
+      "amac": "Genel dijitalleşme stratejisi.",
+      "file": "05.json"
+    },
+    {
+      "id": "05a",
+      "icon": "ph-magnifying-glass",
+      "baslik": "05a · SEO",
+      "ozet": "Organik görünürlük.",
+      "amac": "Organik görünürlük.",
+      "file": "05a.json"
+    },
+    {
+      "id": "05b",
+      "icon": "ph-stack",
+      "baslik": "05b · Programatik SEO",
+      "ozet": "Ölçekli şube/semt sayfaları.",
+      "amac": "Ölçekli şube/semt sayfaları.",
+      "file": "05b.json"
+    },
+    {
+      "id": "05c",
+      "icon": "ph-google-logo",
+      "baslik": "05c · Google Ads (AdWords)",
+      "ozet": "Niyetli aramayı yakalayıp şubeye trafik ve franchise adayı getir.",
+      "amac": "Yüksek niyetli 'yakınımda kahve' ve 'kahve franchise' aramalarını dönüşüme çevirmek.",
+      "status": "CONDITIONAL_GO",
+      "kritikKPI": "ROAS 3x · CPL ≤ ₺140",
+      "file": "05c.json"
+    },
+    {
+      "id": "05d",
+      "icon": "ph-meta-logo",
+      "baslik": "05d · Meta Business + Pixel",
+      "ozet": "Instagram/Facebook reklam & ölçüm.",
+      "amac": "Instagram/Facebook reklam & ölçüm.",
+      "file": "05d.json"
+    },
+    {
+      "id": "05e",
+      "icon": "ph-tiktok-logo",
+      "baslik": "05e · TikTok",
+      "ozet": "Genç kitle, ucuz erişim.",
+      "amac": "Genç kitle, ucuz erişim.",
+      "file": "05e.json"
+    },
+    {
+      "id": "05f",
+      "icon": "ph-chart-line",
+      "baslik": "05f · Yandex Metrica",
+      "ozet": "TR analitik + Webvisor.",
+      "amac": "TR analitik + Webvisor.",
+      "file": "05f.json"
+    },
+    {
+      "id": "05g",
+      "icon": "ph-fire",
+      "baslik": "05g · Hotjar / Clarity",
+      "ozet": "Isı haritası & oturum kaydı.",
+      "amac": "Isı haritası & oturum kaydı.",
+      "file": "05g.json"
+    },
+    {
+      "id": "05h",
+      "icon": "ph-arrows-clockwise",
+      "baslik": "05h · Criteo",
+      "ozet": "Dinamik retargeting.",
+      "amac": "Dinamik retargeting.",
+      "file": "05h.json"
+    },
+    {
+      "id": "05i",
+      "icon": "ph-broadcast",
+      "baslik": "05i · AdRoll",
+      "ozet": "Çapraz platform retargeting.",
+      "amac": "Çapraz platform retargeting.",
+      "file": "05i.json"
+    },
+    {
+      "id": "05j",
+      "icon": "ph-target",
+      "baslik": "05j · Remarketing Stratejisi",
+      "ozet": "Geri kazanım hunisi.",
+      "amac": "Geri kazanım hunisi.",
+      "file": "05j.json"
+    },
+    {
+      "id": "05k",
+      "icon": "ph-tag",
+      "baslik": "05k · Google Tag Manager",
+      "ozet": "Etiket mimarisi.",
+      "amac": "Etiket mimarisi.",
+      "file": "05k.json"
+    },
+    {
+      "id": "05l",
+      "icon": "ph-shopping-cart",
+      "baslik": "05l · WooCommerce & Web UI",
+      "ozet": "Site ne kadar değişmeli?",
+      "amac": "Site ne kadar değişmeli?",
+      "file": "05l.json"
+    },
+    {
+      "id": "05m",
+      "icon": "ph-palette",
+      "baslik": "05m · Marka Kimliği (sıfırdan)",
+      "ozet": "Neden sıfırdan inşa?",
+      "amac": "Neden sıfırdan inşa?",
+      "file": "05m.json"
+    },
+    {
+      "id": "06",
+      "icon": "ph-coins",
+      "baslik": "06 · Finansal Plan",
+      "ozet": "Yatırım + işletme + diğer.",
+      "amac": "Yatırım + işletme + diğer.",
+      "file": "06.json"
+    },
+    {
+      "id": "07",
+      "icon": "ph-warning-diamond",
+      "baslik": "07 · Gap & Bilinmeyen-Bilinmeyenler",
+      "ozet": "Ne eksik, göremediğimiz ne?",
+      "amac": "Ne eksik, göremediğimiz ne?",
+      "file": "07.json"
+    },
+    {
+      "id": "08",
+      "icon": "ph-calendar-check",
+      "baslik": "08 · Zaman Planı & Gantt",
+      "ozet": "40 gün → 12 hafta → çeyrekler.",
+      "amac": "40 gün → 12 hafta → çeyrekler.",
+      "file": "08.json"
+    },
+    {
+      "id": "09",
+      "icon": "ph-shield-check",
+      "baslik": "09 · Durum Tespiti (Due Diligence)",
+      "ozet": "Ortaklık/risk çerçevesi.",
+      "amac": "Ortaklık/risk çerçevesi.",
+      "file": "09.json"
+    }
+  ]
+}

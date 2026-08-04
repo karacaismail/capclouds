@@ -1,0 +1,24 @@
+{
+  "id": "07",
+  "icon": "ph-warning-diamond",
+  "baslik": "07 · Gap & Bilinmeyen-Bilinmeyenler",
+  "ozet": "Ne eksik, göremediğimiz ne?",
+  "amac": "Ne eksik, göremediğimiz ne?",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Ne eksik, göremediğimiz ne?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**(A) Gap:** mevcut vs. hedef durum; kanal kanal eksikler ve kapatma planı (ölçüm, piksel, yerel SEO, e-ticaret, marka)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**(B) Bilinmeyen-bilinmeyenler:** marka/IP sahipliği, gizli borç, franchise churn, ilişkili taraf işlemleri, ruhsat/kira sürekliliği — bunları belge/soru talepleriyle 'bilinen'e çevir."
+        }
+      ]
+    }
+  ]
+}

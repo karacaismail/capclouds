@@ -1,0 +1,33 @@
+{
+  "id": "00",
+  "icon": "ph-list-checks",
+  "baslik": "00 · Yönetici Özeti",
+  "ozet": "Tek sayfada 12 aylık strateji.",
+  "amac": "Tek sayfada 12 aylık strateji.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Tek sayfada 12 aylık strateji.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Durum:** Cups & Clouds sahada güçlü (26+ şube, güçlü konseptler) ama dijitalde görünmez: SEO ~42/100, ölçüm yarım, online mağaza yok."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Hedef sırası:** Ölç → piksel → reklam → yerel SEO → e-ticaret → marka & topluluk."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**İlk hamle:** Ay 1 ölçüm altyapısı + hızlı SEO düzeltmeleri (bedava kazanç).",
+            "**Kuzey Yıldızı:** yerel arama payı, tekrar ziyaret, franchise nitelikli aday.",
+            "**1. yıl bütçesi (reklam hariç):** ~₺2,56 milyon (yatırım + işletme + diğer)."
+          ]
+        }
+      ]
+    }
+  ]
+}

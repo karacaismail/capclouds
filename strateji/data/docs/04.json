@@ -1,0 +1,32 @@
+{
+  "id": "04",
+  "icon": "ph-users-three",
+  "baslik": "04 · Rakip & Rekabet Analizi",
+  "ozet": "Kimlerle, nasıl yarışırız?",
+  "amac": "Kimlerle, nasıl yarışırız?",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Kimlerle, nasıl yarışırız?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Pazar:** ~4.813 zincir şube, Avrupa'nın en kalabalık 4. pazarı; katmanlaşıyor. Dört grup: ulusal liderler (Starbucks, Kahve Dünyası, Espressolab), değer+teknoloji (Coffy, Nevada, Arabica), butik (Kronotrop, Petra, Walter's), bölgesel meydan okuyanlar (Cups & Clouds)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**En yakın dijital tehdit:** Coffy (fiyat bandımıza yakın + en güçlü yerli dijital)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Savunulabilir boşluk:** \"butik his + erişilebilir fiyat + güçlü yerel topluluk + dijital verimlilik\". Rakiplerin hiçbiri bu dördünü aynı anda tutamıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "İkinci cephe: franchise yatırımcısı için şeffaf getiri anlatısı."
+        }
+      ]
+    }
+  ]
+}

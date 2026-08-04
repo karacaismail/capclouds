@@ -1,0 +1,28 @@
+{
+  "id": "05",
+  "icon": "ph-megaphone",
+  "baslik": "05 · Dijital Pazarlama Stratejisi (Genel)",
+  "ozet": "Genel dijitalleşme stratejisi.",
+  "amac": "Genel dijitalleşme stratejisi.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Genel dijitalleşme stratejisi.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Her kanalın ayrı stratejisi vardır; toplamı **genel dijitalleşme ve dijital dünyayı güçlendirme stratejisidir.**"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Huni:** Farkındalık (TikTok/Meta organik+reklam) → İlgi (SEO/içerik) → Değerlendirme (yerel SEO/retargeting) → Aksiyon (şube ziyareti/franchise/online satış) → Sadakat (topluluk/CRM)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alt kanallar aşağıdaki 05a–05m maddelerinde tek tek açılır."
+        }
+      ]
+    }
+  ]
+}

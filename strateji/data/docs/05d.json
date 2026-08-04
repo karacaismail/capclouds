@@ -1,0 +1,28 @@
+{
+  "id": "05d",
+  "icon": "ph-meta-logo",
+  "baslik": "05d · Meta Business + Pixel",
+  "ozet": "Instagram/Facebook reklam & ölçüm.",
+  "amac": "Instagram/Facebook reklam & ölçüm.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Instagram/Facebook reklam & ölçüm.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Business Manager + **Pixel + Conversions API** (iOS kaybını azaltır) + katalog."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Hedef kitleler: yerel erişim, ilgi alanı, benzer kitle, retargeting.",
+            "Kafe markası için 1 numaralı kanal; piksel olmadan optimize edilemez."
+          ]
+        }
+      ]
+    }
+  ]
+}

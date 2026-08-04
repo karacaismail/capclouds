@@ -1,0 +1,33 @@
+{
+  "id": "05a",
+  "icon": "ph-magnifying-glass",
+  "baslik": "05a · SEO",
+  "ozet": "Organik görünürlük.",
+  "amac": "Organik görünürlük.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Organik görünürlük.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Kapsam:** teknik SEO (robots/title/meta/tek H1/hız), on-page, içerik, yerel SEO ve link."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Acil: robots.txt'in /en/ ve /ar/ engelini kaldır; sitemap'i robots'a bağla.",
+            "Başlık + meta açıklamaları anahtar kelimeyle yeniden yaz.",
+            "Aylık içerik takvimi + hedef anahtar kelimeler."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Hedef: SEO puanı 42 → 60 → 70 → 80."
+        }
+      ]
+    }
+  ]
+}

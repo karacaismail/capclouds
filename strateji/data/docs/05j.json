@@ -1,0 +1,28 @@
+{
+  "id": "05j",
+  "icon": "ph-target",
+  "baslik": "05j · Remarketing Stratejisi",
+  "ozet": "Geri kazanım hunisi.",
+  "amac": "Geri kazanım hunisi.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Geri kazanım hunisi.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Segment bazlı geri kazanım: site ziyaretçisi, sepeti terk eden, franchise formunu yarıda bırakan."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Frekans/kapak (frequency cap) ile bıkkınlık önlenir.",
+            "Meta + Google retargeting ile düşük maliyetli geri dönüş."
+          ]
+        }
+      ]
+    }
+  ]
+}

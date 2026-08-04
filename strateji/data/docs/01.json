@@ -1,0 +1,358 @@
+{
+  "__handAuthored": true,
+  "id": "01",
+  "icon": "ph-compass",
+  "baslik": "01 · Vizyon · Misyon · Değerler",
+  "ozet": "Neden varız, nasıl hareket ederiz? (karar filtresi)",
+  "layer": "hazirlik",
+  "sections": [
+    {
+      "id": "amac-yonetici-ozeti",
+      "title": "Amaç & Yönetici Özeti",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cups & Clouds sahada güçlü ama **yönsüz** büyüyor: 26+ şube, güçlü konseptler; ama yazılı vizyon, ölçülebilir misyon ve karar filtresi olan değerler yok. Bu doküman, her kararı süzecek bir **karar filtresi** kurar. Strateji buradan başlar — çünkü nereye gittiğini bilmeyen için hiçbir rüzgâr uygun değildir."
+        }
+      ]
+    },
+    {
+      "id": "mevcut-durum",
+      "title": "Mevcut Durum",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Belirti",
+            "Sonucu",
+            "Çözüm"
+          ],
+          "rows": [
+            [
+              "Yazılı vizyon yok",
+              "Her şube farklı yöne gidiyor, marka dağınık",
+              "Tek cümlelik vizyon + karar filtresi"
+            ],
+            [
+              "Ölçülebilir hedef yok",
+              "'Büyüyoruz' ama nereye belirsiz",
+              "Kuzey Yıldızı metrikleri"
+            ],
+            [
+              "Değerler yazılı değil",
+              "Kararlar kişiye göre değişiyor",
+              "6 değer = 6 davranış kuralı"
+            ],
+            [
+              "Dijitalde ölçüm yok",
+              "Para nereye gidiyor bilinmiyor",
+              "'Kanıtla Yönet' değeri + ölçüm-önce ilkesi"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kanitlar-kaynaklar-f-e-a-u",
+      "title": "Kanıtlar & Kaynaklar (F/E/A/U)",
+      "blocks": [
+        {
+          "type": "evidence",
+          "title": "İddia güven seviyeleriyle",
+          "items": [
+            {
+              "claim": "SEO ~42/100 (site denetimi)",
+              "confidence": "fact",
+              "sourceId": "S1",
+              "formula": "8 kategori ortalaması"
+            },
+            {
+              "claim": "26–29 şube, İstanbul odaklı",
+              "confidence": "estimate",
+              "sourceId": "S2",
+              "low": "26",
+              "base": "27",
+              "high": "29"
+            },
+            {
+              "claim": "Genç kitle konsept + topluluk arıyor",
+              "confidence": "assumption",
+              "note": "üçüncü/dördüncü dalga trendi"
+            },
+            {
+              "claim": "Marka/IP tescilinin gerçek sahibi",
+              "confidence": "unknown",
+              "note": "TÜRKPATENT sorgusu gerekli — bkz. 09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hedef-durum",
+      "title": "Hedef Durum",
+      "blocks": [
+        {
+          "type": "callout",
+          "variant": "info",
+          "title": "Vizyon (10 yıl)",
+          "text": "Türkiye'nin, büyük zincirin gücünü yerel bir kahvecinin sıcaklığıyla birleştiren **en sevilen butik kahve topluluğu** olmak; her açtığımız şubede o semtin buluşma noktası hâline gelmek."
+        },
+        {
+          "type": "callout",
+          "variant": "ok",
+          "title": "Misyon",
+          "text": "Erişilebilir fiyatla butik kalitede kahve ve fırın deneyimini; sıcak, yerel ve topluluk odaklı mekânlarda sunmak; bunu ölçülebilir, veri-odaklı ve sürdürülebilir bir dijital altyapıyla büyütmek."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Yerel Sıcaklık** — 'Bu, en yakın şubedeki müşteriye kendini özel hissettirir mi?'",
+            "**Kanıtla Yönet** — 'Ölçmüyorsak yapmıyoruz; önce ölçüm, sonra harcama.'",
+            "**Şeffaflık** — 'Yatırımcıya söyleyemeyeceğimiz rakamı içeride de kullanmayız.'",
+            "**Topluluk > Tek Seferlik Satış** — müşteriyi bir kez değil, bir ömür kazan.",
+            "**Kalite Tavizsizdir** — fiyat erişilebilir olabilir; çekirdek/hijyen/eğitim olamaz.",
+            "**Küçük ama Hızlı** — 26 şube, 340 şubeli devden hızlı öğrenir ve dener."
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Kırmızı çizgi: kalite/gıda güvenliği tavizi yok",
+            "Kırmızı çizgi: franchise'ta kanıtsız getiri vaadi yok (yasal + itibar)",
+            "Kırmızı çizgi: KVKK ihlali / izinsiz kişisel veri yok",
+            "Kırmızı çizgi: sahte yorum / bot etkileşim / yanıltıcı reklam yok",
+            "Kırmızı çizgi: denetimsiz şube açma yok"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stratejik-secenekler",
+      "title": "Stratejik Seçenekler",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Seçenek",
+            "Where to Play",
+            "How to Win",
+            "Değerlendirme"
+          ],
+          "rows": [
+            [
+              "S1 · Ölçek yarışı",
+              "Ulusal, çok şube",
+              "Sermaye + hız",
+              "Elenir: devlerle bütçe yarışamayız"
+            ],
+            [
+              "S2 · Fiyat yarışı",
+              "Ekonomik segment",
+              "En düşük fiyat",
+              "Elenir: marj + prestij çöker (Coffy zaten orada)"
+            ],
+            [
+              "S3 · Butik + yerel + topluluk",
+              "İstanbul semtleri",
+              "Yerel hâkimiyet + topluluk + dijital verim",
+              "SEÇİLEN: savunulabilir boşluk"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "secilen-yon-neden",
+      "title": "Seçilen Yön & Neden",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**S3** seçildi: 'butik his + erişilebilir fiyat + güçlü yerel topluluk + dijital verimlilik' kesişimi rakiplerin hiçbirinin aynı anda tutamadığı savunulabilir bir boşluktur (bkz. 04 · Rakip Analizi)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Vazgeçilen & Trade-off"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ölçek/şube sayısında liderlikten vazgeçildi → hız ve marjı koruyoruz.",
+            "En düşük fiyat konumundan vazgeçildi → premium his ve sadakati koruyoruz.",
+            "Trade-off: yavaş coğrafi yayılım pahasına derin yerel bağ + yüksek tekrar ziyaret."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "somut-aksiyonlar-owner-zaman",
+      "title": "Somut Aksiyonlar · Owner · Zaman",
+      "blocks": [
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "when": "Ay 1",
+              "what": "Vizyon/misyon/değerleri yazılı yayınla; ekip oryantasyonuna koy",
+              "owner": "Tolga"
+            },
+            {
+              "when": "Ay 1",
+              "what": "Kuzey Yıldızı metriklerini GA4/dashboard'a bağla",
+              "owner": "Tolga"
+            },
+            {
+              "when": "Ay 2",
+              "what": "Değerleri karar filtresi olarak süreçlere göm (kampanya onayı)",
+              "owner": "Tolga + GM"
+            },
+            {
+              "when": "Çeyreklik",
+              "what": "Vizyon/değer sapma denetimi (ECA-V2)",
+              "owner": "GM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kpi-kuzey-yildizi",
+      "title": "KPI (Kuzey Yıldızı)",
+      "blocks": [
+        {
+          "type": "kpi",
+          "rows": [
+            {
+              "metric": "Tekrar ziyaret oranı",
+              "baseline": "yok",
+              "target": "%20 (yıl)",
+              "frequency": "Aylık",
+              "owner": "Tolga"
+            },
+            {
+              "metric": "'Yakınımda kahve' ilk-3 payı",
+              "baseline": "düşük",
+              "target": "%55 (yıl)",
+              "frequency": "Aylık",
+              "owner": "Tolga"
+            },
+            {
+              "metric": "Franchise nitelikli aday / çeyrek",
+              "baseline": "—",
+              "target": "60",
+              "frequency": "Çeyreklik",
+              "owner": "GM+Tolga"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "risk-erken-uyari",
+      "title": "Risk & Erken Uyarı",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Risk",
+            "Erken uyarı",
+            "Önlem"
+          ],
+          "rows": [
+            [
+              "Vizyonun kâğıtta kalması",
+              "Kararlar hâlâ kişiye göre",
+              "Değerleri onay süreçlerine göm"
+            ],
+            [
+              "Ölçüm kurulmadan reklam",
+              "Harcama var, kanıt yok",
+              "'Kanıtla Yönet' kırmızı çizgi"
+            ],
+            [
+              "Marka tutarsızlığı",
+              "Şubeler farklı görünüyor",
+              "Brand book (bkz. 05m)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "karar-sistemi-eca-kapi",
+      "title": "Karar Sistemi (ECA) & Kapı",
+      "blocks": [
+        {
+          "type": "eca",
+          "id": "ECA-V1",
+          "event": "Yeni büyük fırsat/teklif geldi",
+          "condition": "Vizyon/değer filtresine takılıyor mu?",
+          "action": "Takılıyorsa reddet ya da üst karara taşı; değilse değerlendir"
+        },
+        {
+          "type": "eca",
+          "id": "ECA-V2",
+          "event": "Çeyrek kapandı",
+          "condition": "Kuzey Yıldızı metrikleri hedeften saptı mı?",
+          "action": "Sapma nedenini araştır, kanal stratejisini revize et, Karar Günlüğü'ne yaz"
+        },
+        {
+          "type": "gate",
+          "id": "GATE-Vizyon",
+          "question": "Vizyon/misyon/değerler yazılı, ölçülebilir ve karar filtresi olarak süreçlere gömülü mü?",
+          "pass": "Yayınlandı + metrikler bağlı + onay sürecine gömülü",
+          "fail": "Kâğıtta kaldı / metrik yok"
+        },
+        {
+          "type": "decision",
+          "gate": "CONDITIONAL_GO",
+          "rationale": "Vizyon/misyon/değer taslağı hazır ve tutarlı; ancak marka/IP sahipliği (Unknown) netleşmeden 'sahiplik' iddiası tam GO alamaz.",
+          "condition": "TÜRKPATENT marka sahipliği doğrulanınca tam GO (bkz. 09)",
+          "owner": "GM",
+          "deadline": "Ay 1 sonu",
+          "reopen": "Marka başkasında çıkarsa vizyon dili revize edilir"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rollback:** Değerler pratikte karar üretmiyorsa (3 ay içinde en az 1 kararı değiştirmediyse) değer seti sadeleştirilir ve yeniden yazılır."
+        },
+        {
+          "type": "chartReference",
+          "chartId": "c-pazar",
+          "title": "Pazar büyüklüğü hunisi",
+          "note": "hedef kitle ölçeği"
+        }
+      ]
+    },
+    {
+      "id": "kaynakca",
+      "title": "Kaynakça",
+      "blocks": [
+        {
+          "type": "sources",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Cups & Clouds site denetimi (SEO ~42/100, GTM+GA4)",
+              "publishedDate": "2026-08-03",
+              "accessedDate": "2026-08-04"
+            },
+            {
+              "id": "S2",
+              "title": "UFRAD — Cups & Clouds Coffee/Bakery",
+              "url": "https://ufrad.org/cups-clouds-coffee/bakery/",
+              "accessedDate": "2026-08-04"
+            },
+            {
+              "id": "S3",
+              "title": "Strateji-öncesi yöntem (action-plan-strateji-oncesi-v2)",
+              "accessedDate": "2026-08-04"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

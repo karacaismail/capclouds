@@ -1,0 +1,28 @@
+{
+  "id": "05k",
+  "icon": "ph-tag",
+  "baslik": "05k · Google Tag Manager",
+  "ozet": "Etiket mimarisi.",
+  "amac": "Etiket mimarisi.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Etiket mimarisi.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kurulu (GTM-KZKJWLZM). Tüm piksel/etiketler tek panelden, koda dokunmadan yönetilir."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "DataLayer standardı, olay/dönüşüm eşlemesi.",
+            "Consent Mode v2 (KVKK/Google için zorunlu)."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -213,11 +213,23 @@
 .acc-head:hover { background: #faf7f2; }
 .acc-caret { transition: transform 0.2s ease; }
 .acc-open .acc-caret { transform: rotate(180deg); }
-.acc-open { border-color: #c2a07d; }
-.acc-detay p { margin: 0 0 0.6rem; }
-.acc-detay ul { list-style: disc; padding-left: 1.25rem; margin: 0.4rem 0 0.6rem; }
-.acc-detay li { margin-bottom: 0.3rem; }
-.acc-detay b { color: #241a13; }
-.acc-detay > :last-child { margin-bottom: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .acc-caret, .reveal, * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+.acc-l1.acc-open { border-color: #c2a07d; }
+.acc-head, .acc-head-sub { min-height: 44px; cursor: pointer; }
+/* Seviye 2/3 nested accordion */
+.acc-group { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.45rem; }
+.acc-head-sub { display: flex; align-items: center; gap: 0.55rem; width: 100%; text-align: left; padding: 0.6rem 0.7rem; }
+.acc-head-sub:hover { background: #f3ede4; }
+.acc-sub-title { font-size: 1.02rem; }
+.acc-group-l2 > .acc-item { border: 1px solid #ece2d6; border-radius: 0.75rem; background: #faf7f2; overflow: hidden; }
+.acc-group-l2 > .acc-item.acc-open { border-color: #c2a07d; background: #fff; }
+.acc-group-l3 { margin-left: 0.15rem; padding-left: 0.5rem; border-left: 2px solid #e6dccb; }
+.acc-group-l3 > .acc-item { border: 1px solid #ece2d6; border-radius: 0.6rem; background: #fff; overflow: hidden; }
+.acc-l3 .acc-sub-title { font-size: 0.98rem; color: #573d2c; }
+.acc-inner { padding: 0.1rem 0.7rem 0.6rem; }
+.acc-inner-l1 { padding: 0.6rem 0.4rem 0.2rem; }
+.acc-inner > :first-child { margin-top: 0; }
 
 [x-cloak] { display: none !important; }

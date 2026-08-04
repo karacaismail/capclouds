@@ -1,0 +1,33 @@
+{
+  "id": "06",
+  "icon": "ph-coins",
+  "baslik": "06 · Finansal Plan",
+  "ozet": "Yatırım + işletme + diğer.",
+  "amac": "Yatırım + işletme + diğer.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Yatırım + işletme + diğer.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Üç kalem:**"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Yatırım (tek seferlik):** ~₺255.000 (web/SEO, ölçüm-piksel, şube sayfaları, online mağaza, marka kimliği, AI otomasyon).",
+            "**Aylık işletme:** ~₺180.000/ay → ~₺2,16M/yıl (ekip, prodüksiyon, araç, yönetim).",
+            "**Diğer:** ~₺149.000 (nakit tamponu, eğitim, lisans, yasal)."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**1. yıl toplam (reklam hariç):** ~₺2,56M. Reklam bütçesi ayrı. Rakamlar canlı grafik+tablodan güncellenir."
+        }
+      ]
+    }
+  ]
+}

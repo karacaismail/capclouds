@@ -1,0 +1,28 @@
+{
+  "id": "05h",
+  "icon": "ph-arrows-clockwise",
+  "baslik": "05h · Criteo",
+  "ozet": "Dinamik retargeting.",
+  "amac": "Dinamik retargeting.",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Dinamik retargeting.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dinamik yeniden pazarlama; **e-ticaret/katalog ön koşuludur.**"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Online satış açılana kadar beklemeli (2. faz).",
+            "ROAS odaklı; \"baktığın ürünü\" gösteren format."
+          ]
+        }
+      ]
+    }
+  ]
+}

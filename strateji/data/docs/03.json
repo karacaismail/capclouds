@@ -1,0 +1,33 @@
+{
+  "id": "03",
+  "icon": "ph-chart-pie-slice",
+  "baslik": "03 · Pazar Analizi",
+  "ozet": "Pazar ne kadar büyük, kimi hedefleriz?",
+  "amac": "Pazar ne kadar büyük, kimi hedefleriz?",
+  "sections": [
+    {
+      "id": "genel",
+      "title": "Genel Bakış",
+      "summary": "Pazar ne kadar büyük, kimi hedefleriz?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pazar büyüklüğü **üç katmanda** (jargon terimleri kullanılmadan) raporlanır:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Toplam Ulaşılabilir Pazar:** ≈ 30.000.000 kişi (TR'de düzenli kahve tüketen + dijitalde aktif).",
+            "**Hedeflenebilir Pazar:** ≈ 4.500.000 kişi (şube illeri, 18–40, premium/üçüncü dalga ilgili).",
+            "**Gerçekçi Hedef Pazar (12–18 ay):** ≈ 315.000 kişi (anlamlı dijital temas)."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ayrıca talep gerçekliği, segment kartları ve kanal erişim gerçekliği. Sayılar canlı grafikte de yer alır."
+        }
+      ]
+    }
+  ]
+}
