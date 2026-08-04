@@ -1,33 +1,74 @@
 {
+  "__handAuthored": true,
   "id": "06",
   "icon": "ph-coins",
   "baslik": "06 · Finansal Plan",
-  "ozet": "Yatırım + işletme + diğer.",
-  "amac": "Yatırım + işletme + diğer.",
+  "ozet": "Yatırım + işletme + reklam + rezerv; senaryo, nakit akışı ve birim ekonomisiyle.",
+  "amac": "12 aylık dijital pazarlama finansmanını sapma eşikleri ve senaryolarla yönetmek.",
+  "status": "CONDITIONAL_GO",
+  "kritikKPI": "1. yıl ~₺2,56M (reklam hariç)",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Yatırım + işletme + diğer.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "**Üç kalem:**"
-        },
-        {
-          "type": "list",
-          "ordered": false,
-          "items": [
-            "**Yatırım (tek seferlik):** ~₺255.000 (web/SEO, ölçüm-piksel, şube sayfaları, online mağaza, marka kimliği, AI otomasyon).",
-            "**Aylık işletme:** ~₺180.000/ay → ~₺2,16M/yıl (ekip, prodüksiyon, araç, yönetim).",
-            "**Diğer:** ~₺149.000 (nakit tamponu, eğitim, lisans, yasal)."
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "**1. yıl toplam (reklam hariç):** ~₺2,56M. Reklam bütçesi ayrı. Rakamlar canlı grafik+tablodan güncellenir."
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Para nereye, ne getiri?", "blocks": [
+      { "type": "paragraph", "text": "Finans dört kalemden oluşur: **tek seferlik yatırım**, **aylık işletme**, **reklam harcaması** (ayrı) ve **diğer/rezerv**. Reklam hariç 1. yıl toplamı ~**₺2,56M**. Tüm sayılar **planlama varsayımıdır** ve canlı grafik/tablodan güncellenir." },
+      { "type": "callout", "variant": "warn", "text": "Sayılar kanıtlanmamış planlama varsayımıdır; gerçek CPC/CVR/AOV geldikçe güncellenir. Reklam bütçesi bu toplamın dışındadır." }
+    ]},
+    { "id": "yatirim-capex", "title": "2 · Yatırım Harcamaları (tek seferlik)", "summary": "Altyapı kurulum yatırımı.", "blocks": [
+      { "type": "chartReference", "chartId": "c-yatirim", "title": "Yatırım kalemleri", "note": "canlı (CANLI VERİ sekmesi)", "datasetId": "yatirim" },
+      { "type": "paragraph", "text": "Toplam ~**₺255.000**: web/SEO düzeltme, ölçüm & piksel, şube sayfaları, online mağaza altyapısı, marka kimliği + içerik kiti, AI araç otomasyonu." }
+    ]},
+    { "id": "isletme-opex", "title": "3 · İşletme Giderleri (aylık, tekrar eden)", "summary": "Ekip, prodüksiyon, araç.", "blocks": [
+      { "type": "chartReference", "chartId": "c-isletme", "title": "Aylık işletme kalemleri", "note": "canlı", "datasetId": "isletme" },
+      { "type": "paragraph", "text": "Aylık ~**₺180.000** → yıllık ~**₺2,16M**. İçerir: Dijital Pazarlama Lideri (Tolga), uzman adayı, grafiker, video/foto prodüksiyon, araç & yazılım (AI dahil), influencer koordinasyon, yönetim & raporlama. **İnsan kaynağı** en büyük kalem." }
+    ]},
+    { "id": "diger-rezerv", "title": "4 · Diğer Gerekli Kalemler & Rezerv", "summary": "Nakit tamponu, eğitim, lisans, hukuk.", "blocks": [
+      { "type": "chartReference", "chartId": "c-diger", "title": "Diğer kalemler", "note": "canlı", "datasetId": "diger" },
+      { "type": "table", "headers": ["Kalem", "Tutar (planlama)", "Not"], "rows": [ ["Nakit tamponu / rezerv (3 ay)", "₺90.000", "Beklenmedik gider"], ["Eğitim & sertifikasyon", "₺15.000", "Ekip yetkinliği"], ["Yazılım lisans (yıllık)", "₺24.000", "Tasarım/e-posta/SEO"], ["Yasal / KVKK / danışman", "₺20.000", "Sözleşme, uyum"] ] }
+    ]},
+    { "id": "reklam-butcesi", "title": "5 · Reklam Harcaması (ayrı)", "summary": "İşletmeden ayrı, ROAS'a bağlı.", "blocks": [
+      { "type": "paragraph", "text": "Reklam bütçesi işletme giderinden **ayrıdır** ve ROAS'a göre ölçeklenir. Kanal dağılımı Bütçe Hesaplama'da; aylık örnek ₺46.200 reklam (Meta+Google+TikTok+Influencer)." },
+      { "type": "chartReference", "chartId": "c-kanal", "title": "Aylık reklam kanal dağılımı", "note": "canlı", "datasetId": "kanal" }
+    ]},
+    { "id": "birinci-yil-ozeti", "title": "6 · 1. Yıl Özeti (reklam hariç)", "summary": "Toplam operasyon maliyeti.", "blocks": [
+      { "type": "chartReference", "chartId": "c-yil", "title": "1. yıl maliyet özeti", "note": "canlı", "datasetId": "yil" },
+      { "type": "table", "headers": ["Kalem", "Tutar (planlama)"], "rows": [ ["Yatırım (tek seferlik)", "₺255.000"], ["Yıllık işletme (12 ay)", "₺2.160.000"], ["Diğer + rezerv", "₺149.000"], ["1. yıl toplam (reklam hariç)", "₺2.564.000"] ] }
+    ]},
+    { "id": "cash-flow", "title": "7 · 12 Aylık Nakit Akışı", "summary": "Ne zaman ne kadar nakit gerekir?", "blocks": [
+      { "type": "paragraph", "text": "İlk aylar yatırım ağırlıklı (yüksek çıkış, düşük getiri); getiri Faz 2'den (reklam) itibaren birikir. Rezerv, negatif ayları köprüler." },
+      { "type": "table", "headers": ["Dönem", "Ağırlık", "Nakit ihtiyacı"], "rows": [ ["Ay 1-2", "Yatırım + ekip başlangıç", "Yüksek çıkış"], ["Ay 3-4", "Reklam başlar, getiri düşük", "Orta-yüksek"], ["Ay 5-8", "Reklam ölçekleme + e-ticaret", "Getiri artar"], ["Ay 9-12", "Sürdürülebilir + marka", "Dengelenir"] ] },
+      { "type": "callout", "variant": "info", "text": "Detaylı aylık nakit akışı tablosu Google E-Tablo '09 · Finansal Plan' ve canlı grafiklerle senkron tutulur." }
+    ]},
+    { "id": "senaryolar", "title": "8 · Senaryolar (düşük / baz / yüksek)", "summary": "Belirsizliği aralıkla yönet.", "blocks": [
+      { "type": "table", "headers": ["Kalem", "Düşük", "Baz", "Yüksek"], "rows": [ ["Aylık reklam", "₺30.000", "₺46.000", "₺70.000"], ["Beklenen ROAS", "1.4x", "2.0x", "2.8x"], ["Aylık işletme", "₺150.000", "₺180.000", "₺210.000"] ] },
+      { "type": "evidence", "items": [ { "claim": "ROAS baz 2.0x", "confidence": "estimate", "low": "1.4x", "base": "2.0x", "high": "2.8x", "formula": "gelir / reklam harcaması", "note": "yeni hesap; gerçek veriyle güncellenecek" } ] }
+    ]},
+    { "id": "birim-ekonomi", "title": "9 · Birim Ekonomisi (ROI/ROAS/CAC/LTV)", "summary": "Bir müşteri/lead ne kadar?", "blocks": [
+      { "type": "table", "headers": ["Metrik", "Formül", "Baz varsayım"], "rows": [ ["CAC", "reklam harcaması / yeni müşteri", "planlama"], ["LTV", "ort. adisyon × ziyaret sıklığı × yıl", "planlama"], ["ROAS", "gelir / reklam", "2.0x hedef"], ["Franchise lead değeri", "nitelikli aday × dönüşüm × sözleşme değeri", "yüksek"] ] },
+      { "type": "callout", "variant": "warn", "text": "Kafe için LTV, tekrar ziyaret ve sadakatle büyür; bu yüzden 'Topluluk > Tek satış' değeri finansal olarak da haklıdır (01)." }
+    ]},
+    { "id": "franchise-ekonomisi", "title": "10 · Franchise Lead Ekonomisi", "summary": "Yüksek değerli cephe.", "blocks": [
+      { "type": "list", "items": ["Bir nitelikli franchise adayı, kahve müşterisinden kat kat değerli.", "Hedef: çeyrekte 15 → 30 → 60 nitelikli aday.", "CPL düşük tutulursa franchise reklamı en yüksek ROI'li harcamadır.", "Şeffaf getiri sayfası dönüşümü artırır (bkz. 04, 05c/05d)."] }
+    ]},
+    { "id": "break-even", "title": "11 · Başabaş Varsayımları", "summary": "Ne zaman kendini döndürür?", "blocks": [
+      { "type": "paragraph", "text": "Dijital pazarlama yatırımının başabaşı; reklam ROAS'ı ≥ ~1.5x sürdürülebilir olduğunda ve yerel SEO/organik trafik işletme giderinin bir kısmını 'bedava' karşıladığında yaklaşır. Franchise lead geliri başabaşı hızlandırır." },
+      { "type": "evidence", "items": [ { "claim": "Başabaş ~Ay 6-9 aralığı", "confidence": "assumption", "low": "Ay 9", "base": "Ay 7", "high": "Ay 5", "note": "ROAS ve franchise dönüşümüne çok duyarlı" } ] }
+    ]},
+    { "id": "butce-sahipligi", "title": "12 · Bütçe Sahipliği ve Onay", "summary": "Kim harcar, kim onaylar?", "blocks": [
+      { "type": "table", "headers": ["Karar", "Öneren", "Onaylayan"], "rows": [ ["Aylık toplam bütçe", "Tolga", "Genel Müdür"], ["Kanal içi dağılım", "Uzman", "Tolga"], ["Tek seferlik yatırım kalemi", "Tolga", "Genel Müdür"], ["Rezerv kullanımı", "Tolga", "Genel Müdür"] ] }
+    ]},
+    { "id": "sapma-esikleri", "title": "13 · Sapma Eşikleri & Yeniden Tahsis (ECA)", "summary": "Ne zaman durdur/kaydır?", "blocks": [
+      { "type": "eca", "id": "ECA-Fin-Durdur", "event": "Bir kanal CPL/ROAS eşiğini 2 hafta aştı", "condition": "Optimizasyon sonuç vermedi", "action": "O kanalın bütçesini duraklat, kazanan kanala yeniden tahsis et" },
+      { "type": "eca", "id": "ECA-Fin-Rezerv", "event": "Aylık nakit çıkışı planı %20 aştı", "condition": "Gelir hedefin altında", "action": "Rezervden köprüle + harcamayı gözden geçir, GM'ye taşı" },
+      { "type": "gate", "id": "GATE-Fin-Ceyrek", "question": "Çeyrek sonu birim ekonomisi (ROAS/CAC/LTV) sağlıklı mı?", "pass": "ROAS ≥ hedef + LTV/CAC ≥ 3", "fail": "Kanal karması/teklif revize + bütçe kıs" }
+    ]},
+    { "id": "riskler", "title": "14 · Finansal Riskler", "summary": "Erken uyarı.", "blocks": [
+      { "type": "risk", "rows": [ { "risk": "ROAS beklenenin altı", "signal": "2 hafta hedef altı", "mitigation": "Kanal/kreatif revize, bütçe kaydır", "severity": "high" }, { "risk": "Nakit tamponu erimesi", "signal": "Rezerv < 1 ay", "mitigation": "Harcama dondur, GM kararı", "severity": "high" }, { "risk": "Kur/çekirdek maliyet baskısı", "signal": "Marj daralması", "mitigation": "Fiyat/menü esnekliği (operasyon)", "severity": "med" } ] }
+    ]},
+    { "id": "kaynaklar", "title": "15 · Kaynaklar & Senkron", "summary": "Veri kaynağı.", "blocks": [
+      { "type": "paragraph", "text": "Sayısal veriler **Google E-Tablo 'CANLI VERİ' sekmesinden** canlı çekilir; bu doküman ve grafikler aynı kaynaktan beslenir (tek kaynak ilkesi)." },
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds finansal planlama varsayımları (E-Tablo CANLI VERİ)", "publishedDate": "2026-08-04", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }

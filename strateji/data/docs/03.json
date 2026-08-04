@@ -1,33 +1,61 @@
 {
+  "__handAuthored": true,
   "id": "03",
   "icon": "ph-chart-pie-slice",
   "baslik": "03 · Pazar Analizi",
-  "ozet": "Pazar ne kadar büyük, kimi hedefleriz?",
-  "amac": "Pazar ne kadar büyük, kimi hedefleriz?",
+  "ozet": "Pazar üç katmanda; her sayı formül + kaynak + güven + düşük/baz/yüksek ile.",
+  "amac": "Gerçekçi hedef pazarı ve rakip konumunu kanıta dayalı çerçevelemek.",
+  "status": "GO",
+  "kritikKPI": "Gerçekçi hedef ≈ 315k dijital temas",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "hazirlik",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Pazar ne kadar büyük, kimi hedefleriz?",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Pazar büyüklüğü **üç katmanda** (jargon terimleri kullanılmadan) raporlanır:"
-        },
-        {
-          "type": "list",
-          "ordered": false,
-          "items": [
-            "**Toplam Ulaşılabilir Pazar:** ≈ 30.000.000 kişi (TR'de düzenli kahve tüketen + dijitalde aktif).",
-            "**Hedeflenebilir Pazar:** ≈ 4.500.000 kişi (şube illeri, 18–40, premium/üçüncü dalga ilgili).",
-            "**Gerçekçi Hedef Pazar (12–18 ay):** ≈ 315.000 kişi (anlamlı dijital temas)."
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Ayrıca talep gerçekliği, segment kartları ve kanal erişim gerçekliği. Sayılar canlı grafikte de yer alır."
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Pazar ne kadar, kimi hedefleriz?", "blocks": [
+      { "type": "paragraph", "text": "Pazar **üç katmanda** raporlanır (jargon terimleri yazılmadan): toplam ulaşılabilir, hedeflenebilir ve 12-18 aylık gerçekçi hedef. Her sayı bir **formül + kaynak + güven düzeyi + düşük/baz/yüksek** aralığıyla verilir; hiçbiri kesin gerçek değildir." },
+      { "type": "callout", "variant": "warn", "text": "Tüm pazar büyüklükleri tahmindir; kesinlik iddiası yoktur. Aralık (düşük/baz/yüksek) belirsizliği dürüstçe gösterir." }
+    ]},
+    { "id": "pazar-katmanlari", "title": "2 · Pazar Katmanları (canlı)", "summary": "Üç halka.", "blocks": [
+      { "type": "chartReference", "chartId": "c-pazar", "title": "Pazar katmanları", "note": "canlı (CANLI VERİ sekmesi)", "datasetId": "pazar" }
+    ], "sections": [
+      { "id": "toplam-pazar", "title": "Toplam Ulaşılabilir Pazar", "summary": "En geniş halka.", "blocks": [
+        { "type": "evidence", "items": [ { "claim": "≈ 30.000.000 kişi", "confidence": "estimate", "low": "22.000.000", "base": "30.000.000", "high": "38.000.000", "formula": "TR yetişkin nüfus × düzenli kahve tüketen oranı × dijitalde aktif oranı", "sourceId": "S1", "note": "kaba üst sınır" } ] },
+        { "type": "paragraph", "text": "Türkiye'de düzenli kahve tüketen **ve** dijitalde aktif kitle. Bu bir tavandır; ulaşım değil potansiyeli gösterir." }
+      ]},
+      { "id": "hedef-pazar", "title": "Hedeflenebilir Pazar", "summary": "Erişim gerçekçi olan.", "blocks": [
+        { "type": "evidence", "items": [ { "claim": "≈ 4.500.000 kişi", "confidence": "estimate", "low": "3.000.000", "base": "4.500.000", "high": "6.000.000", "formula": "şube illeri nüfusu × 18-40 oranı × premium/üçüncü dalga ilgi oranı", "sourceId": "S1" } ] },
+        { "type": "paragraph", "text": "Şube bulunan iller, 18-40 yaş, premium/üçüncü dalga kahveye ilgili segment. Reklamla makul maliyetle erişilebilir kısım." }
+      ]},
+      { "id": "gercekci-hedef", "title": "Gerçekçi Hedef (12-18 ay)", "summary": "Anlamlı temas.", "blocks": [
+        { "type": "evidence", "items": [ { "claim": "≈ 315.000 kişi", "confidence": "assumption", "low": "180.000", "base": "315.000", "high": "500.000", "formula": "hedeflenebilir × bütçeyle erişilebilir oran × anlamlı etkileşim oranı", "sourceId": "S1", "note": "bütçe ve ROAS'a duyarlı" } ] },
+        { "type": "paragraph", "text": "12-18 ayda **anlamlı dijital temas** kurulabilecek kişi (takip, ziyaret, dönüşüm potansiyeli). Planlamanın gerçek çıpası budur." }
+      ]}
+    ]},
+    { "id": "talep-gerceklik", "title": "3 · Talep Gerçekliği", "summary": "Talep var mı, mevsimsel mi?", "blocks": [
+      { "type": "list", "items": ["Üçüncü dalga kahve talebi büyükşehirlerde güçlü ve büyüyor (yapısal rüzgar).", "Mevsimsellik: soğuk aylarda sıcak içecek, yazın soğuk kahve/ikram — kampanya takvimi buna göre.", "Franchise talebi ayrı bir pazar: girişimci/yatırımcı ilgisi (yüksek değerli, düşük hacim).", "Fiyat hassasiyeti: premium ama 'erişilebilir premium' konumu (01)."] },
+      { "type": "evidence", "items": [ { "claim": "Üçüncü dalga kahve büyüyen kategori", "confidence": "estimate", "sourceId": "S1", "note": "sektör gözlemi; kesin oran doğrulanmalı" } ] }
+    ]},
+    { "id": "segment-kartlari", "title": "4 · Segment Kartları", "summary": "Kimi, neyle çekeriz?", "blocks": [
+      { "type": "table", "headers": ["Segment", "İhtiyaç/motivasyon", "Ana kanal"], "rows": [ ["Genç profesyonel (24-35)", "Kaliteli kahve + çalışma/buluşma alanı", "Instagram, Google, Maps"], ["Öğrenci (18-24)", "Uygun premium + atmosfer + sosyal", "TikTok, Instagram"], ["Kahve meraklısı", "Menşe/demleme + üçüncü dalga", "Instagram, içerik, e-ticaret"], ["Franchise adayı", "Kârlı + güvenilir marka", "Google Ads (marka arama), franchise sayfası"] ] }
+    ]},
+    { "id": "rakip-analizi", "title": "5 · Rakip Konumu (çok boyut)", "summary": "Nerede durur, nerede ayrışırız?", "blocks": [
+      { "type": "paragraph", "text": "Rakipler tek eksende değil, çok boyutta karşılaştırılır. Amaç kalabalık ortada boğuşmak değil, **boş alan** bulmaktır." },
+      { "type": "table", "headers": ["Boyut", "Büyük zincirler", "Butik/bağımsız", "Cups & Clouds fırsatı"], "rows": [ ["Ölçek/tanınırlık", "Yüksek", "Düşük", "Orta — franchise ile büyüyor"], ["Yerel/topluluk hissi", "Düşük", "Yüksek", "Yüksek (ayrışma ekseni)"], ["Dijital olgunluk", "Yüksek", "Değişken", "Bu proje ile hızla kapanır"], ["Fiyat", "Yüksek", "Değişken", "Erişilebilir premium"], ["Franchise sistemi", "Var", "Çoğu yok", "Güçlü kart"] ] },
+      { "type": "callout", "variant": "info", "text": "Ayrışma ekseni: 'yerel + topluluk + erişilebilir premium + güçlü franchise' birleşimi. Rakip adı stratejik dokümanda anılmaz; konumlanma davranışla yönetilir." }
+    ]},
+    { "id": "kanal-erisim", "title": "6 · Kanal Erişim Gerçekliği", "summary": "Hangi kanal kime ulaşır?", "blocks": [
+      { "type": "list", "items": ["Instagram/Meta: en geniş görsel erişim (24-40).", "TikTok: genç + viral keşif (18-28).", "Google/Maps: niyetli arama + yerel ('yakınımdaki kahve').", "Google Ads marka arama: franchise adayı yakalama.", "E-ticaret/e-posta: mevcut sadıkları derinleştirme."] }
+    ]},
+    { "id": "franchise-huni", "title": "7 · Franchise Talep Hunisi", "summary": "Yüksek değerli, ince huni.", "blocks": [
+      { "type": "list", "ordered": true, "items": ["Farkındalık: marka + başarı hikâyesi görünürlüğü.", "İlgi: şeffaf getiri/model sayfası (04).", "Değerlendirme: nitelikli aday formu + görüşme.", "Karar: sözleşme — yüksek değer, düşük hacim."] },
+      { "type": "callout", "variant": "info", "text": "Bu huni az sayıda ama çok değerli lead üretir; finansal olarak en yüksek getirili cephe (06)." }
+    ]},
+    { "id": "riskler", "title": "8 · Pazar Riskleri", "summary": "Neye dikkat?", "blocks": [
+      { "type": "risk", "rows": [ { "risk": "Pazar tahmini fazla iyimser", "signal": "Erişim maliyeti beklenenden yüksek", "mitigation": "Gerçekçi hedefe (düşük senaryo) göre planla", "severity": "med" }, { "risk": "Yoğun rekabet / dikkat kıtlığı", "signal": "CPM/CPC artışı", "mitigation": "Ayrışma ekseni + organik + yerel SEO", "severity": "med" }, { "risk": "Makro/harcama daralması", "signal": "Dönüşüm düşüşü", "mitigation": "Erişilebilir fiyat + değer iletişimi", "severity": "med" } ] }
+    ]},
+    { "id": "kaynaklar", "title": "9 · Kaynaklar & Yöntem", "summary": "Nasıl hesaplandı?", "blocks": [
+      { "type": "paragraph", "text": "Katman sayıları kamuya açık nüfus/sektör büyüklüğü mertebeleri ve oran varsayımlarıyla **yukarıdan-aşağı** hesaplanmıştır; kesinlik değil mertebe verir. Sayısal değerler canlı grafikle (CANLI VERİ) senkron tutulur." },
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds pazar mertebe hesabı (nüfus + sektör oranı varsayımları)", "publishedDate": "2026-08-04", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }
