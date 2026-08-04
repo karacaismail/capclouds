@@ -1,28 +1,97 @@
 {
+  "__handAuthored": true,
   "id": "05d",
   "icon": "ph-meta-logo",
   "baslik": "05d · Meta Business + Pixel",
-  "ozet": "Instagram/Facebook reklam & ölçüm.",
-  "amac": "Instagram/Facebook reklam & ölçüm.",
+  "ozet": "Kafe markasının 1 numaralı kanalı: Instagram/Facebook erişim, retargeting, franchise.",
+  "amac": "Yerel erişim + retargeting + franchise lead'i ölçülebilir biçimde büyütmek.",
+  "status": "CONDITIONAL_GO",
+  "kritikKPI": "ROAS ≥ 2x · erişim +%140",
+  "owner": "Dijital Pazarlama Uzmanı (adayı)",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Instagram/Facebook reklam & ölçüm.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Business Manager + **Pixel + Conversions API** (iOS kaybını azaltır) + katalog."
-        },
-        {
-          "type": "list",
-          "ordered": false,
-          "items": [
-            "Hedef kitleler: yerel erişim, ilgi alanı, benzer kitle, retargeting.",
-            "Kafe markası için 1 numaralı kanal; piksel olmadan optimize edilemez."
-          ]
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Hangi kararı üretir?", "blocks": [
+      { "type": "paragraph", "text": "Instagram, bir kahve markasının en güçlü kanalıdır. **Pixel + Conversions API** olmadan reklam optimize edilemez ve siteyi/profili gezene geri dönülemez. Ön koşul tamamlanınca GO." },
+      { "type": "decision", "gate": "CONDITIONAL_GO", "rationale": "Kitle ve içerik güçlü; ancak Pixel+CAPI kurulmadan bütçe verimi düşük olur.", "condition": "Pixel + CAPI doğrulandıktan sonra tam GO (G12-G15).", "owner": "Uzman", "deadline": "G15" }
+    ]},
+    { "id": "is-gerekcesi", "title": "2 · İş Gerekçesi", "summary": "Neden Meta?", "blocks": [
+      { "type": "list", "items": ["Genç, yerel, görsel-odaklı kahve kitlesi Instagram'da.", "Retargeting: siteyi/menüyü/franchise formunu gezene düşük maliyetli geri dönüş.", "Coffee Ride gibi topluluk içeriği en çok burada yayılır."] }
+    ]},
+    { "id": "mevcut-durum", "title": "3 · Mevcut Durum ve Eksikler", "summary": "Bugün ne var?", "blocks": [
+      { "type": "evidence", "items": [ { "claim": "Sitede Meta Pixel (fbq) yok", "confidence": "fact", "sourceId": "S1" }, { "claim": "Instagram hesabı aktif ama reklam ölçümü yok", "confidence": "estimate" } ] }
+    ]},
+    { "id": "hedef-kitle", "title": "4 · Hedef Kitle ve Kullanım Senaryosu", "summary": "Kimi hedefliyoruz?", "blocks": [
+      { "type": "table", "headers": ["Kitle", "Amaç"], "rows": [ ["Şube çevresi (yerel)", "Ziyaret / farkındalık"], ["Etkileşenler / benzer kitle", "Yeni müşteri"], ["Site/menü ziyaretçisi", "Retargeting"], ["Yatırımcı ilgisi", "Franchise lead"] ] }
+    ]},
+    { "id": "funnel-gorevi", "title": "5 · Funnel İçindeki Görevi", "summary": "Hangi aşama?", "blocks": [
+      { "type": "paragraph", "text": "Meta ağırlıkla **Farkındalık → İlgi** kurar ve **Retargeting ile Aksiyon'a** geri çağırır. Franchise için Aksiyon (lead) kampanyası ayrı yürür." }
+    ]},
+    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne kurulu olmalı?", "blocks": [
+      { "type": "list", "items": ["Meta Business Manager + Reklam Hesabı", "Pixel + Conversions API (sunucu taraflı)", "Consent Mode / KVKK izinleri", "Katalog (dinamik reklam için, e-ticaret sonrası)"] },
+      { "type": "gate", "id": "GATE-Meta-Onkosul", "question": "Pixel + CAPI test olayları Etkinlikler Yöneticisi'nde düşüyor mu?", "pass": "Olaylar + eşleşme kalitesi yeterli", "fail": "Olay yok → HOLD" }
+    ]},
+    { "id": "hesap-yetki", "title": "7 · Hesap ve Yetki Mimarisi", "summary": "Kim neye erişir?", "blocks": [
+      { "type": "table", "headers": ["Varlık", "Sahip", "Erişim"], "rows": [ ["Business Manager", "Şirket", "Tolga: yönetici"], ["Reklam Hesabı", "BM altında", "Uzman: reklamcı"], ["Sayfa/Instagram", "Şirket", "Grafiker: içerik"], ["Ödeme", "GM", "Sadece GM"] ] }
+    ]},
+    { "id": "kurulum", "title": "8 · Kurulum Adımları", "summary": "Sıra.", "blocks": [
+      { "type": "list", "ordered": true, "items": ["Business Manager + Reklam Hesabı + Sayfa/Instagram bağla.", "Pixel oluştur, GTM ile ekle (All Pages).", "Lead/Contact/ViewContent olayları ekle.", "Conversions API'yi sunucu tarafıyla bağla (stape.io/CAPI Gateway).", "Kitleleri kur (retargeting, benzer). Küçük bütçeyle başlat."] }
+    ]},
+    { "id": "kampanya-mimarisi", "title": "9 · Kampanya Mimarisi", "summary": "Hangi kampanyalar?", "blocks": [
+      { "type": "paragraph", "text": "Kampanyalar hedefe göre ayrılır ve ayrı bütçelenir." }
+    ], "sections": [
+      { "id": "yerel-erisim", "title": "Yerel Erişim / Trafik", "summary": "Şube çevresine ulaş.", "blocks": [
+        { "type": "list", "items": ["**Nedir:** şube yarıçapında erişim/trafik.", "**Neden:** yeni yerel müşteri.", "**Ölçüm:** erişim, sayfa/profil ziyareti, yol tarifi.", "**Ölçekle:** CPM düşük + etkileşim yüksekse artır.", "**Durdur:** CPM yüksek + etkileşim düşükse kreatifi değiştir."] }
+      ]},
+      { "id": "retargeting", "title": "Retargeting", "summary": "Gezeni geri çağır.", "blocks": [
+        { "type": "list", "items": ["**Kitle:** site/menü ziyaretçisi, etkileşen, franchise formunu yarıda bırakan.", "**Frekans kapağı** uygula (bıkkınlık).", "**Ölçüm:** geri dönüş ROAS.", "**Durdur:** frekans yüksek/ROAS düşük → kes."] }
+      ]},
+      { "id": "franchise-lead", "title": "Franchise Lead", "summary": "Yatırımcı lead'i.", "blocks": [
+        { "type": "list", "items": ["**Nedir:** lead formu / franchise sayfasına yönlendirme.", "**Ön koşul:** şeffaf franchise sayfası + ön-elemeli form.", "**Ölçüm:** nitelikli aday (CRM), CPL.", "**Karar:** GM · **Risk:** düşük nitelik → ön-eleme soruları."] }
+      ]},
+      { "id": "benzer-kitle", "title": "Benzer Kitle (Lookalike)", "summary": "En iyi müşteriye benzeyeni bul.", "blocks": [
+        { "type": "list", "items": ["**Kaynak:** dönüşen/etkileşen kitle (yeterli hacim gerekli).", "**Neden:** verimli ölçekleme.", "**Ölçüm:** yeni müşteri CVR/CAC.", "**Not:** kaynak kitle küçükse beklet."] }
+      ]},
+      { "id": "katalog-dinamik", "title": "Katalog / Dinamik Reklam", "summary": "E-ticaret sonrası.", "blocks": [
+        { "type": "callout", "variant": "warn", "title": "Ön koşul", "text": "Dinamik ürün reklamı **online mağaza + katalog** gerektirir (Faz 4). O zamana kadar N/A; e-ticaret açılınca yeniden değerlendir." }
+      ]}
+    ]},
+    { "id": "tracking", "title": "10 · Tracking, Events ve Conversions", "summary": "Neyi ölçüyoruz?", "blocks": [
+      { "type": "table", "headers": ["Event", "Tür", "Kaynak"], "rows": [ ["Lead (franchise)", "Dönüşüm", "Pixel+CAPI"], ["Contact", "Dönüşüm", "Pixel+CAPI"], ["ViewContent (menü)", "Mikro", "Pixel"], ["Purchase (Faz 4)", "Dönüşüm", "Pixel+CAPI+DataLayer"] ] },
+      { "type": "paragraph", "text": "**CAPI** iOS/çerez kaybını %20-30 azaltır; eşleşme kalitesi izlenir." }
+    ]},
+    { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler.", "blocks": [
+      { "type": "table", "headers": ["Terim", "Anlam"], "rows": [ ["CAPI", "Conversions API (sunucu ölçümü)"], ["CPM", "Bin gösterim maliyeti"], ["ROAS", "Reklam getirisi"], ["Lookalike", "Benzer kitle"], ["Frekans", "Kişi başı gösterim"] ] }
+    ]},
+    { "id": "butce", "title": "12 · Bütçe (düşük/baz/yüksek)", "summary": "Ne kadar?", "blocks": [
+      { "type": "table", "headers": ["Senaryo", "Aylık Meta", "Odak"], "rows": [ ["Düşük", "₺10.000", "Yerel + retargeting"], ["Baz", "₺18.000", "+ franchise + benzer kitle"], ["Yüksek", "₺30.000", "+ ölçekleme + (katalog Faz 4)"] ] },
+      { "type": "callout", "variant": "warn", "text": "Rakamlar **planlama varsayımıdır**; gerçek CPM/CVR ile güncellenecek." }
+    ]},
+    { "id": "kpi", "title": "13 · KPI ve Hedefler", "summary": "Başarı.", "blocks": [
+      { "type": "kpi", "rows": [ { "metric": "ROAS", "baseline": "—", "target": "1.6x → 2.2x → 3.0x", "frequency": "Haftalık", "owner": "Uzman" }, { "metric": "Erişim/ay", "baseline": "baz", "target": "+%140", "frequency": "Haftalık", "owner": "Grafiker" }, { "metric": "Franchise CPL", "baseline": "—", "target": "≤ ₺220 → ₺140", "frequency": "Haftalık", "owner": "Uzman" } ] },
+      { "type": "chartReference", "chartId": "c-kanal", "title": "Bütçe dağılımı (Meta payı)", "note": "canlı", "datasetId": "kanal" }
+    ]},
+    { "id": "test-backlog", "title": "14 · Test Backlog'u", "summary": "Neyi test?", "blocks": [
+      { "type": "list", "items": ["Kreatif: Reels vs statik", "Kitle: yerel vs ilgi vs benzer", "Yerleşim: Reels vs Feed vs Story", "Franchise: lead form vs sayfa yönlendirme"] }
+    ]},
+    { "id": "scale-pause-kill", "title": "15 · Scale / Pause / Kill (ECA)", "summary": "Ne zaman büyüt/durdur?", "blocks": [
+      { "type": "eca", "id": "ECA-Meta-Scale", "event": "Kampanya ROAS ≥ 2x, 2 hafta stabil", "condition": "Kitle doygun değil", "action": "Bütçeyi %20 artır" },
+      { "type": "eca", "id": "ECA-Meta-Kill", "event": "ROAS < 1.2x", "condition": "Kreatif/kitle revizyonu 1 hafta sonuç vermedi", "action": "Kampanyayı duraklat" }
+    ]},
+    { "id": "kvkk-risk", "title": "16 · KVKK, Güvenlik ve Marka Riski", "summary": "Uyum.", "blocks": [
+      { "type": "list", "items": ["Consent Mode / izin zorunlu.", "Yanıltıcı franchise vaadi yasak (01 kırmızı çizgi).", "Marka tutarlılığı: brand book'a uygun kreatif (05m)."] }
+    ]},
+    { "id": "plan-30-60-90", "title": "17 · 30/60/90 Günlük Plan", "summary": "Takvim.", "blocks": [
+      { "type": "timeline", "items": [ { "when": "0-30", "what": "Pixel+CAPI, yerel + retargeting başlat", "owner": "Uzman" }, { "when": "30-60", "what": "Franchise + benzer kitle, kreatif testleri", "owner": "Uzman+Grafiker" }, { "when": "60-90", "what": "Ölçekle; e-ticaret sonrası katalog hazırlığı", "owner": "Uzman" } ] }
+    ]},
+    { "id": "raci", "title": "18 · RACI", "summary": "Rol.", "blocks": [
+      { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [ ["Kampanya ops", "Uzman", "Tolga", "—", "GM"], ["Kreatif", "Grafiker", "Tolga", "Uzman", "—"], ["Pixel/CAPI", "Tolga", "Tolga", "Uzman", "—"] ] }
+    ]},
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [
+      { "type": "list", "items": ["05k GTM + dönüşüm", "05m marka kimliği (kreatif tutarlılığı)", "01 kırmızı çizgiler", "06 bütçe"] }
+    ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds site denetimi (Meta Pixel yok)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" }, { "id": "S2", "title": "Meta yardım — Pixel & Conversions API", "url": "https://www.facebook.com/business/help", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }

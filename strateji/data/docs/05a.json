@@ -1,33 +1,88 @@
 {
+  "__handAuthored": true,
   "id": "05a",
   "icon": "ph-magnifying-glass",
   "baslik": "05a · SEO",
-  "ozet": "Organik görünürlük.",
-  "amac": "Organik görünürlük.",
+  "ozet": "Bedava organik trafik: 'yakınımda kahve'de görünür ol.",
+  "amac": "Teknik + yerel + içerik SEO ile organik görünürlüğü 42→80'e çıkarmak.",
+  "status": "GO",
+  "kritikKPI": "SEO 42 → 80 · yerel ilk-3 %55",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Organik görünürlük.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "**Kapsam:** teknik SEO (robots/title/meta/tek H1/hız), on-page, içerik, yerel SEO ve link."
-        },
-        {
-          "type": "list",
-          "ordered": false,
-          "items": [
-            "Acil: robots.txt'in /en/ ve /ar/ engelini kaldır; sitemap'i robots'a bağla.",
-            "Başlık + meta açıklamaları anahtar kelimeyle yeniden yaz.",
-            "Aylık içerik takvimi + hedef anahtar kelimeler."
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Hedef: SEO puanı 42 → 60 → 70 → 80."
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Hangi kararı üretir?", "blocks": [
+      { "type": "paragraph", "text": "SEO, reklam bütçesi olmadan sürekli trafik getirir. 26 şubeli bir kafe için en değerli trafik **'yakınımda kahve'** aramalarıdır. Acil hatalar (robots dil engeli, başlık/meta) hızlı kazançtır. Karar: hemen başla (GO)." }
+    ]},
+    { "id": "is-gerekcesi", "title": "2 · İş Gerekçesi", "summary": "Neden SEO?", "blocks": [
+      { "type": "list", "items": ["Bedava, sürdürülebilir, bileşik büyüyen trafik.", "Yerel arama doğrudan şubeye müşteri getirir (devlerin zayıf alanı).", "İçerik otoritesi markayı 'kahve otoritesi' konumuna taşır (Tier-3'e komşuluk)."] }
+    ]},
+    { "id": "mevcut-durum", "title": "3 · Mevcut Durum ve Eksikler", "summary": "Bugün ne var?", "blocks": [
+      { "type": "evidence", "items": [ { "claim": "SEO puanı ~42/100", "confidence": "fact", "sourceId": "S1", "formula": "8 kategori ort." }, { "claim": "robots.txt /en/ ve /ar/'ı engelliyor (hreflang ise işaret ediyor)", "confidence": "fact", "sourceId": "S1" }, { "claim": "Ana sayfa başlığı marka adını 2 kez tekrar; meta açıklama yok; 3 H1", "confidence": "fact", "sourceId": "S1" }, { "claim": "Şubeler için LocalBusiness şeması yok", "confidence": "fact", "sourceId": "S1" } ] }
+    ]},
+    { "id": "hedef-kitle", "title": "4 · Hedef Kitle ve Arama Niyetleri", "summary": "Kim, ne arıyor?", "blocks": [
+      { "type": "table", "headers": ["Niyet", "Örnek sorgu", "Hedef sayfa"], "rows": [ ["Yerel", "yakınımda kahve, Ortaköy kahve", "Şube sayfası"], ["Marka", "cups and clouds menü", "Menü"], ["Bilgi", "third-wave kahve nedir", "Blog"], ["Franchise", "kahve franchise şartları", "Franchise"] ] }
+    ]},
+    { "id": "funnel-gorevi", "title": "5 · Funnel İçindeki Görevi", "summary": "Hangi aşama?", "blocks": [
+      { "type": "paragraph", "text": "SEO **İlgi → Değerlendirme** aşamasını besler; yerel SEO doğrudan **Aksiyon** (şube ziyareti) üretir." }
+    ]},
+    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne gerekli?", "blocks": [
+      { "type": "list", "items": ["WordPress/Yoast erişimi", "Search Console + Yandex Webmaster hesabı", "Elementor şablon düzenleme (H1/hız)"] }
+    ]},
+    { "id": "hesap-yetki", "title": "7 · Hesap ve Yetki (Search Console)", "summary": "Kim erişir?", "blocks": [
+      { "type": "table", "headers": ["Varlık", "Erişim"], "rows": [ ["Search Console", "Tolga: sahip, Uzman: tam"], ["Yandex Webmaster", "Tolga"], ["WP/Yoast", "Tolga"] ] }
+    ]},
+    { "id": "kurulum", "title": "8 · Kurulum / Hızlı Düzeltmeler", "summary": "İlk işler.", "blocks": [
+      { "type": "list", "ordered": true, "items": ["robots.txt'ten /en/ ve /ar/ engelini kaldır; Sitemap satırı ekle.", "Sitemap'i Search Console + Yandex Webmaster'a gönder.", "Başlık + meta açıklamalarını anahtar kelimeyle yeniden yaz.", "Sayfa başına tek H1 (Elementor fazlalıklarını H2 yap).", "Görsel sıkıştırma + tembel yükleme (Core Web Vitals)."] }
+    ]},
+    { "id": "kampanya-mimarisi", "title": "9 · İçerik & Sayfa Mimarisi", "summary": "Hangi sayfalar/içerikler?", "blocks": [
+      { "type": "paragraph", "text": "SEO dört koldan yürür: teknik, on-page, yerel, içerik." }
+    ], "sections": [
+      { "id": "teknik-seo", "title": "Teknik SEO", "summary": "Google doğru okusun.", "blocks": [
+        { "type": "list", "items": ["robots/sitemap/canonical/hreflang tutarlılığı", "Hız (LCP/CLS), mobil-öncelik", "Kırık link + indeksleme denetimi"] }
+      ]},
+      { "id": "on-page", "title": "On-Page SEO", "summary": "Başlık/meta/başlık yapısı.", "blocks": [
+        { "type": "list", "items": ["Anahtar kelimeli title (≤60) + meta (150-160)", "Tek anlamlı H1 + H2/H3 hiyerarşi", "İç linkleme + görsel alt metni"] }
+      ]},
+      { "id": "yerel-seo", "title": "Yerel SEO & Şube Sayfaları", "summary": "En yüksek getirili.", "blocks": [
+        { "type": "list", "items": ["Her semt için ayrı sayfa (Ortaköy, Çekmeköy…)", "LocalBusiness/CafeOrCoffeeShop + Menu şeması", "Google İşletme Profili optimizasyonu (bkz. 05b)", "**Ölçüm:** yerel ilk-3 payı, yol tarifi"] }
+      ]},
+      { "id": "icerik", "title": "İçerik / Blog", "summary": "Otorite + arama trafiği.", "blocks": [
+        { "type": "list", "items": ["Haftada 1 içerik: 'üçüncü dalga nedir', 'evde demleme', 'espresso mu filtre mi'", "Konu kümeleri (topic cluster) + iç link", "**Kill/scale:** performanslı konuları derinleştir, tutmayanı bırak"] }
+      ]}
+    ]},
+    { "id": "tracking", "title": "10 · Tracking ve Ölçüm", "summary": "Neyle ölçüyoruz?", "blocks": [
+      { "type": "list", "items": ["Search Console: sıralama, tıklama, CTR, kapsam", "GA4: organik oturum + dönüşüm", "Sıralama takibi (manuel/araç) semt sorguları"] }
+    ]},
+    { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler.", "blocks": [
+      { "type": "table", "headers": ["Terim", "Anlam"], "rows": [ ["SERP", "Arama sonuç sayfası"], ["CTR", "Tıklama oranı"], ["LCP/CLS", "Core Web Vitals"], ["Schema", "Yapısal veri"] ] }
+    ]},
+    { "id": "butce", "title": "12 · Bütçe ve Kaynak", "summary": "Maliyet.", "blocks": [
+      { "type": "callout", "variant": "ok", "text": "Araç maliyeti düşük (Search Console/Webmaster ücretsiz). Ana maliyet **işçilik**: teknik düzeltme + şube sayfaları + haftalık içerik (Tolga + Grafiker). Yatırım kaleminde 'Şube sayfaları & yerel arama'." }
+    ]},
+    { "id": "kpi", "title": "13 · KPI ve Hedefler", "summary": "Başarı.", "blocks": [
+      { "type": "kpi", "rows": [ { "metric": "SEO puanı", "baseline": "42", "target": "60 → 70 → 80", "frequency": "Aylık", "owner": "Tolga" }, { "metric": "Organik oturum/ay", "baseline": "baz", "target": "+%40 → +%180", "frequency": "Haftalık", "owner": "Uzman" }, { "metric": "Yerel ilk-3 payı", "baseline": "düşük", "target": "%55", "frequency": "Aylık", "owner": "Tolga" } ] }
+    ]},
+    { "id": "test-backlog", "title": "14 · Test / Deney Backlog'u", "summary": "Neyi deneyeceğiz?", "blocks": [
+      { "type": "list", "items": ["Title varyasyonu → CTR etkisi", "Şube sayfası şablonu A/B", "Blog konu kümesi vs tekil yazı", "Schema türleri → rich result"] }
+    ]},
+    { "id": "scale-pause-kill", "title": "15 · Scale / Pause / Kill", "summary": "Ne büyüt/bırak?", "blocks": [
+      { "type": "eca", "id": "ECA-SEO", "event": "Bir semt sayfası/konu kümesi ilk sayfaya çıktı", "condition": "Dönüşüm de artıyor", "action": "Benzer semtler/konular için şablonu çoğalt (programatik, bkz. 05b)" }
+    ]},
+    { "id": "kvkk-risk", "title": "16 · Risk ve Marka Güvenliği", "summary": "Uyum.", "blocks": [
+      { "type": "list", "items": ["Karartma/yanıltıcı SEO (cloaking, sahte yorum) yasak (01 kırmızı çizgi).", "İçerik doğruluğu; kanıtsız iddia yok.", "Çok dilli sayfa engeli kaldırılırken KVKK/erişilebilirlik korunur."] }
+    ]},
+    { "id": "plan-30-60-90", "title": "17 · 30/60/90 Günlük Plan", "summary": "Takvim.", "blocks": [
+      { "type": "timeline", "items": [ { "when": "0-30", "what": "Teknik düzeltmeler + Search Console + on-page", "owner": "Tolga" }, { "when": "30-60", "what": "İlk 5-10 şube sayfası + schema + haftalık blog", "owner": "Tolga+Grafiker" }, { "when": "60-90", "what": "26 şube + İşletme Profili + konu kümeleri", "owner": "Tolga" } ] }
+    ]},
+    { "id": "raci", "title": "18 · RACI", "summary": "Rol.", "blocks": [
+      { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [ ["Teknik SEO", "Tolga", "Tolga", "—", "GM"], ["Şube sayfaları", "Tolga", "Tolga", "Grafiker", "Operasyon"], ["İçerik", "Grafiker", "Tolga", "—", "—"] ] }
+    ]},
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [
+      { "type": "list", "items": ["05b Programatik SEO (şube sayfası ölçeği)", "05k GTM (ölçüm)", "05l WooCommerce/UI (hız)", "05c Google Ads (arama verisiyle beslenme)"] }
+    ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds SEO denetimi (robots/başlık/meta/schema bulguları)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" }, { "id": "S2", "title": "Google Search Central — SEO başlangıç", "url": "https://developers.google.com/search", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }
