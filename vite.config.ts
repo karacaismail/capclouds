@@ -7,5 +7,11 @@ export default defineConfig({
     target: "es2020",
     outDir: "dist",
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        strateji: "strateji/index.html",
+      },
+    },
   },
 });
