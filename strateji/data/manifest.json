@@ -64,8 +64,10 @@
       "id": "05b",
       "icon": "ph-stack",
       "baslik": "05b · Programatik SEO",
-      "ozet": "Ölçekli şube/semt sayfaları.",
-      "amac": "Ölçekli şube/semt sayfaları.",
+      "ozet": "Şablon + veri ile her semt için ölçekli yerel sayfa üret.",
+      "amac": "26 şube/semt için tutarlı, yüksek niyetli yerel sayfaları ölçekle üretmek.",
+      "status": "CONDITIONAL_GO",
+      "kritikKPI": "26+ semt sayfası · yerel ilk-3",
       "file": "05b.json"
     },
     {
@@ -111,25 +113,31 @@
     {
       "id": "05g",
       "icon": "ph-fire",
-      "baslik": "05g · Hotjar / Clarity",
-      "ozet": "Isı haritası & oturum kaydı.",
-      "amac": "Isı haritası & oturum kaydı.",
+      "baslik": "05g · Hotjar / Microsoft Clarity",
+      "ozet": "Isı haritası + oturum kaydı ile UX'i sürekli iyileştir (Clarity ücretsiz).",
+      "amac": "Ziyaretçinin takıldığı yeri görüp dönüşüm ve UX'i veriyle iyileştirmek.",
+      "status": "GO",
+      "kritikKPI": "Kurulu + haftalık UX bulgusu",
       "file": "05g.json"
     },
     {
       "id": "05h",
       "icon": "ph-arrows-clockwise",
       "baslik": "05h · Criteo",
-      "ozet": "Dinamik retargeting.",
-      "amac": "Dinamik retargeting.",
+      "ozet": "Dinamik ürün retargeting — e-ticaret açılınca (şimdilik HOLD).",
+      "amac": "Katalog bazlı dinamik retargeting ile sepet/ürün geri kazanımı.",
+      "status": "HOLD",
+      "kritikKPI": "Ön koşul: online mağaza + katalog",
       "file": "05h.json"
     },
     {
       "id": "05i",
       "icon": "ph-broadcast",
       "baslik": "05i · AdRoll",
-      "ozet": "Çapraz platform retargeting.",
-      "amac": "Çapraz platform retargeting.",
+      "ozet": "Çapraz platform retargeting — opsiyonel/ileri faz (şimdilik HOLD).",
+      "amac": "Katalog bazlı çapraz platform retargeting (yalnız Meta/Google yetmezse).",
+      "status": "HOLD",
+      "kritikKPI": "Ön koşul: e-ticaret + Meta/Google yetersizliği",
       "file": "05i.json"
     },
     {

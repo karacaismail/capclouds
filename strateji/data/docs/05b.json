@@ -1,29 +1,47 @@
 {
+  "__handAuthored": true,
   "id": "05b",
   "icon": "ph-stack",
   "baslik": "05b · Programatik SEO",
-  "ozet": "Ölçekli şube/semt sayfaları.",
-  "amac": "Ölçekli şube/semt sayfaları.",
+  "ozet": "Şablon + veri ile her semt için ölçekli yerel sayfa üret.",
+  "amac": "26 şube/semt için tutarlı, yüksek niyetli yerel sayfaları ölçekle üretmek.",
+  "status": "CONDITIONAL_GO",
+  "kritikKPI": "26+ semt sayfası · yerel ilk-3",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Ölçekli şube/semt sayfaları.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Şablon + veri ile **her şube/semt için ölçekli sayfa üretimi** (ör. \"Ortaköy kahve\", \"Çekmeköy kafe\")."
-        },
-        {
-          "type": "list",
-          "ordered": false,
-          "items": [
-            "LocalBusiness/Cafe yapısal verisi (schema).",
-            "Tutarlı iç linkleme ve semt bazlı içerik blokları.",
-            "26 şube = 26+ yüksek niyetli yerel sayfa."
-          ]
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Hangi kararı üretir?", "blocks": [
+      { "type": "paragraph", "text": "Tek tek 26 semt sayfası yazmak yavaştır. **Şablon + yapılandırılmış veri** ile her şube/semt için tutarlı sayfa üretilir ('Ortaköy kahve', 'Çekmeköy kafe'). Bu, devlerin zayıf olduğu yerel aramada hızla ölçek verir." },
+      { "type": "decision", "gate": "CONDITIONAL_GO", "rationale": "Yüksek getirili; ancak ince/kopya içerik cezasından kaçınmak için her sayfa gerçek yerel değer taşımalı.", "condition": "Her sayfada özgün yerel içerik (adres, foto, semt bilgisi) olduğu doğrulanınca GO.", "owner": "Tolga", "deadline": "G36" }
+    ]},
+    { "id": "is-gerekcesi", "title": "2 · İş Gerekçesi", "summary": "Neden programatik?", "blocks": [
+      { "type": "list", "items": ["26 şube = 26+ yüksek niyetli yerel sayfa fırsatı.", "Tutarlı schema + iç link → yerel sıralama gücü.", "Yeni şube açıldığında sayfa otomatik üretilir (ölçeklenebilir)."] }
+    ]},
+    { "id": "mevcut-durum", "title": "3 · Mevcut Durum ve Eksikler", "summary": "Bugün ne var?", "blocks": [
+      { "type": "evidence", "items": [ { "claim": "Tek bir /subeler/ sayfası var; semt bazlı sayfa yok", "confidence": "fact", "sourceId": "S1" }, { "claim": "LocalBusiness schema yok", "confidence": "fact", "sourceId": "S1" } ] }
+    ]},
+    { "id": "hedef-kitle", "title": "4 · Hedef Kitle ve Sorgular", "summary": "Kim, ne arıyor?", "blocks": [
+      { "type": "table", "headers": ["Semt", "Sorgu tipi", "Hedef"], "rows": [ ["Ortaköy", "ortaköy kahve, boğaz manzaralı kafe", "Ortaköy sayfası"], ["Çekmeköy", "çekmeköy kafe", "Çekmeköy sayfası"], ["…26 şube", "semt + kahve/kafe", "Semt sayfası"] ] }
+    ]},
+    { "id": "funnel-gorevi", "title": "5 · Funnel Görevi", "summary": "Aşama.", "blocks": [ { "type": "paragraph", "text": "Değerlendirme → Aksiyon: yerel niyeti yakalayıp şubeye (yol tarifi) yönlendirir." } ]},
+    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne gerekli?", "blocks": [ { "type": "list", "items": ["Şube veri seti (ad, adres, saat, foto, semt açıklaması)", "Sayfa şablonu (WordPress/Elementor)", "Schema jeneratörü", "05a teknik SEO temeli"] } ]},
+    { "id": "hesap-yetki", "title": "7 · Hesap ve Yetki", "summary": "Kim?", "blocks": [ { "type": "table", "headers": ["Rol", "Erişim"], "rows": [ ["Tolga", "Şablon + yayın"], ["Grafiker", "Foto/görsel"], ["Operasyon", "Şube verisi kaynağı"] ] } ]},
+    { "id": "kurulum", "title": "8 · Kurulum / Üretim Adımları", "summary": "Sıra.", "blocks": [ { "type": "list", "ordered": true, "items": ["Şube veri setini topla (Operasyon).", "Sayfa şablonu + değişken alanlar tasarla.", "Her sayfaya özgün yerel içerik blokları (foto, semt notu) ekle.", "LocalBusiness/Menu schema bağla.", "İç linkleme + sitemap; Search Console'a gönder."] } ]},
+    { "id": "kampanya-mimarisi", "title": "9 · Sayfa & İçerik Mimarisi", "summary": "Şablon nasıl?", "blocks": [
+      { "type": "paragraph", "text": "Her semt sayfası: başlık (semt + kahve), yerel giriş, adres+harita, çalışma saati, menü linki, yol tarifi CTA, semt-özel foto, yorum. Özgünlük ince-içerik cezasını önler." },
+      { "type": "callout", "variant": "warn", "title": "İnce içerik riski", "text": "Yalnız değişken doldurulmuş kopya sayfalar Google tarafından cezalandırılır. Her sayfa gerçek yerel değer taşımalı." }
+    ]},
+    { "id": "tracking", "title": "10 · Tracking", "summary": "Ne ölçülür?", "blocks": [ { "type": "list", "items": ["Search Console: semt sorgu sıralaması + tıklama", "GA4: semt sayfası → yol tarifi dönüşümü", "İndeksleme kapsamı"] } ]},
+    { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler.", "blocks": [ { "type": "table", "headers": ["Terim", "Anlam"], "rows": [ ["Programatik SEO", "Şablon+veriyle ölçekli sayfa"], ["İnce içerik", "Zayıf/kopya sayfa"], ["Schema", "Yapısal veri"] ] } ]},
+    { "id": "butce", "title": "12 · Bütçe ve Kaynak", "summary": "Maliyet.", "blocks": [ { "type": "callout", "variant": "ok", "text": "Maliyet = şablon geliştirme + veri toplama + foto işçiliği. Yatırım kaleminde 'Şube sayfaları & yerel arama' (₺45.000)." } ]},
+    { "id": "kpi", "title": "13 · KPI ve Hedefler", "summary": "Başarı.", "blocks": [ { "type": "kpi", "rows": [ { "metric": "Yayınlanan semt sayfası", "baseline": "0", "target": "26+", "frequency": "Aylık", "owner": "Tolga" }, { "metric": "Yerel ilk-3 payı", "baseline": "düşük", "target": "%55", "frequency": "Aylık", "owner": "Tolga" }, { "metric": "Semt sayfası → yol tarifi", "baseline": "0", "target": "artan", "frequency": "Aylık", "owner": "Uzman" } ] } ]},
+    { "id": "test-backlog", "title": "14 · Test Backlog'u", "summary": "Neyi test?", "blocks": [ { "type": "list", "items": ["Şablon A/B (CTA yerleşimi)", "Özgün içerik miktarı → sıralama etkisi", "Schema türleri → rich result"] } ]},
+    { "id": "scale-pause-kill", "title": "15 · Scale / Pause / Kill", "summary": "ECA.", "blocks": [ { "type": "eca", "id": "ECA-PSEO", "event": "İlk semt sayfaları ilk sayfaya çıktı + dönüşüm getirdi", "condition": "İçerik kalitesi ceza riski taşımıyor", "action": "Tüm 26 şubeye + yeni açılışlara şablonu yay" } ]},
+    { "id": "kvkk-risk", "title": "16 · Risk ve Marka", "summary": "Uyum.", "blocks": [ { "type": "list", "items": ["İnce/kopya içerik cezası → özgünlük zorunlu.", "Yanlış şube bilgisi itibar riski → veri doğrulama.", "NAP (ad-adres-telefon) tutarlılığı (İşletme Profili ile)."] } ]},
+    { "id": "plan-30-60-90", "title": "17 · 30/60/90 Günlük Plan", "summary": "Takvim.", "blocks": [ { "type": "timeline", "items": [ { "when": "0-30", "what": "Şablon + veri seti + ilk 5 pilot semt", "owner": "Tolga" }, { "when": "30-60", "what": "İlk 5 sonuç değerlendirme + schema", "owner": "Tolga" }, { "when": "60-90", "what": "26 şube + yeni açılış otomasyonu", "owner": "Tolga" } ] } ]},
+    { "id": "raci", "title": "18 · RACI", "summary": "Rol.", "blocks": [ { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [ ["Şablon", "Tolga", "Tolga", "—", "GM"], ["Veri toplama", "Operasyon", "Tolga", "—", "—"], ["Görsel", "Grafiker", "Tolga", "—", "—"] ] } ]},
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [ { "type": "list", "items": ["05a SEO teknik temeli", "Şube veri seti (Operasyon)", "Google İşletme Profili (NAP tutarlılığı)"] } ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [ { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds site denetimi (/subeler/ tek sayfa, schema yok)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" }, { "id": "S2", "title": "Google — yerel işletme yapısal verisi", "url": "https://developers.google.com/search/docs/appearance/structured-data/local-business", "accessedDate": "2026-08-04" } ] } ]}
   ]
 }

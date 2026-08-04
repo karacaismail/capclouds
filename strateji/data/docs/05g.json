@@ -1,24 +1,52 @@
 {
+  "__handAuthored": true,
   "id": "05g",
   "icon": "ph-fire",
-  "baslik": "05g · Hotjar / Clarity",
-  "ozet": "Isı haritası & oturum kaydı.",
-  "amac": "Isı haritası & oturum kaydı.",
+  "baslik": "05g · Hotjar / Microsoft Clarity",
+  "ozet": "Isı haritası + oturum kaydı ile UX'i sürekli iyileştir (Clarity ücretsiz).",
+  "amac": "Ziyaretçinin takıldığı yeri görüp dönüşüm ve UX'i veriyle iyileştirmek.",
+  "status": "GO",
+  "kritikKPI": "Kurulu + haftalık UX bulgusu",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Isı haritası & oturum kaydı.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Isı haritası + oturum kaydı + funnel/form analizi ile **UX iyileştirme döngüsü**."
-        },
-        {
-          "type": "paragraph",
-          "text": "Microsoft Clarity ücretsizdir; GTM galerisinden hızlı kurulur. Ziyaretçinin nerede takılıp çıktığını gösterir."
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Hangi kararı üretir?", "blocks": [
+      { "type": "paragraph", "text": "**Microsoft Clarity ücretsizdir** ve GTM galerisinden hızlı kurulur; ısı haritası + oturum kaydı + kaydırma haritası verir. Yandex Metrica Webvisor ile birlikte veya alternatif olarak UX iyileştirme döngüsünü besler. Karar: hemen kur (GO). Hotjar ücretli/opsiyoneldir." }
+    ]},
+    { "id": "is-gerekcesi", "title": "2 · İş Gerekçesi", "summary": "Neden gerekli?", "blocks": [
+      { "type": "list", "items": ["Reklam trafiğini boşa harcamamak için açılış sayfası UX'i kritik.", "'Neden dönüşmedi' sorusunu ısı haritası + kayıt gösterir.", "Clarity ücretsiz → düşük bütçede yüksek değer."] }
+    ]},
+    { "id": "mevcut-durum", "title": "3 · Mevcut Durum ve Eksikler", "summary": "Bugün ne var?", "blocks": [
+      { "type": "evidence", "items": [ { "claim": "Sitede oturum kaydı/ısı haritası aracı yok", "confidence": "fact", "sourceId": "S1" }, { "claim": "GTM kurulu (kolay kurulum)", "confidence": "fact", "sourceId": "S1" } ] }
+    ]},
+    { "id": "hedef-kitle", "title": "4 · Hangi Sorulara Cevap?", "summary": "Kullanım senaryosu.", "blocks": [
+      { "type": "list", "items": ["Franchise/iletişim formunda nerede vazgeçiliyor?", "Mobilde CTA görülüyor mu (rage-click var mı)?", "Menü/şube sayfasında ne kadar aşağı iniliyor?"] }
+    ]},
+    { "id": "funnel-gorevi", "title": "5 · Funnel Görevi", "summary": "Aşama.", "blocks": [ { "type": "paragraph", "text": "UX ölçüm katmanı — tüm funnel'ın açılış sayfalarındaki davranışı görünür kılar; dönüşüm optimizasyonunu besler." } ]},
+    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne gerekli?", "blocks": [ { "type": "list", "items": ["GTM erişimi", "KVKK/consent", "Hassas alan maskeleme kararı"] } ]},
+    { "id": "hesap-yetki", "title": "7 · Hesap ve Yetki", "summary": "Kim izler?", "blocks": [
+      { "type": "table", "headers": ["Rol", "Erişim"], "rows": [ ["Tolga", "Yönetici + kayıt izleme"], ["Uzman", "Rapor + heatmap"], ["Operasyon", "Yok (kişisel veri riski)"] ] },
+      { "type": "callout", "variant": "warn", "text": "Oturum kayıtları kişisel veri içerebilir; yalnız yetkili kişiler izler, dışa aktarılmaz." }
+    ]},
+    { "id": "kurulum", "title": "8 · Kurulum Adımları", "summary": "Sıra.", "blocks": [ { "type": "list", "ordered": true, "items": ["clarity.microsoft.com'da proje oluştur.", "GTM galerisinden Clarity şablonunu kur (All Pages).", "Hassas form alanlarını maskele; consent'e bağla.", "Kayıt/heatmap dolmaya başlayınca haftalık inceleme ritmi kur."] } ]},
+    { "id": "kampanya-mimarisi", "title": "9 · Analiz Mimarisi", "summary": "Hangi araçlar?", "blocks": [
+      { "type": "paragraph", "text": "Araçlar ayrı ayrı incelenir:" }
+    ], "sections": [
+      { "id": "isi-haritasi", "title": "Isı Haritası", "summary": "Nereye tıklanıyor?", "blocks": [ { "type": "list", "items": ["Tıklama/hareket yoğunluğu; ölü tıklama, rage-click.", "Aksiyon: kritik CTA'ları görünür bölgeye taşı."] } ]},
+      { "id": "oturum-kaydi", "title": "Oturum Kaydı", "summary": "Gerçek davranış.", "blocks": [ { "type": "list", "items": ["Dönüşmeyen/hata alan oturumlara odaklan.", "Haftada 10-15 kayıt → UX bulgu listesi.", "Maskeleme + yetki sınırı."] } ]},
+      { "id": "scroll-form", "title": "Scroll & Form Analizi", "summary": "Nereye kadar, hangi alan?", "blocks": [ { "type": "list", "items": ["Scroll map: içeriğin görülen kısmı.", "Form: terk ettiren alan → sadeleştir."] } ]}
+    ]},
+    { "id": "tracking", "title": "10 · Tracking / Doğrulama", "summary": "Doğru mu?", "blocks": [ { "type": "list", "items": ["Kayıt/heatmap örneklem yeterliliği", "GA4 dönüşümleriyle çapraz doğrulama"] } ]},
+    { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler.", "blocks": [ { "type": "table", "headers": ["Terim", "Anlam"], "rows": [ ["Heatmap", "Isı haritası"], ["Rage-click", "Öfkeli tekrar tıklama"], ["Scroll map", "Kaydırma derinliği"], ["Session recording", "Oturum kaydı"] ] } ]},
+    { "id": "butce", "title": "12 · Bütçe ve Kaynak", "summary": "Maliyet.", "blocks": [ { "type": "callout", "variant": "ok", "text": "Clarity **ücretsiz**. Hotjar ücretli (opsiyonel, ölçekte). Maliyet = haftalık ~1 saat inceleme. Yatırımda 'Ölçüm & piksel kurulumu'." } ]},
+    { "id": "kpi", "title": "13 · KPI ve Hedefler", "summary": "Başarı.", "blocks": [ { "type": "kpi", "rows": [ { "metric": "Kurulum + kayıt aktif", "baseline": "yok", "target": "G8", "frequency": "Tek sefer", "owner": "Tolga" }, { "metric": "Haftalık UX bulgusu", "baseline": "0", "target": "≥3/hafta", "frequency": "Haftalık", "owner": "Tolga" }, { "metric": "Form tamamlanma", "baseline": "bilinmiyor", "target": "artan", "frequency": "Aylık", "owner": "Uzman" } ] } ]},
+    { "id": "test-backlog", "title": "14 · İnceleme Backlog'u", "summary": "Neyi izle?", "blocks": [ { "type": "list", "items": ["Franchise formu terk noktası", "Mobil CTA görünürlüğü", "Şube sayfası scroll derinliği", "404/hata oturumları"] } ]},
+    { "id": "scale-pause-kill", "title": "15 · Scale / Pause / Kill", "summary": "ECA.", "blocks": [ { "type": "eca", "id": "ECA-Clarity", "event": "KVKK/gizlilik riski maskelenemiyor", "condition": "Uyum sağlanamıyor", "action": "Oturum kaydını durdur, yalnız anonim ısı haritasına düş" } ]},
+    { "id": "kvkk-risk", "title": "16 · KVKK ve Maskeleme", "summary": "Uyum.", "blocks": [ { "type": "list", "items": ["Çerez/aydınlatma + açık rıza (consent).", "Form alanları maskeli.", "Kayıtlar yalnız yetkili 2 kişi, dışa aktarma yok."] } ]},
+    { "id": "plan-30-60-90", "title": "17 · 30/60/90 Günlük Plan", "summary": "Takvim.", "blocks": [ { "type": "timeline", "items": [ { "when": "0-30", "what": "Clarity kurulum + haftalık inceleme", "owner": "Tolga" }, { "when": "30-60", "what": "Bulgulardan UX iyileştirme (form/CTA)", "owner": "Tolga+Grafiker" }, { "when": "60-90", "what": "Şube sayfaları + e-ticaret öncesi UX doğrulama", "owner": "Tolga" } ] } ]},
+    { "id": "raci", "title": "18 · RACI", "summary": "Rol.", "blocks": [ { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [ ["Kurulum", "Tolga", "Tolga", "—", "GM"], ["Kayıt inceleme", "Tolga/Uzman", "Tolga", "—", "—"], ["UX değişiklik", "Grafiker/Tolga", "Tolga", "—", "—"] ] } ]},
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [ { "type": "list", "items": ["05k GTM", "Consent/KVKK", "05f Yandex Metrica (örtüşen/tamamlayan)"] } ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [ { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds site denetimi (oturum kaydı aracı yok)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" }, { "id": "S2", "title": "Microsoft Clarity dokümantasyonu", "url": "https://learn.microsoft.com/clarity/", "accessedDate": "2026-08-04" } ] } ]}
   ]
 }

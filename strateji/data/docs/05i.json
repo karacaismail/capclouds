@@ -1,24 +1,38 @@
 {
+  "__handAuthored": true,
   "id": "05i",
   "icon": "ph-broadcast",
   "baslik": "05i · AdRoll",
-  "ozet": "Çapraz platform retargeting.",
-  "amac": "Çapraz platform retargeting.",
+  "ozet": "Çapraz platform retargeting — opsiyonel/ileri faz (şimdilik HOLD).",
+  "amac": "Katalog bazlı çapraz platform retargeting (yalnız Meta/Google yetmezse).",
+  "status": "HOLD",
+  "kritikKPI": "Ön koşul: e-ticaret + Meta/Google yetersizliği",
+  "owner": "Dijital Pazarlama Uzmanı (adayı)",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Çapraz platform retargeting.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Çapraz platform retargeting; katalog gerektirir."
-        },
-        {
-          "type": "paragraph",
-          "text": "TR'de Meta + Google retargeting çoğu ihtiyacı karşılar; AdRoll **opsiyonel/ileri faz** olarak işaretlidir."
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Neden HOLD?", "blocks": [
+      { "type": "callout", "variant": "warn", "title": "HOLD / Opsiyonel", "text": "AdRoll çapraz platform retargeting yapar; **katalog + e-ticaret** gerektirir. TR'de **Meta + Google retargeting çoğu ihtiyacı karşılar**. AdRoll ancak onlar yetmediğinde açılır." },
+      { "type": "decision", "gate": "HOLD", "rationale": "Ek maliyet/karmaşıklık; Meta+Google retargeting yeterli olduğu sürece gereksiz.", "condition": "E-ticaret canlı + Meta/Google retargeting kapsama/ROAS'ta yetersiz kalırsa yeniden değerlendir.", "owner": "Uzman", "reopen": "Meta/Google dışı ağlarda kayıp kitle kanıtlanırsa" }
+    ]},
+    { "id": "is-gerekcesi", "title": "2 · İş Gerekçesi", "summary": "Ne zaman?", "blocks": [ { "type": "paragraph", "text": "Yalnız Meta/Google dışı web ağlarında anlamlı kitle kaçırıldığı kanıtlanırsa değer üretir." } ]},
+    { "id": "mevcut-durum", "title": "3 · Mevcut Durum", "summary": "Bugün.", "blocks": [ { "type": "evidence", "items": [ { "claim": "AdRoll yok; e-ticaret/katalog yok", "confidence": "fact", "sourceId": "S1" } ] } ]},
+    { "id": "hedef-kitle", "title": "4 · Hedef Kitle", "summary": "Kim (gelecekte)?", "blocks": [ { "type": "paragraph", "text": "Meta/Google dışı ağlarda gezinen, siteyi ziyaret etmiş potansiyel müşteri." } ]},
+    { "id": "funnel-gorevi", "title": "5 · Funnel Görevi", "summary": "Aşama.", "blocks": [ { "type": "paragraph", "text": "Değerlendirme/Aksiyon — çapraz ağ geri kazanım." } ]},
+    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne gerekli?", "blocks": [ { "type": "list", "items": ["E-ticaret + katalog", "AdRoll pixel/etiket", "Kitle senkronizasyonu"] } ]},
+    { "id": "hesap-yetki", "title": "7 · Hesap ve Yetki", "summary": "Kim?", "blocks": [ { "type": "paragraph", "text": "Aktifleşince Uzman (ops), Tolga (etiket), GM (sözleşme). Şimdilik N/A." } ]},
+    { "id": "kurulum", "title": "8 · Kurulum (gelecekte)", "summary": "Sıra.", "blocks": [ { "type": "list", "ordered": true, "items": ["Meta/Google retargeting kapsama analizi.", "Kayıp kitle kanıtlanırsa AdRoll pilot.", "Küçük bütçe + ROAS eşiği."] } ]},
+    { "id": "kampanya-mimarisi", "title": "9 · Kampanya Mimarisi", "summary": "Format.", "blocks": [ { "type": "paragraph", "text": "Çapraz platform display retargeting. E-ticaret öncesi N/A." } ]},
+    { "id": "tracking", "title": "10 · Tracking", "summary": "Ne ölçülür?", "blocks": [ { "type": "paragraph", "text": "purchase/lead + inkremental katkı (Meta/Google üstüne net ek). E-ticaret sonrası." } ]},
+    { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler.", "blocks": [ { "type": "table", "headers": ["Terim", "Anlam"], "rows": [ ["İnkremental", "Ek net katkı"], ["Cross-platform", "Çapraz ağ"], ["ROAS", "Getiri"] ] } ]},
+    { "id": "butce", "title": "12 · Bütçe", "summary": "Ne kadar?", "blocks": [ { "type": "callout", "variant": "warn", "text": "Şimdilik ₺0 (HOLD). Aktifleşirse inkremental ROAS'a göre (planlama varsayımı)." } ]},
+    { "id": "kpi", "title": "13 · KPI", "summary": "Başarı (gelecekte).", "blocks": [ { "type": "kpi", "rows": [ { "metric": "İnkremental ROAS", "baseline": "—", "target": "Meta/Google üstüne net pozitif", "frequency": "Aylık", "owner": "Uzman" } ] } ]},
+    { "id": "test-backlog", "title": "14 · Test Backlog'u", "summary": "Gelecekte.", "blocks": [ { "type": "list", "items": ["AdRoll'un inkremental katkısı (holdout testi)"] } ]},
+    { "id": "scale-pause-kill", "title": "15 · Scale / Pause / Kill", "summary": "ECA.", "blocks": [ { "type": "eca", "id": "ECA-AdRoll", "event": "AdRoll pilot 4 hafta çalıştı", "condition": "İnkremental ROAS pozitif değil", "action": "Durdur; bütçeyi Meta/Google'a geri tahsis et" } ]},
+    { "id": "kvkk-risk", "title": "16 · KVKK ve Risk", "summary": "Uyum.", "blocks": [ { "type": "list", "items": ["Consent + üçüncü taraf çerez bağımlılığı riski.", "Marka güvenliği (display placement)."] } ]},
+    { "id": "plan-30-60-90", "title": "17 · Plan", "summary": "Takvim.", "blocks": [ { "type": "paragraph", "text": "İlk 90 günde N/A (HOLD). Meta/Google retargeting olgunlaşınca değerlendirilir." } ]},
+    { "id": "raci", "title": "18 · RACI", "summary": "Rol.", "blocks": [ { "type": "paragraph", "text": "Aktifleşince: R Uzman, A GM, I Tolga." } ]},
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [ { "type": "list", "items": ["05j Remarketing (Meta/Google) olgunluğu", "05l e-ticaret", "katalog feed"] } ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [ { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds site denetimi (AdRoll/e-ticaret yok)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" } ] } ]}
   ]
 }
