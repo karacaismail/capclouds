@@ -1,33 +1,44 @@
 {
+  "__handAuthored": true,
   "id": "00",
   "icon": "ph-list-checks",
   "baslik": "00 · Yönetici Özeti",
-  "ozet": "Tek sayfada 12 aylık strateji.",
-  "amac": "Tek sayfada 12 aylık strateji.",
+  "ozet": "Tek sayfada 12 aylık strateji: durum, sıra, faz, bütçe, kuzey yıldızı.",
+  "amac": "Kararı olan bir yönetici için 12 aylık planı tek bakışta özetlemek.",
+  "status": "CONDITIONAL_GO",
+  "kritikKPI": "Yerel arama payı + tekrar ziyaret + franchise lead",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "hazirlik",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Tek sayfada 12 aylık strateji.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "**Durum:** Cups & Clouds sahada güçlü (26+ şube, güçlü konseptler) ama dijitalde görünmez: SEO ~42/100, ölçüm yarım, online mağaza yok."
-        },
-        {
-          "type": "paragraph",
-          "text": "**Hedef sırası:** Ölç → piksel → reklam → yerel SEO → e-ticaret → marka & topluluk."
-        },
-        {
-          "type": "list",
-          "ordered": false,
-          "items": [
-            "**İlk hamle:** Ay 1 ölçüm altyapısı + hızlı SEO düzeltmeleri (bedava kazanç).",
-            "**Kuzey Yıldızı:** yerel arama payı, tekrar ziyaret, franchise nitelikli aday.",
-            "**1. yıl bütçesi (reklam hariç):** ~₺2,56 milyon (yatırım + işletme + diğer)."
-          ]
-        }
-      ]
-    }
+    { "id": "durum", "title": "1 · Durum", "summary": "Nerede güçlü, nerede görünmez?", "blocks": [
+      { "type": "paragraph", "text": "Cups & Clouds **sahada güçlü** (26+ şube, oturmuş konseptler) ama **dijitalde görünmez**: SEO ~42/100, ölçüm altyapısı yarım, online mağaza yok, marka dili tutarsız. Boşluk fırsattır: temel işler bir kez kurulunca kalıcı kazanç üretir." },
+      { "type": "evidence", "items": [ { "claim": "Dijital SEO skoru ~42/100", "confidence": "estimate", "sourceId": "S1" }, { "claim": "shop/cart/checkout 404 → online mağaza yok", "confidence": "fact", "sourceId": "S1" }, { "claim": "Ölçüm/piksel kurulumu eksik", "confidence": "estimate", "sourceId": "S1" } ] }
+    ]},
+    { "id": "hedef-sirasi", "title": "2 · Hedef Sırası", "summary": "Hangi işi neden önce?", "blocks": [
+      { "type": "paragraph", "text": "Sıra rastgele değil, bağımlılık zinciridir: **Ölç → piksel → reklam → yerel SEO → e-ticaret → marka & topluluk.** Ölçmeden reklam para yakar; piksel olmadan optimizasyon kördür." },
+      { "type": "list", "ordered": true, "items": ["Ölçüm & analitik omurgası (Metrica/GA4/GTM).", "Dönüşüm pikselleri (Meta/TikTok) + tüketici olayları.", "Reklam (test-önce, küçük bütçe → ölçekle).", "Yerel SEO + Google/Yandex işletme profilleri.", "E-ticaret + ürün kataloğu (WooCommerce).", "Marka kimliği + topluluk & sadakat."] }
+    ]},
+    { "id": "faz-ozeti", "title": "3 · 5 Faz", "summary": "Üst seviye kronoloji.", "blocks": [
+      { "type": "table", "headers": ["Faz", "Odak", "Ana çıktı"], "rows": [ ["1", "Ölçüm & SEO", "Veri akışı + hızlı SEO kazançları"], ["2", "Piksel & reklam", "Optimize edilebilir kampanyalar"], ["3", "Yerel SEO & ölçekleme", "Yerel arama payı + kazanan kanal ölçekleme"], ["4", "E-ticaret & katalog", "Online satış + dinamik retargeting önü"], ["5", "Marka & sürdürülebilir", "Tutarlı kimlik + topluluk + sadakat"] ] },
+      { "type": "callout", "variant": "info", "text": "Fazlar üst üste biner; her faz bir GATE (GO/CONDITIONAL_GO/HOLD) ile ilerler. Detay: 08 Zaman Planı." }
+    ]},
+    { "id": "butce-ozeti", "title": "4 · Bütçe Özeti (reklam hariç)", "summary": "1. yıl kaça mal olur?", "blocks": [
+      { "type": "chartReference", "chartId": "c-yil", "title": "1. yıl maliyet özeti", "note": "canlı", "datasetId": "yil" },
+      { "type": "paragraph", "text": "Reklam hariç 1. yıl ~**₺2,56M** (tek seferlik yatırım + yıllık işletme + diğer/rezerv). Reklam bütçesi ayrıdır ve ROAS'a göre ölçeklenir. Tüm sayılar **planlama varsayımıdır** (detay: 06 Finansal)." }
+    ]},
+    { "id": "kuzey-yildizi", "title": "5 · Kuzey Yıldızı Metrikleri", "summary": "Neyi kovalıyoruz?", "blocks": [
+      { "type": "kpi", "rows": [ { "metric": "Yerel arama payı", "baseline": "düşük", "target": "artan", "frequency": "Aylık", "owner": "Tolga" }, { "metric": "Tekrar ziyaret / sadakat", "baseline": "—", "target": "artan", "frequency": "Aylık", "owner": "Tolga" }, { "metric": "Nitelikli franchise adayı", "baseline": "—", "target": "çeyrekte artan", "frequency": "Çeyreklik", "owner": "Tolga" } ] }
+    ]},
+    { "id": "ilk-hamle", "title": "6 · İlk Hamle", "summary": "Ay 1'de ne olur?", "blocks": [
+      { "type": "paragraph", "text": "**Ay 1:** ölçüm altyapısı + hızlı SEO düzeltmeleri (neredeyse bedava kazanç). Bu, sonraki her reklam lirasının verimini yükseltir." }
+    ]},
+    { "id": "kararlar", "title": "7 · Ana Kararlar", "summary": "Neye GO, neye koşullu?", "blocks": [
+      { "type": "table", "headers": ["Karar", "Durum", "Not"], "rows": [ ["Ölçüm & SEO altyapısı", "GO", "Faz 1, düşük risk"], ["Reklam (test-önce)", "GO", "Küçük bütçe → ölçekle"], ["Online mağaza", "CONDITIONAL_GO", "Kargo/ödeme/iade operasyonu netleşince"], ["Katalog retargeting (Criteo/AdRoll)", "HOLD", "Trafik/katalog eşiği sonrası"] ] }
+    ]},
+    { "id": "nasil-okunur", "title": "8 · Bu Sistem Nasıl Okunur?", "summary": "Hangi doküman neyi anlatır?", "blocks": [
+      { "type": "list", "items": ["01 vizyon/misyon/değer · 02 org & iş akışı · 03 pazar · 04 rakip", "05 genel + 05a-05m kanal stratejileri (her biri 20 bölüm)", "06 finansal · 07 gap & bilinmeyenler · 08 zaman/Gantt · 09 durum tespiti", "Sayısal veriler Google E-Tablo 'CANLI VERİ' sekmesinden canlı beslenir."] },
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds dijital denetim özeti (SEO ~42, mağaza yok, ölçüm eksik)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }

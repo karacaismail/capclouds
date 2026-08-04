@@ -1,24 +1,45 @@
 {
+  "__handAuthored": true,
   "id": "09",
   "icon": "ph-shield-check",
   "baslik": "09 · Durum Tespiti (Due Diligence)",
-  "ozet": "Ortaklık/risk çerçevesi.",
-  "amac": "Ortaklık/risk çerçevesi.",
+  "ozet": "Ortaklık/yatırım öncesi risk haritası: bayraklar, R1-R10 matrisi, belge listesi.",
+  "amac": "Bir ortaklık/yatırım kararını kanıta dayandırıp Go/Bekle/Vazgeç çerçevesine bağlamak.",
+  "status": "CONDITIONAL_GO",
+  "kritikKPI": "İmza öncesi kritik belgeler tamam",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "hazirlik",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Ortaklık/risk çerçevesi.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Bir ortaklık/yatırım kararı öncesi **risk haritası**: franchise mi/hisse ortaklığı mı ayrımı, bayrak tablosu, risk matrisi (R1–R10), bilinmeyen-bilinmeyenler, imza öncesi belge listesi, keskin sorular, Go/Bekle/Vazgeç çerçevesi."
-        },
-        {
-          "type": "paragraph",
-          "text": "Bu bir risk çerçevesidir; hukuki/mali tavsiye değildir."
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Bu bir risk haritası.", "blocks": [
+      { "type": "paragraph", "text": "Bir ortaklık/yatırım kararı öncesi risk haritası: **franchise mi / hisse ortaklığı mı** ayrımı, bayrak tablosu, risk matrisi (R1-R10), bilinmeyen-bilinmeyenler, imza öncesi belge listesi, keskin sorular ve **Go/Bekle/Vazgeç** çerçevesi." },
+      { "type": "callout", "variant": "warn", "text": "Bu bir risk çerçevesidir; hukuki veya mali tavsiye değildir. Nihai kararda yeminli mali müşavir + avukat görüşü alınmalıdır." }
+    ]},
+    { "id": "ortaklik-turu", "title": "2 · Ortaklık Türü Ayrımı", "summary": "Franchise mi, hisse mi?", "blocks": [
+      { "type": "table", "headers": ["Boyut", "Franchise", "Hisse Ortaklığı"], "rows": [ ["Risk maruziyeti", "Sözleşmeyle sınırlı", "Şirketin tüm riskine ortak"], ["Kontrol", "Operasyonel, marka kurallı", "Yönetim/karar hakkı"], ["Getiri", "Kendi şubesinin kârı", "Şirket kârından pay"], ["Çıkış", "Sözleşme sonu", "Hisse devri (daha karmaşık)"], ["İnceleme derinliği", "Marka + model", "Tam mali/hukuki durum tespiti"] ] },
+      { "type": "paragraph", "text": "Hisse ortaklığı çok daha derin durum tespiti gerektirir; franchise'de odak marka gücü ve model sürdürülebilirliğidir." }
+    ]},
+    { "id": "bayrak-tablosu", "title": "3 · Bayrak Tablosu", "summary": "Yeşil / sarı / kırmızı.", "blocks": [
+      { "type": "table", "headers": ["Sinyal", "Bayrak", "Anlamı"], "rows": [ ["Şeffaf mali tablo + tescilli marka", "Yeşil", "Güven artar"], ["Büyüyen, düşük churn'lü şube ağı", "Yeşil", "Model sağlıklı"], ["Eksik/gecikmeli belge paylaşımı", "Sarı", "Daha çok soru gerek"], ["Yüksek ilişkili taraf işlemi", "Sarı", "Kâr sızıntısı ihtimali"], ["Belirsiz marka/IP sahipliği", "Kırmızı", "Yatırım riski yüksek"], ["Gizli borç / dava", "Kırmızı", "Karar ertelenmeli"] ] }
+    ]},
+    { "id": "risk-matrisi", "title": "4 · Risk Matrisi (R1-R10)", "summary": "Olasılık × etki.", "blocks": [
+      { "type": "risk", "rows": [ { "risk": "R1 Marka/IP sahipliği belirsiz", "signal": "Tescil belgesi yok", "mitigation": "Tescil doğrula, gerekiyorsa devir şartı", "severity": "high" }, { "risk": "R2 Gizli borç/yükümlülük", "signal": "Mali tablo eksik", "mitigation": "Bağımsız mali inceleme", "severity": "high" }, { "risk": "R3 Franchise churn (kapanan şube)", "signal": "Kapanış geçmişi gizli", "mitigation": "Şube açılış/kapanış kaydı iste", "severity": "high" }, { "risk": "R4 İlişkili taraf işlemleri", "signal": "Tedarik/kira aile içi", "mitigation": "Sözleşmeleri incele", "severity": "med" }, { "risk": "R5 Ruhsat/kira sürekliliği", "signal": "Kısa/belirsiz süre", "mitigation": "Süreleri doğrula", "severity": "med" }, { "risk": "R6 Dijital varlık erişimi", "signal": "Hesaplar 3. kişide", "mitigation": "Erişim devri şartı", "severity": "med" }, { "risk": "R7 Menü/tedarik maliyet baskısı", "signal": "Marj daralması", "mitigation": "Maliyet & fiyat esnekliği", "severity": "med" }, { "risk": "R8 Kilit kişi bağımlılığı", "signal": "Tek kişiye bağlı bilgi", "mitigation": "Dokümantasyon + devir planı", "severity": "med" }, { "risk": "R9 Rekabet/pazar baskısı", "signal": "Dijitalde geride", "mitigation": "Bu proje (hızlı kapanış)", "severity": "med" }, { "risk": "R10 Yasal/uyum (KVKK, tüketici)", "signal": "Metin/uyum eksik", "mitigation": "Hukuki uyum paketi", "severity": "med" } ] }
+    ]},
+    { "id": "bilinmeyen-bilinmeyenler", "title": "5 · Bilinmeyen-Bilinmeyenler", "summary": "Sormadığımız için görünmeyen.", "blocks": [
+      { "type": "paragraph", "text": "Görünmeyen riskler ancak doğru belge ve soruyla ortaya çıkar; bkz. 07 çerçevesi. En kritikleri: marka/IP, gizli borç, churn, ilişkili taraf, ruhsat/kira." }
+    ]},
+    { "id": "belge-listesi", "title": "6 · İmza Öncesi Belge Listesi", "summary": "Neler görülmeli?", "blocks": [
+      { "type": "list", "items": ["Marka tescil belgeleri (sınıflar + sahip).", "Son 2-3 yıl mali tablolar + borç/yükümlülük beyanı.", "Şube açılış/kapanış kayıtları (churn).", "Ana tedarik ve kira sözleşmeleri (süre + taraflar).", "Ruhsat/izinler.", "Dijital hesap/veri sahiplik ve erişim listesi.", "Varsa dava/icra kayıtları."] }
+    ]},
+    { "id": "keskin-sorular", "title": "7 · Keskin Sorular", "summary": "Doğrudan sorulacaklar.", "blocks": [
+      { "type": "list", "items": ["Marka kimin adına tescilli; devir mümkün mü?", "Bilançoda görünmeyen yükümlülük var mı?", "Son 24 ayda kaç şube kapandı, neden?", "Tedarik/kira ilişkili taraflarla mı?", "Dijital hesapların ve verinin sahibi kim?", "Karar/çıkış hakları nasıl tanımlı?"] }
+    ]},
+    { "id": "karar-cercevesi", "title": "8 · Go / Bekle / Vazgeç", "summary": "Karar kapısı.", "blocks": [
+      { "type": "gate", "id": "GATE-09-Karar", "question": "Kırmızı bayraklar (IP, gizli borç, churn) temizlendi mi?", "pass": "Belgelerle doğrulandı → GO (koşullu olabilir)", "fail": "Kırmızı sürüyorsa VAZGEÇ; sarıysa BEKLE + ek belge" },
+      { "type": "table", "headers": ["Sonuç", "Koşul", "Aksiyon"], "rows": [ ["GO", "Yeşil ağırlıklı, kırmızı yok", "İlerle, sözleşme + koşullar"], ["BEKLE", "Sarı bayraklar açık", "Ek belge/soru, yeniden değerlendir"], ["VAZGEÇ", "Kırmızı bayrak sürüyor", "Yatırımı durdur"] ] }
+    ]},
+    { "id": "kaynaklar", "title": "9 · Kaynaklar", "summary": "Kaynak.", "blocks": [
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds durum tespiti risk çerçevesi (planlama; hukuki tavsiye değildir)", "publishedDate": "2026-08-04", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }

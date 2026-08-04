@@ -1,28 +1,57 @@
 {
+  "__handAuthored": true,
   "id": "02",
   "icon": "ph-tree-structure",
   "baslik": "02 · Organizasyon · İK · İş Akışları",
-  "ozet": "Kim, neyi, hangi süreçle yapar?",
-  "amac": "Kim, neyi, hangi süreçle yapar?",
+  "ozet": "Kim, neyi, hangi süreçle yapar? Org şema, işe alım, iş akışları, RACI.",
+  "amac": "Minimum ekip–maksimum verimlilikle net roller ve tekrarlanabilir süreç kurmak.",
+  "status": "GO",
+  "kritikKPI": "Ekip Ay 3'te tam operasyonel",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "hazirlik",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Kim, neyi, hangi süreçle yapar?",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "**Org şema:** Genel Müdür › **Tolga Akşen (Dijital Pazarlama Lideri)** › (Uzman adayı + Grafiker). Operasyon/Şube GM'ye bağlı; Tolga'ya içerik akışı sağlar."
-        },
-        {
-          "type": "paragraph",
-          "text": "**İK (ilk 3 ay):** Ay 1 Tolga başlar + uzman adayı ilanı; Ay 2 uzman işe alım + eğitim, grafiker ilanı; Ay 3 grafiker marka kimliği uygulamasına başlar, ekip tam operasyonel."
-        },
-        {
-          "type": "paragraph",
-          "text": "**İş akışları:** haftalık içerik üretimi · reklam kampanyası (test-önce) · franchise adayı (lead) hunisi. RACI ve tek Karar Günlüğü ile."
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Yapı ne, neden böyle?", "blocks": [
+      { "type": "paragraph", "text": "Küçük ama yetkin bir çekirdek ekip, AI araçlarıyla çarpan alır. Yapı: **Genel Müdür › Dijital Pazarlama Lideri (Tolga Akşen) › Uzman + Grafiker.** Operasyon/şubeler GM'ye bağlı, Tolga'ya içerik akışı sağlar. Roller net, kararlar tek Karar Günlüğü'nde." }
+    ]},
+    { "id": "org-sema", "title": "2 · Organizasyon Şeması", "summary": "Kim kime bağlı?", "blocks": [
+      { "type": "table", "headers": ["Seviye", "Rol", "Bağlı olduğu"], "rows": [ ["1", "Genel Müdür", "—"], ["2", "Dijital Pazarlama Lideri (Tolga Akşen)", "Genel Müdür"], ["3", "Dijital Pazarlama Uzmanı", "Tolga"], ["3", "Grafiker (orta seviye)", "Tolga"], ["yatay", "Operasyon / Şube", "Genel Müdür (Tolga'ya içerik besler)"] ] },
+      { "type": "callout", "variant": "info", "text": "Tolga'nın üstünde Genel Müdür vardır; nihai iş ve bütçe kararları GM'dedir. Tolga icra ve kanal kararlarının sahibidir." }
+    ]},
+    { "id": "roller", "title": "3 · Roller ve Sorumluluklar", "summary": "Herkes neyi taşır?", "blocks": [
+      { "type": "table", "headers": ["Rol", "Ana sorumluluk", "AI kaldıracı"], "rows": [ ["Tolga (Lider)", "Strateji, kanal kararları, bütçe önerisi, raporlama", "Analiz + kopya taslak"], ["Uzman", "Kampanya kurulum/optimizasyon, ölçüm, test", "Otomasyon + veri"], ["Grafiker", "Marka kimliği, görsel/video üretim, şablon", "Üretken tasarım"], ["Operasyon/Şube", "Saha içerik hammaddesi, deneyim tutarlılığı", "—"] ] }
+    ]},
+    { "id": "ik-plani", "title": "4 · İşe Alım Planı (0-90 gün)", "summary": "Ekip ne zaman tamam?", "blocks": [
+      { "type": "timeline", "items": [ { "when": "Ay 1", "what": "Tolga başlar + uzman ilanı; ölçüm/SEO işleri başlar", "owner": "GM+Tolga" }, { "when": "Ay 2", "what": "Uzman işe alım + eğitim; grafiker ilanı", "owner": "Tolga" }, { "when": "Ay 3", "what": "Grafiker marka kimliğine başlar; ekip tam operasyonel", "owner": "Tolga" } ] }
+    ]},
+    { "id": "is-akislari", "title": "5 · İş Akışları", "summary": "Tekrarlanabilir üç süreç.", "blocks": [
+      { "type": "paragraph", "text": "Üç ana akış standartlaştırılır; her biri girdisi–adımı–çıktısı belli, test-önce disiplinli." }
+    ], "sections": [
+      { "id": "icerik-uretimi", "title": "Haftalık İçerik Üretimi", "summary": "Fikir → yayın → ölçüm.", "blocks": [
+        { "type": "list", "ordered": true, "items": ["Şube/operasyondan hammadde toplama (foto/olay/menü).", "Haftalık içerik takvimi + çekim/tasarım (grafiker + AI).", "Kanal formatına uyarlama (Reels/story/post/kısa video).", "Yayın + topluluk yönetimi (yorum/DM).", "Haftalık performans → sonraki takvime öğrenim."] }
+      ]},
+      { "id": "reklam-kampanyasi", "title": "Reklam Kampanyası (test-önce)", "summary": "Küçük test → ölçekle.", "blocks": [
+        { "type": "list", "ordered": true, "items": ["Hipotez + hedef kitle + kreatif varyantları.", "Küçük bütçeli test (öğren, yakma).", "Ölç: CTR/CPC/CVR/CPL/ROAS eşiklerine karşı.", "Kazananı ölçekle, kaybedeni durdur/revize et (ECA).", "Karar Günlüğü'ne yaz."] },
+        { "type": "eca", "id": "ECA-Org-Test", "event": "Test kreatifi eşik üstü performans", "condition": "İstatistiksel olarak anlamlı", "action": "Bütçeyi ölçekle; düşük performanslıyı durdur" }
+      ]},
+      { "id": "franchise-lead", "title": "Franchise Aday (Lead) Hunisi", "summary": "Yüksek değerli süreç.", "blocks": [
+        { "type": "list", "ordered": true, "items": ["Farkındalık: marka + başarı görünürlüğü.", "İlgi: şeffaf model/getiri sayfası (04).", "Form: nitelikli aday verisi topla (KVKK uyumlu).", "Görüşme + değerlendirme → GM'ye taşı.", "Sonuç Karar Günlüğü + CRM'e işlenir."] }
+      ]}
+    ]},
+    { "id": "raci", "title": "6 · RACI", "summary": "Kim sorumlu, kim onaylar?", "blocks": [
+      { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [ ["Kanal stratejisi", "Tolga", "GM", "Uzman", "Operasyon"], ["Kampanya icra", "Uzman", "Tolga", "Grafiker", "GM"], ["İçerik üretimi", "Grafiker", "Tolga", "Operasyon", "GM"], ["Bütçe onayı", "Tolga (öneri)", "GM", "—", "Uzman"] ] }
+    ]},
+    { "id": "karar-gunlugu", "title": "7 · Karar Günlüğü Disiplini", "summary": "Kararlar nasıl kayda geçer?", "blocks": [
+      { "type": "paragraph", "text": "Her önemli karar tek bir Karar Günlüğü'ne yazılır: **tarih, karar, gerekçe, sahip, GATE durumu, gözden geçirme tarihi.** Bu, 'kim ne demişti' kaybını önler ve öğrenmeyi kurumsallaştırır." }
+    ]},
+    { "id": "riskler", "title": "8 · Organizasyon Riskleri", "summary": "Yapısal riskler.", "blocks": [
+      { "type": "risk", "rows": [ { "risk": "Kilit kişi bağımlılığı (tek lider)", "signal": "Tolga yokken akış durur", "mitigation": "Süreç dokümantasyonu + uzman yetkinlendirme", "severity": "med" }, { "risk": "İşe alım gecikmesi", "signal": "Ay 2-3 rol boş", "mitigation": "Erken ilan + freelance köprü", "severity": "med" }, { "risk": "Operasyon–pazarlama kopukluğu", "signal": "Saha içeriği gelmiyor", "mitigation": "Haftalık ritüel + net sorumlu", "severity": "med" } ] }
+    ]},
+    { "id": "bagimliliklar", "title": "9 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [
+      { "type": "list", "items": ["01 vizyon/değerler (kültür & ses tonu)", "05m marka kimliği (grafikerin ilk büyük işi)", "06 finansal (işletme gideri = ekip)", "08 zaman planı (işe alım takvimi)"] }
+    ]},
+    { "id": "kaynaklar", "title": "10 · Kaynaklar", "summary": "Kaynak.", "blocks": [
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds organizasyon & işe alım planı (planlama varsayımları)", "publishedDate": "2026-08-04", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }

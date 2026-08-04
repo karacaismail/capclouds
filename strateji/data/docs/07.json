@@ -1,24 +1,44 @@
 {
+  "__handAuthored": true,
   "id": "07",
   "icon": "ph-warning-diamond",
   "baslik": "07 · Gap & Bilinmeyen-Bilinmeyenler",
-  "ozet": "Ne eksik, göremediğimiz ne?",
-  "amac": "Ne eksik, göremediğimiz ne?",
+  "ozet": "Mevcut vs hedef açıkları + göremediğimizi 'bilinen'e çevirme çerçevesi.",
+  "amac": "Eksikleri kapatma planına, gizli riskleri doğrulama sorularına bağlamak.",
+  "status": "CONDITIONAL_GO",
+  "kritikKPI": "Kritik açıklar kapatma planına bağlı",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "hazirlik",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Ne eksik, göremediğimiz ne?",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "**(A) Gap:** mevcut vs. hedef durum; kanal kanal eksikler ve kapatma planı (ölçüm, piksel, yerel SEO, e-ticaret, marka)."
-        },
-        {
-          "type": "paragraph",
-          "text": "**(B) Bilinmeyen-bilinmeyenler:** marka/IP sahipliği, gizli borç, franchise churn, ilişkili taraf işlemleri, ruhsat/kira sürekliliği — bunları belge/soru talepleriyle 'bilinen'e çevir."
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "İki tür belirsizlik.", "blocks": [
+      { "type": "paragraph", "text": "İki katman var: **(A) Gap** — mevcut ile hedef durum arasındaki bilinen açıklar (ölçüm, piksel, yerel SEO, e-ticaret, marka) ve kapatma planı. **(B) Bilinmeyen-bilinmeyenler** — henüz sormadığımız için göremediğimiz riskler; bunları belge ve soru talepleriyle 'bilinen'e çeviririz." }
+    ]},
+    { "id": "gap-analizi", "title": "2 · Gap Analizi (mevcut → hedef)", "summary": "Kanal kanal açık.", "blocks": [
+      { "type": "table", "headers": ["Alan", "Mevcut", "Hedef", "Öncelik"], "rows": [ ["Ölçüm/analitik", "Yarım kurulu", "Tam olay akışı", "Yüksek"], ["Dönüşüm pikselleri", "Eksik", "Meta+TikTok aktif", "Yüksek"], ["Yerel SEO", "Zayıf (~42)", "Yerel aramada görünür", "Yüksek"], ["E-ticaret", "Yok (404)", "WooCommerce canlı", "Orta"], ["Marka tutarlılığı", "Tutarsız", "Brand book + uygulama", "Orta"], ["Reklam optimizasyonu", "Yok/ad-hoc", "Test-önce + ROAS yönetimi", "Yüksek"] ] }
+    ]},
+    { "id": "kapatma-plani", "title": "3 · Kapatma Planı", "summary": "Açık → aksiyon → sahip.", "blocks": [
+      { "type": "list", "ordered": true, "items": ["Ölçüm/piksel: Faz 1'de GTM+analitik+piksel kur (Uzman).", "Yerel SEO: işletme profilleri + teknik/hız + içerik (Tolga/Uzman).", "E-ticaret: hız → WooCommerce → katalog (Faz 4, koşullu).", "Marka: brand book + şablon kütüphanesi (Grafiker, Ay 3+).", "Reklam: test-önce çerçevesi + eşikler (Uzman)."] },
+      { "type": "callout", "variant": "info", "text": "Her açık bir sahibe ve faza bağlanır; sahipsiz açık kapanmaz." }
+    ]},
+    { "id": "bilinen-bilinmeyenler", "title": "4 · Bilinen Bilinmeyenler", "summary": "Sorusunu bildiğimiz belirsizlikler.", "blocks": [
+      { "type": "list", "items": ["Gerçek CPC/CPM/CVR (yeni hesap; ilk testlerle netleşir).", "Gerçek site hızı (PageSpeed ölçümü gerekli).", "Yerel arama hacmi/pay (araç verisiyle doğrulanır).", "Franchise dönüşüm oranı (huni verisiyle netleşir)."] }
+    ]},
+    { "id": "bilinmeyen-bilinmeyenler", "title": "5 · Bilinmeyen-Bilinmeyenler", "summary": "Göremediklerimiz.", "blocks": [
+      { "type": "paragraph", "text": "Bunlar 'ne bilmediğimizi bilmediğimiz' alanlardır; belge/soru talebiyle görünür kılınır." },
+      { "type": "table", "headers": ["Olası kör nokta", "Neden tehlikeli", "'Bilinen'e çevirme"], "rows": [ ["Marka/IP sahipliği", "Reklam yatırımı başkasının markasına akabilir", "Tescil belgesi + sahiplik doğrulama (09)"], ["Gizli borç / yükümlülük", "Ortaklık/yatırım kararını bozar", "Mali tablo + borç beyanı"], ["Franchise churn (kapanan şube)", "Büyüme anlatısını çürütür", "Şube açılış/kapanış geçmişi"], ["İlişkili taraf işlemleri", "Kâr sızıntısı", "Tedarik/kira sözleşmeleri"], ["Ruhsat/kira sürekliliği", "Operasyon riski", "Ruhsat + kira süreleri"] ] }
+    ]},
+    { "id": "varsayim-riskleri", "title": "6 · Varsayım Riskleri", "summary": "Plan hangi varsayıma dayanıyor?", "blocks": [
+      { "type": "risk", "rows": [ { "risk": "ROAS varsayımı iyimser", "signal": "İlk testler hedef altı", "mitigation": "Düşük senaryoya göre planla, kanal karması revize", "severity": "high" }, { "risk": "Pazar büyüklüğü fazla geniş", "signal": "Erişim maliyeti yüksek", "mitigation": "Gerçekçi hedef katmanını çıpa al (03)", "severity": "med" }, { "risk": "İşe alım/kapasite gecikir", "signal": "Roller boş", "mitigation": "Freelance köprü + öncelik sırası", "severity": "med" } ] }
+    ]},
+    { "id": "dogrulama-sorulari", "title": "7 · Doğrulama Soruları", "summary": "Neyi kime sormalı?", "blocks": [
+      { "type": "list", "items": ["Marka tescili kimin adına, hangi sınıflarda?", "Son 24 ayda kaç şube açıldı/kapandı?", "Mevcut borç/yükümlülük tablosu nedir?", "Ana tedarik ve kira sözleşmelerinin süresi?", "Mevcut dijital hesap/veri erişimleri kimde?"] }
+    ]},
+    { "id": "gate", "title": "8 · Karar Kapısı", "summary": "Ne zaman ilerlemeli?", "blocks": [
+      { "type": "gate", "id": "GATE-07-Kritik", "question": "Kritik bilinmeyenler (IP, borç, ruhsat) 'bilinen'e çevrildi mi?", "pass": "Belgelerle doğrulandı → tam yatırım GO", "fail": "Yüksek harcamayı beklet; düşük-risk işlerle ilerle" }
+    ]},
+    { "id": "kaynaklar", "title": "9 · Kaynaklar", "summary": "Kaynak.", "blocks": [
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds gap & belirsizlik çerçevesi (planlama)", "publishedDate": "2026-08-04", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }

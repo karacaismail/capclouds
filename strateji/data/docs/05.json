@@ -1,28 +1,41 @@
 {
+  "__handAuthored": true,
   "id": "05",
   "icon": "ph-megaphone",
   "baslik": "05 · Dijital Pazarlama Stratejisi (Genel)",
-  "ozet": "Genel dijitalleşme stratejisi.",
-  "amac": "Genel dijitalleşme stratejisi.",
+  "ozet": "Tüm kanalları bağlayan huni, sıralama, ölçüm omurgası ve yönetim ilkeleri.",
+  "amac": "05a-05m kanallarını tek bir ölçülebilir dijitalleşme stratejisinde birleştirmek.",
+  "status": "GO",
+  "kritikKPI": "Bağlı huni + ölçüm omurgası",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Genel dijitalleşme stratejisi.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Her kanalın ayrı stratejisi vardır; toplamı **genel dijitalleşme ve dijital dünyayı güçlendirme stratejisidir.**"
-        },
-        {
-          "type": "paragraph",
-          "text": "**Huni:** Farkındalık (TikTok/Meta organik+reklam) → İlgi (SEO/içerik) → Değerlendirme (yerel SEO/retargeting) → Aksiyon (şube ziyareti/franchise/online satış) → Sadakat (topluluk/CRM)."
-        },
-        {
-          "type": "paragraph",
-          "text": "Alt kanallar aşağıdaki 05a–05m maddelerinde tek tek açılır."
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Bütün ne, parçalar ne?", "blocks": [
+      { "type": "paragraph", "text": "Her kanalın ayrı stratejisi vardır (05a-05m); toplamı **genel dijitalleşme ve dijital dünyada güçlenme stratejisidir.** Kanallar tek tek değil, bir huni içinde birbirini besleyecek şekilde kurgulanır ve ortak bir ölçüm omurgasına bağlanır." }
+    ]},
+    { "id": "huni", "title": "2 · Huni", "summary": "Yabancıdan sadık müşteriye.", "blocks": [
+      { "type": "table", "headers": ["Aşama", "Görev", "Ana kanallar"], "rows": [ ["Farkındalık", "Yeni kitleye ulaş", "TikTok, Meta (organik+reklam)"], ["İlgi", "Değer anlat, güven kur", "SEO/içerik, Instagram"], ["Değerlendirme", "Hatırlat, ikna et", "Yerel SEO, retargeting"], ["Aksiyon", "Ziyaret/satış/franchise", "Google Ads, Maps, WooCommerce"], ["Sadakat", "Tekrar & topluluk", "CRM/e-posta, topluluk"] ] }
+    ]},
+    { "id": "kanal-haritasi", "title": "3 · Kanal Haritası (05a-05m)", "summary": "Hangi doküman neyi kapsar?", "blocks": [
+      { "type": "table", "headers": ["Kanal", "Rol", "Durum"], "rows": [ ["05a SEO", "Organik görünürlük temeli", "GO"], ["05b Programatik SEO", "Ölçeklenir yerel/kategori sayfaları", "GO"], ["05c Google Ads", "Niyetli trafik + franchise", "GO"], ["05d Meta + Pixel", "Farkındalık + retargeting", "GO"], ["05e TikTok", "Genç + viral keşif", "GO"], ["05f Yandex Metrica", "Ölçüm/analitik", "GO"], ["05g Hotjar/Clarity", "Davranış analizi", "GO"], ["05h Criteo", "Katalog retargeting", "HOLD"], ["05i AdRoll", "Katalog retargeting", "HOLD"], ["05j Remarketing", "Geri kazanım", "GO"], ["05k GTM", "Etiket/olay yönetimi", "GO"], ["05l WooCommerce/UI", "E-ticaret + hız", "CONDITIONAL_GO"], ["05m Marka Kimliği", "Tutarlı dil", "GO"] ] }
+    ]},
+    { "id": "faz-sirasi", "title": "4 · Sıralama İlkesi", "summary": "Neden bu sırayla?", "blocks": [
+      { "type": "paragraph", "text": "Sıra bağımlılıkla belirlenir: **ölç → pikselle → reklam ver → yerel SEO → e-ticaret → marka.** Ölçüm olmadan reklam kör, katalog olmadan dinamik retargeting imkânsız, marka tutarlılığı olmadan tüm reklam verimi düşük olur." },
+      { "type": "list", "items": ["Önce bedava/kalıcı kazançlar (SEO, ölçüm).", "Sonra ölçülebilir reklam (test-önce).", "En son yüksek operasyon yükü (e-ticaret) ve uzun vade (marka/topluluk)."] }
+    ]},
+    { "id": "yonetim-ilkeleri", "title": "5 · Yönetim İlkeleri", "summary": "Nasıl karar veririz?", "blocks": [
+      { "type": "list", "items": ["**Test-önce:** her kanal küçük testle başlar, kanıtla ölçeklenir.", "**ECA (Olay-Koşul-Aksiyon):** eşik aşımında otomatik karar kuralı.", "**GATE:** her faz GO/CONDITIONAL_GO/HOLD/NO_GO ile geçilir.", "**Kanıt disiplini:** her sayı gerçek/tahmin/varsayım olarak etiketlenir.", "**Tek kaynak:** sayısal veriler canlı E-Tablodan beslenir."] }
+    ]},
+    { "id": "olcum-omurgasi", "title": "6 · Ölçüm Omurgası", "summary": "Her şey neye bağlanır?", "blocks": [
+      { "type": "paragraph", "text": "Tüm kanallar ortak bir ölçüm omurgasına bağlanır: **GTM (05k)** etiketleri yönetir, **Yandex Metrica/GA4 (05f)** trafiği ölçer, **Meta/TikTok pikselleri (05d/05e)** dönüşümü, **Hotjar/Clarity (05g)** davranışı gösterir. Bu omurga olmadan optimizasyon yapılamaz." },
+      { "type": "gate", "id": "GATE-05-Olcum", "question": "Ölçüm omurgası (GTM+analitik+piksel) çalışıyor mu?", "pass": "Olaylar doğru akıyor → reklam GO", "fail": "Reklamı beklet, önce ölçümü düzelt" }
+    ]},
+    { "id": "bagimliliklar", "title": "7 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [
+      { "type": "list", "items": ["05k GTM tüm olay akışının merkezi", "05f/05g ölçüm & davranış", "05m marka kimliği tüm kreatifin temeli", "05l site hızı/e-ticaret altyapısı", "06 finansal (kanal bütçe dağılımı)"] }
+    ]},
+    { "id": "kaynaklar", "title": "8 · Kaynaklar", "summary": "Kaynak.", "blocks": [
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds dijital pazarlama genel stratejisi (kanal sentezi)", "publishedDate": "2026-08-04", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }

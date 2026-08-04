@@ -6,8 +6,10 @@
       "id": "00",
       "icon": "ph-list-checks",
       "baslik": "00 · Yönetici Özeti",
-      "ozet": "Tek sayfada 12 aylık strateji.",
-      "amac": "Tek sayfada 12 aylık strateji.",
+      "ozet": "Tek sayfada 12 aylık strateji: durum, sıra, faz, bütçe, kuzey yıldızı.",
+      "amac": "Kararı olan bir yönetici için 12 aylık planı tek bakışta özetlemek.",
+      "status": "CONDITIONAL_GO",
+      "kritikKPI": "Yerel arama payı + tekrar ziyaret + franchise lead",
       "file": "00.json"
     },
     {
@@ -22,8 +24,10 @@
       "id": "02",
       "icon": "ph-tree-structure",
       "baslik": "02 · Organizasyon · İK · İş Akışları",
-      "ozet": "Kim, neyi, hangi süreçle yapar?",
-      "amac": "Kim, neyi, hangi süreçle yapar?",
+      "ozet": "Kim, neyi, hangi süreçle yapar? Org şema, işe alım, iş akışları, RACI.",
+      "amac": "Minimum ekip–maksimum verimlilikle net roller ve tekrarlanabilir süreç kurmak.",
+      "status": "GO",
+      "kritikKPI": "Ekip Ay 3'te tam operasyonel",
       "file": "02.json"
     },
     {
@@ -40,16 +44,20 @@
       "id": "04",
       "icon": "ph-users-three",
       "baslik": "04 · Rakip & Rekabet Analizi",
-      "ozet": "Kimlerle, nasıl yarışırız?",
-      "amac": "Kimlerle, nasıl yarışırız?",
+      "ozet": "Pazar katmanları, rakip grupları, en yakın tehdit ve savunulabilir boşluk.",
+      "amac": "Kalabalık ortada boğuşmadan, tutulabilir bir konum ve ayrışma ekseni tanımlamak.",
+      "status": "GO",
+      "kritikKPI": "Savunulabilir dörtlü boşluk",
       "file": "04.json"
     },
     {
       "id": "05",
       "icon": "ph-megaphone",
       "baslik": "05 · Dijital Pazarlama Stratejisi (Genel)",
-      "ozet": "Genel dijitalleşme stratejisi.",
-      "amac": "Genel dijitalleşme stratejisi.",
+      "ozet": "Tüm kanalları bağlayan huni, sıralama, ölçüm omurgası ve yönetim ilkeleri.",
+      "amac": "05a-05m kanallarını tek bir ölçülebilir dijitalleşme stratejisinde birleştirmek.",
+      "status": "GO",
+      "kritikKPI": "Bağlı huni + ölçüm omurgası",
       "file": "05.json"
     },
     {
@@ -196,24 +204,30 @@
       "id": "07",
       "icon": "ph-warning-diamond",
       "baslik": "07 · Gap & Bilinmeyen-Bilinmeyenler",
-      "ozet": "Ne eksik, göremediğimiz ne?",
-      "amac": "Ne eksik, göremediğimiz ne?",
+      "ozet": "Mevcut vs hedef açıkları + göremediğimizi 'bilinen'e çevirme çerçevesi.",
+      "amac": "Eksikleri kapatma planına, gizli riskleri doğrulama sorularına bağlamak.",
+      "status": "CONDITIONAL_GO",
+      "kritikKPI": "Kritik açıklar kapatma planına bağlı",
       "file": "07.json"
     },
     {
       "id": "08",
       "icon": "ph-calendar-check",
       "baslik": "08 · Zaman Planı & Gantt",
-      "ozet": "40 gün → 12 hafta → çeyrekler.",
-      "amac": "40 gün → 12 hafta → çeyrekler.",
+      "ozet": "40 gün → 12 hafta → çeyrekler; 5 faz ve kilometre taşları, canlı Gantt ile.",
+      "amac": "Yakın vadeyi gün-be-gün, uzak vadeyi kaba planlayıp fazları GATE'lere bağlamak.",
+      "status": "GO",
+      "kritikKPI": "Faz geçişleri GATE'e bağlı",
       "file": "08.json"
     },
     {
       "id": "09",
       "icon": "ph-shield-check",
       "baslik": "09 · Durum Tespiti (Due Diligence)",
-      "ozet": "Ortaklık/risk çerçevesi.",
-      "amac": "Ortaklık/risk çerçevesi.",
+      "ozet": "Ortaklık/yatırım öncesi risk haritası: bayraklar, R1-R10 matrisi, belge listesi.",
+      "amac": "Bir ortaklık/yatırım kararını kanıta dayandırıp Go/Bekle/Vazgeç çerçevesine bağlamak.",
+      "status": "CONDITIONAL_GO",
+      "kritikKPI": "İmza öncesi kritik belgeler tamam",
       "file": "09.json"
     }
   ]

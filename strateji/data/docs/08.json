@@ -1,24 +1,40 @@
 {
+  "__handAuthored": true,
   "id": "08",
   "icon": "ph-calendar-check",
   "baslik": "08 · Zaman Planı & Gantt",
-  "ozet": "40 gün → 12 hafta → çeyrekler.",
-  "amac": "40 gün → 12 hafta → çeyrekler.",
+  "ozet": "40 gün → 12 hafta → çeyrekler; 5 faz ve kilometre taşları, canlı Gantt ile.",
+  "amac": "Yakın vadeyi gün-be-gün, uzak vadeyi kaba planlayıp fazları GATE'lere bağlamak.",
+  "status": "GO",
+  "kritikKPI": "Faz geçişleri GATE'e bağlı",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "40 gün → 12 hafta → çeyrekler.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Kronoloji (yakın=detaylı, uzak=kaba): İlk 40 gün (gün-be-gün) → İlk 12 hafta (haftalık) → İlk 3 ay → İlk 6 ay → 2026 yıl sonu → 2026 çeyrekleri → 2027 çeyrekleri."
-        },
-        {
-          "type": "paragraph",
-          "text": "Üst seviye 5 faz: Ölçüm & SEO → Piksel & reklam → Yerel SEO & ölçekleme → E-ticaret & katalog → Marka & sürdürülebilir. Canlı Gantt grafiğinde görünür."
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Yakın detay, uzak kaba.", "blocks": [
+      { "type": "paragraph", "text": "Kronoloji giderek kabalaşır: **İlk 40 gün (gün-be-gün) → İlk 12 hafta (haftalık) → çeyrekler (2026-2027).** Üst seviye 5 faz vardır ve her faz geçişi bir GATE ile denetlenir. Sayısal/tarih verisi canlı Gantt grafiğinde görünür." }
+    ]},
+    { "id": "gantt", "title": "2 · Canlı Gantt", "summary": "Fazlar zaman ekseninde.", "blocks": [
+      { "type": "chartReference", "chartId": "c-gantt", "title": "Faz zaman çizelgesi (Gantt)", "note": "canlı (CANLI VERİ sekmesi)", "datasetId": "gantt" },
+      { "type": "paragraph", "text": "Gantt'taki başlangıç/bitiş tarihleri E-Tablodan beslenir; plan değişince grafik de güncellenir (tek kaynak)." }
+    ]},
+    { "id": "ilk-40-gun", "title": "3 · İlk 40 Gün", "summary": "En yoğun kurulum dönemi.", "blocks": [
+      { "type": "timeline", "items": [ { "when": "Gün 1-10", "what": "Erişim/hesap devri, ölçüm omurgası (GTM+analitik) kurulumu, hızlı SEO düzeltmeleri", "owner": "Tolga/Uzman" }, { "when": "Gün 11-20", "what": "Pikseller + tüketici olayları, işletme profilleri, içerik ritmi başlar", "owner": "Uzman" }, { "when": "Gün 21-30", "what": "İlk reklam testleri (küçük bütçe), yerel SEO derinleştirme", "owner": "Uzman" }, { "when": "Gün 31-40", "what": "Test okuması → kazananı ölçekle, ilk raporlama & Karar Günlüğü", "owner": "Tolga" } ] }
+    ]},
+    { "id": "ilk-12-hafta", "title": "4 · İlk 12 Hafta", "summary": "Haftalık ritim.", "blocks": [
+      { "type": "table", "headers": ["Hafta", "Odak"], "rows": [ ["1-2", "Ölçüm & erişim + hızlı SEO"], ["3-4", "Piksel/olay + içerik takvimi"], ["5-6", "Reklam testleri (Meta/Google)"], ["7-8", "Yerel SEO + retargeting kurulum"], ["9-10", "Kazanan kanalları ölçekle"], ["11-12", "İlk çeyrek değerlendirme + plan revizyon"] ] }
+    ]},
+    { "id": "5-faz", "title": "5 · 5 Faz (detay)", "summary": "Fazların içeriği.", "blocks": [
+      { "type": "table", "headers": ["Faz", "Kaba dönem", "Çıktı", "GATE"], "rows": [ ["1 · Ölçüm & SEO", "Ay 1-2", "Veri akışı + SEO kazançları", "Ölçüm çalışıyor mu?"], ["2 · Piksel & reklam", "Ay 2-4", "Optimize edilebilir kampanyalar", "ROAS testte tutuyor mu?"], ["3 · Yerel SEO & ölçekleme", "Ay 3-6", "Yerel pay + kanal ölçekleme", "Kazanan kanal net mi?"], ["4 · E-ticaret & katalog", "Ay 5-9", "Online satış + katalog", "Operasyon hazır mı?"], ["5 · Marka & sürdürülebilir", "Ay 6-12", "Kimlik + topluluk + sadakat", "Tutarlılık sağlandı mı?"] ] }
+    ]},
+    { "id": "kilometre-taslari", "title": "6 · Kilometre Taşları", "summary": "Ölçülebilir kontrol noktaları.", "blocks": [
+      { "type": "list", "items": ["Ay 1: ölçüm omurgası canlı.", "Ay 2: ilk reklam testleri okundu.", "Ay 3: ekip tam operasyonel + marka kimliği başladı.", "Ay 6: yerel arama payı artışı görünür.", "Ay 9: e-ticaret canlı (koşul sağlanırsa).", "Ay 12: brand book + sürdürülebilir topluluk ritmi."] }
+    ]},
+    { "id": "bagimliliklar", "title": "7 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [
+      { "type": "list", "items": ["02 işe alım takvimi (kapasite)", "05k/05f ölçüm (Faz 1 önkoşulu)", "05l e-ticaret (Faz 4 önkoşulu)", "06 finansal (faz bütçeleri)", "07 kritik bilinmeyenlerin çözülmesi (yüksek harcama GATE'i)"] }
+    ]},
+    { "id": "kaynaklar", "title": "8 · Kaynaklar", "summary": "Kaynak.", "blocks": [
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds zaman planı & faz kurgusu (E-Tablo Gantt ile senkron)", "publishedDate": "2026-08-04", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }
