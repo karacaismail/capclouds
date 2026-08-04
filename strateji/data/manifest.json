@@ -96,8 +96,10 @@
       "id": "05f",
       "icon": "ph-chart-line",
       "baslik": "05f · Yandex Metrica",
-      "ozet": "TR analitik + Webvisor.",
-      "amac": "TR analitik + Webvisor.",
+      "ozet": "GA4'ün göremediğini gör: oturum kaydı, ısı haritası, form analizi.",
+      "amac": "Ziyaretçinin sayfada gerçekte ne yaptığını görüp UX ve dönüşümü iyileştirmek.",
+      "status": "GO",
+      "kritikKPI": "Kurulu + haftalık inceleme",
       "file": "05f.json"
     },
     {

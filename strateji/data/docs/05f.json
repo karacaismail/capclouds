@@ -1,28 +1,104 @@
 {
+  "__handAuthored": true,
   "id": "05f",
   "icon": "ph-chart-line",
   "baslik": "05f · Yandex Metrica",
-  "ozet": "TR analitik + Webvisor.",
-  "amac": "TR analitik + Webvisor.",
+  "ozet": "GA4'ün göremediğini gör: oturum kaydı, ısı haritası, form analizi.",
+  "amac": "Ziyaretçinin sayfada gerçekte ne yaptığını görüp UX ve dönüşümü iyileştirmek.",
+  "status": "GO",
+  "kritikKPI": "Kurulu + haftalık inceleme",
+  "owner": "Tolga Akşen",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "TR analitik + Webvisor.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Ücretsiz TR analitik; **Webvisor (oturum kaydı)**, ısı haritası ve form analizi verir."
-        },
-        {
-          "type": "list",
-          "ordered": false,
-          "items": [
-            "GTM ile \"Özel HTML\" olarak kurulur; Webvisor/ısı haritası açılır.",
-            "KVKK çerez metnine eklenir."
-          ]
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Hangi kararı üretir?", "blocks": [
+      { "type": "paragraph", "text": "Yandex Metrica **ücretsizdir** ve GA4'ün vermediğini verir: **Webvisor (oturum kaydı)**, ısı/scroll haritası, form analizi. GA4 'ne oldu'yu sayar; Metrica 'neden' sorusunu gösterir. Karar: hemen kur (GO)." }
+    ]},
+    { "id": "is-gerekcesi", "title": "2 · Neden GA4 Yanında?", "summary": "İş gerekçesi.", "blocks": [
+      { "type": "list", "items": [
+        "GA4 = nicel (kaç kişi, hangi olay). Metrica = nitel (kişi nerede takıldı, nereye tıkladı, formu neden bıraktı).",
+        "TR pazarında Yandex trafiği önemlidir; Metrica bu trafiği daha iyi çözer.",
+        "Ücretsiz olması, düşük bütçeli başlangıçta yüksek değer sağlar."
+      ]}
+    ]},
+    { "id": "mevcut-durum", "title": "3 · Mevcut Durum ve Eksikler", "summary": "Bugün ne var?", "blocks": [
+      { "type": "evidence", "items": [ { "claim": "Sitede Yandex Metrica kurulu değil", "confidence": "fact", "sourceId": "S1" }, { "claim": "GTM kurulu (kolay kurulum imkânı)", "confidence": "fact", "sourceId": "S1" } ] }
+    ]},
+    { "id": "hedef-kitle", "title": "4 · Hangi Sorulara Cevap Verir?", "summary": "Kullanım senaryosu.", "blocks": [
+      { "type": "list", "items": [
+        "Franchise formunu kim, nerede yarıda bırakıyor? (form analizi)",
+        "Menü sayfasında kullanıcı nereye kadar kaydırıyor? (scroll map)",
+        "Mobilde hangi buton görülmüyor/yanlış tıklanıyor? (ısı haritası)",
+        "Şube sayfalarında 'yol tarifi' butonu bulunuyor mu?"
+      ]}
+    ]},
+    { "id": "funnel-gorevi", "title": "5 · Funnel İçindeki Görevi", "summary": "Ölçüm/UX katmanı.", "blocks": [
+      { "type": "paragraph", "text": "Metrica bir reklam kanalı değil, **tüm funnel'ı gözlemleyen UX ölçüm katmanıdır**; her kanalın açılış sayfasındaki davranışı görünür kılar." }
+    ]},
+    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne gerekli?", "blocks": [
+      { "type": "list", "items": ["GTM erişimi", "KVKK çerez/aydınlatma metninin güncellenmesi", "Hassas alanların (form) maskeleme kararı"] }
+    ]},
+    { "id": "hesap-yetki", "title": "7 · Hesap ve Yetki", "summary": "Kim erişir, kim kayıt izler?", "blocks": [
+      { "type": "table", "headers": ["Rol", "Erişim"], "rows": [ ["Tolga", "Yönetici (tam)"], ["Uzman adayı", "Görüntüleme + rapor"], ["Operasyon", "Yok (kayıtlarda kişisel veri olabilir)"] ] },
+      { "type": "callout", "variant": "warn", "title": "Kayıt izleme sınırı", "text": "Oturum kayıtları kişisel veri içerebilir; yalnız yetkili 2 kişi izler, dışa aktarılmaz." }
+    ]},
+    { "id": "kurulum", "title": "8 · Kurulum Adımları", "summary": "Nasıl kurulur?", "blocks": [
+      { "type": "list", "ordered": true, "items": [
+        "metrica.yandex.com'da ücretsiz sayaç oluştur (alan adı gir).",
+        "Webvisor + ısı haritası + form analizi seçeneklerini AÇ.",
+        "GTM'de 'Özel HTML' etiketiyle Metrica kodunu ekle (All Pages).",
+        "Consent'e bağla; hassas form alanlarını maskele.",
+        "Test: birkaç saat sonra kayıt/heatmap doluyor mu doğrula."
+      ]}
+    ]},
+    { "id": "kampanya-mimarisi", "title": "9 · Ölçüm & Hedef Mimarisi", "summary": "Neyi, nasıl ölçüyoruz?", "blocks": [
+      { "type": "paragraph", "text": "Metrica'nın araçları ayrı ayrı yapılandırılır:" }
+    ], "sections": [
+      { "id": "webvisor", "title": "Webvisor (Oturum Kaydı) & Filtreler", "summary": "Gerçek oturumları izle.", "blocks": [
+        { "type": "list", "items": ["**Nedir:** ziyaretçinin ekran hareketinin kaydı.", "**Neden:** 'formu neden bıraktı' sorusunu gösterir.", "**Filtreler:** dönüşen vs dönüşmeyen, mobil, franchise sayfası, hata alan oturumlar.", "**Ölçüm:** haftada 10-15 kayıt incelemesi → UX bulgu listesi.", "**Risk:** kişisel veri → maskeleme + yetki sınırı."] }
+      ]},
+      { "id": "isi-scroll", "title": "Isı Haritası & Scroll Map", "summary": "Nereye tıklanıyor, nereye kadar iniliyor?", "blocks": [
+        { "type": "list", "items": ["**Isı haritası:** tıklama yoğunluğu → önemli butonlar görülüyor mu?", "**Scroll map:** menü/franchise sayfasında kullanıcı nereye kadar iniyor?", "**Aksiyon:** kritik CTA'ları görülen bölgeye taşı.", "**Ölçüm:** CTA görünürlük + tıklama oranı."] }
+      ]},
+      { "id": "form-analizi", "title": "Form Analizi (Şube vs Franchise)", "summary": "Hangi alan terk ettiriyor?", "blocks": [
+        { "type": "list", "items": ["**Nedir:** her form alanının doldurulma/terk oranı.", "**Ayrım:** iletişim formu vs **franchise formu** ayrı hedeflenir (franchise yüksek değerli).", "**Aksiyon:** terk ettiren alanı sadeleştir/kaldır.", "**Ölçüm:** form tamamlanma oranı."] }
+      ]},
+      { "id": "hedefler-events", "title": "Hedefler & Event Tanımları", "summary": "Neyi dönüşüm sayıyoruz?", "blocks": [
+        { "type": "table", "headers": ["Hedef", "Tür"], "rows": [ ["Franchise formu gönderimi", "Anahtar hedef"], ["İletişim / tel / wa", "Hedef"], ["Yol tarifi", "Mikro hedef"], ["Menü görüntüleme derinliği", "Davranış"] ] }
+      ]}
+    ]},
+    { "id": "tracking", "title": "10 · Tracking, Event ve UTM Standardı", "summary": "Tutarlı veri.", "blocks": [
+      { "type": "list", "items": ["Hedefler GA4 ile aynı olayları yansıtsın (tutarlılık).", "**UTM standardı:** utm_source/medium/campaign sözlüğü sabit; şube ve franchise ayrı kampanya etiketi.", "GTM tek kaynak; Metrica hedefleri dataLayer olaylarına bağlanır."] }
+    ]},
+    { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler.", "blocks": [
+      { "type": "table", "headers": ["Terim", "Anlam"], "rows": [ ["Webvisor", "Oturum kaydı"], ["Isı haritası", "Tıklama yoğunluğu"], ["Scroll map", "Kaydırma derinliği"], ["Hedef", "Dönüşüm tanımı"] ] }
+    ]},
+    { "id": "butce", "title": "12 · Bütçe ve Kaynak", "summary": "Maliyet.", "blocks": [
+      { "type": "callout", "variant": "ok", "text": "Araç **ücretsiz (₺0)**. Maliyet = kurulum + haftalık ~1 saat inceleme (Tolga/Uzman). Yatırım kaleminde 'Ölçüm & piksel kurulumu' içinde." }
+    ]},
+    { "id": "kpi", "title": "13 · KPI ve Hedefler", "summary": "Başarı kriteri.", "blocks": [
+      { "type": "kpi", "rows": [ { "metric": "Kurulum + Webvisor aktif", "baseline": "yok", "target": "G7 (kurulu)", "frequency": "Tek sefer", "owner": "Tolga" }, { "metric": "Haftalık UX bulgusu", "baseline": "0", "target": "≥3 bulgu/hafta", "frequency": "Haftalık", "owner": "Tolga" }, { "metric": "Form tamamlanma oranı", "baseline": "bilinmiyor", "target": "artan", "frequency": "Aylık", "owner": "Uzman" } ] }
+    ]},
+    { "id": "test-backlog", "title": "14 · İnceleme Backlog'u", "summary": "Neyi izleyeceğiz?", "blocks": [
+      { "type": "list", "items": ["Franchise formu terk noktaları", "Mobil menü scroll derinliği", "Şube sayfası 'yol tarifi' tıklaması", "404/hata alan oturumlar"] }
+    ]},
+    { "id": "scale-pause-kill", "title": "15 · Kullanımın Durdurulacağı Koşullar", "summary": "Ne zaman durdurulur?", "blocks": [
+      { "type": "eca", "id": "ECA-Metrica", "event": "KVKK/gizlilik gereksinimi değişti veya kayıtlarda maskelenemeyen kişisel veri riski", "condition": "Hukuki uyum sağlanamıyor", "action": "Webvisor'ı durdur, yalnız anonim ısı haritasına düş" }
+    ]},
+    { "id": "kvkk-risk", "title": "16 · KVKK, Açık Rıza ve Maskeleme", "summary": "Uyum.", "blocks": [
+      { "type": "list", "items": ["Çerez/aydınlatma metnine Metrica + Webvisor eklenir; **açık rıza** (Consent) bağlanır.", "Form alanlarında (isim/telefon/e-posta) **maskeleme** açık.", "Kayıtları yalnız yetkili 2 kişi izler; dışa aktarma yok."] }
+    ]},
+    { "id": "plan-30-60-90", "title": "17 · 30/60/90 Günlük Plan", "summary": "Takvim.", "blocks": [
+      { "type": "timeline", "items": [ { "when": "0-30", "what": "Kurulum + Webvisor/heatmap/form + haftalık inceleme ritmi", "owner": "Tolga" }, { "when": "30-60", "what": "Bulgulardan UX iyileştirmeleri (form/CTA)", "owner": "Tolga+Grafiker" }, { "when": "60-90", "what": "Şube sayfaları + e-ticaret öncesi UX doğrulama", "owner": "Tolga" } ] }
+    ]},
+    { "id": "raci", "title": "18 · RACI", "summary": "Rol.", "blocks": [
+      { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [ ["Kurulum", "Tolga", "Tolga", "—", "GM"], ["Kayıt inceleme", "Tolga/Uzman", "Tolga", "—", "—"], ["KVKK uyum", "Tolga", "GM", "Hukuk", "—"] ] }
+    ]},
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [
+      { "type": "list", "items": ["05k GTM", "Consent Mode / KVKK metni", "01 kırmızı çizgiler (izinsiz veri yok)"] }
+    ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds site denetimi (Metrica yok, GTM var)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" }, { "id": "S2", "title": "Yandex Metrica dokümantasyonu (Webvisor/heatmap)", "url": "https://yandex.com/support/metrica/", "accessedDate": "2026-08-04" } ] }
+    ]}
   ]
 }
