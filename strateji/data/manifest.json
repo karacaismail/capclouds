@@ -144,8 +144,10 @@
       "id": "05j",
       "icon": "ph-target",
       "baslik": "05j · Remarketing Stratejisi",
-      "ozet": "Geri kazanım hunisi.",
-      "amac": "Geri kazanım hunisi.",
+      "ozet": "Gezeni geri kazan: segment bazlı, düşük maliyetli geri dönüş hunisi.",
+      "amac": "Site/profil/form ziyaretçisini segmentleyip düşük maliyetle dönüşüme çevirmek.",
+      "status": "GO",
+      "kritikKPI": "Geri dönüş ROAS · frekans kontrol",
       "file": "05j.json"
     },
     {
@@ -162,16 +164,20 @@
       "id": "05l",
       "icon": "ph-shopping-cart",
       "baslik": "05l · WooCommerce & Web UI",
-      "ozet": "Site ne kadar değişmeli?",
-      "amac": "Site ne kadar değişmeli?",
+      "ozet": "Site ne kadar değişmeli? Mobil hız + gerçek e-ticaret altyapısı.",
+      "amac": "Mevcut WordPress'i hızlandırıp WooCommerce ile online satışı açmak (gerçek mobil-öncelik).",
+      "status": "CONDITIONAL_GO",
+      "kritikKPI": "Mobil hız + mağaza canlı",
       "file": "05l.json"
     },
     {
       "id": "05m",
       "icon": "ph-palette",
       "baslik": "05m · Marka Kimliği (sıfırdan)",
-      "ozet": "Neden sıfırdan inşa?",
-      "amac": "Neden sıfırdan inşa?",
+      "ozet": "Tutarlı tek dil: logo, renk, tipografi, ses tonu ve uygulama kılavuzu.",
+      "amac": "Şubeden sosyal medyaya tek ve tutarlı marka dili kurmak (reklam veriminin temeli).",
+      "status": "GO",
+      "kritikKPI": "Brand book + tutarlılık",
       "file": "05m.json"
     },
     {

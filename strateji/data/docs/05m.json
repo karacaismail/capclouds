@@ -1,29 +1,49 @@
 {
+  "__handAuthored": true,
   "id": "05m",
   "icon": "ph-palette",
   "baslik": "05m · Marka Kimliği (sıfırdan)",
-  "ozet": "Neden sıfırdan inşa?",
-  "amac": "Neden sıfırdan inşa?",
+  "ozet": "Tutarlı tek dil: logo, renk, tipografi, ses tonu ve uygulama kılavuzu.",
+  "amac": "Şubeden sosyal medyaya tek ve tutarlı marka dili kurmak (reklam veriminin temeli).",
+  "status": "GO",
+  "kritikKPI": "Brand book + tutarlılık",
+  "owner": "Grafiker (orta seviye)",
+  "decisionOwner": "Genel Müdür",
+  "layer": "hazirlik",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Neden sıfırdan inşa?",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "**Neden sıfırdan?** Bugün tutarlı bir logo/renk/tipografi sistemi, ses tonu ve uygulama kılavuzu yok; her şube/kanal farklı görünüyor. Tutarsız kimlik, reklam veriminin ve prestijin önündeki en büyük engel."
-        },
-        {
-          "type": "list",
-          "ordered": false,
-          "items": [
-            "Logo + renk paleti + tipografi sistemi.",
-            "Ses tonu ve içerik dili.",
-            "**Marka uygulama kılavuzu (brand book):** şubeden sosyal medyaya tek dil."
-          ]
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Hangi kararı üretir?", "blocks": [
+      { "type": "paragraph", "text": "Bugün tutarlı bir logo/renk/tipografi sistemi, ses tonu ve **uygulama kılavuzu (brand book)** yok; her şube/kanal farklı görünüyor. Tutarsız kimlik, reklam verimini ve prestiji düşüren en büyük görünmez maliyettir. Sıfırdan tutarlı sistem kurulur (GO)." }
+    ]},
+    { "id": "is-gerekcesi", "title": "2 · Neden Sıfırdan?", "summary": "İş gerekçesi.", "blocks": [
+      { "type": "list", "items": ["Tutarlı kimlik = tanınırlık + güven + premium algı (Tier-3'e komşuluk).", "Her kreatif/şube aynı dili konuşunca reklam verimi ve marka değeri artar.", "Franchise satışında güçlü kimlik yatırımcı güvenini yükseltir."] }
+    ]},
+    { "id": "mevcut-durum", "title": "3 · Mevcut Durum ve Eksikler", "summary": "Bugün ne var?", "blocks": [
+      { "type": "evidence", "items": [ { "claim": "Yazılı brand book / uygulama kılavuzu yok", "confidence": "estimate", "sourceId": "S1" }, { "claim": "Şube/kanal görselleri arasında tutarsızlık", "confidence": "assumption" }, { "claim": "Var olan temalar (ör. 'Coffee Ride') kullanılabilir kimlik tohumu", "confidence": "fact", "sourceId": "S1" } ] }
+    ]},
+    { "id": "hedef-kitle", "title": "4 · Marka Kime, Nasıl Görünmeli?", "summary": "Konumlanma.", "blocks": [
+      { "type": "paragraph", "text": "Hedef algı: **erişilebilir ama butik, sıcak, yerel, topluluk odaklı.** 18-40 yaş, üçüncü dalga meraklısı ama elitist olmayan." }
+    ]},
+    { "id": "funnel-gorevi", "title": "5 · Funnel Görevi", "summary": "Aşama.", "blocks": [ { "type": "paragraph", "text": "Marka kimliği tüm funnel'ın üstünde durur: her temas noktasında tanınırlık ve güven üretir." } ]},
+    { "id": "teknik-onkosul", "title": "6 · Ön Koşullar", "summary": "Ne gerekli?", "blocks": [ { "type": "list", "items": ["01 vizyon/misyon/değerler (kimlik oradan türer)", "Grafiker + (gerekirse) marka danışmanı", "Mevcut varlıkların envanteri"] } ]},
+    { "id": "hesap-yetki", "title": "7 · Sahiplik ve Yetki", "summary": "Kim?", "blocks": [ { "type": "table", "headers": ["Rol", "Sorumluluk"], "rows": [ ["Grafiker", "Sistem tasarımı + uygulama"], ["Tolga", "Marka sesi + onay"], ["GM", "Nihai onay"], ["Operasyon", "Şube uygulaması"] ] } ]},
+    { "id": "kurulum", "title": "8 · İnşa Adımları", "summary": "Sıra.", "blocks": [ { "type": "list", "ordered": true, "items": ["Vizyon/değerlerden marka özü çıkar (01).", "Logo + renk paleti + tipografi sistemi tasarla.", "Ses tonu + içerik dili kılavuzu.", "Şablon kütüphanesi (sosyal, menü, tabela).", "Brand book yayınla + ekip/şube eğitimi."] } ]},
+    { "id": "kampanya-mimarisi", "title": "9 · Kimlik Sistemi", "summary": "Neyi kapsar?", "blocks": [
+      { "type": "paragraph", "text": "Kimlik üç kolonda inşa edilir." }
+    ], "sections": [
+      { "id": "gorsel-sistem", "title": "Görsel Sistem", "summary": "Logo/renk/tipografi.", "blocks": [ { "type": "list", "items": ["Logo + kullanım kuralları (min boşluk, yanlış kullanımlar).", "Renk paleti (ana/aksan) + erişilebilir kontrast.", "Tipografi ölçeği (min okunur boyut, ağırlık).", "İkon/foto stili."] } ]},
+      { "id": "ses-tonu", "title": "Ses Tonu & İçerik Dili", "summary": "Nasıl konuşuruz?", "blocks": [ { "type": "list", "items": ["Sıcak, samimi, yerel; elitist değil.", "Yasaklar: kanıtsız iddia, abartı (01 kırmızı çizgi).", "Örnek do/don't ifadeleri."] } ]},
+      { "id": "brand-book", "title": "Uygulama Kılavuzu (Brand Book)", "summary": "Tek dil, her yerde.", "blocks": [ { "type": "list", "items": ["Sosyal medya şablonları (Reels/story/post).", "Şube tabela/menü/ambalaj kuralları.", "Şablon kütüphanesi (AI ile hızlı üretim).", "Erişilebilirlik: min metin boyutu, kontrast."] } ]}
+    ]},
+    { "id": "tracking", "title": "10 · Tutarlılık Ölçümü", "summary": "Nasıl ölçülür?", "blocks": [ { "type": "list", "items": ["Marka tutarlılık denetimi (checklist) çeyreklik.", "Sosyal/şube görsellerinin kılavuza uyum oranı.", "Marka tanınırlık/hatırlanma (anket, ileride)."] } ]},
+    { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler.", "blocks": [ { "type": "table", "headers": ["Terim", "Anlam"], "rows": [ ["Brand book", "Marka uygulama kılavuzu"], ["Ses tonu", "Marka dili"], ["Tipografi ölçeği", "Yazı boyut sistemi"], ["Şablon kütüphanesi", "Hazır tasarım setleri"] ] } ]},
+    { "id": "butce", "title": "12 · Bütçe ve Kaynak", "summary": "Maliyet.", "blocks": [ { "type": "callout", "variant": "warn", "text": "Yatırım kaleminde 'Marka kimliği (sıfırdan) + içerik kiti' (₺70.000, planlama varsayımı). İç grafiker + (gerekirse) marka danışmanı." } ]},
+    { "id": "kpi", "title": "13 · KPI ve Hedefler", "summary": "Başarı.", "blocks": [ { "type": "kpi", "rows": [ { "metric": "Brand book yayını", "baseline": "yok", "target": "Ay 3", "frequency": "Tek sefer", "owner": "Grafiker" }, { "metric": "Kılavuza uyum oranı", "baseline": "—", "target": "≥ %90", "frequency": "Çeyreklik", "owner": "Tolga" } ] } ]},
+    { "id": "test-backlog", "title": "14 · Test Backlog'u", "summary": "Neyi test?", "blocks": [ { "type": "list", "items": ["Logo/renk varyant testi (tanınırlık)", "Sosyal şablon performansı", "Ambalaj/tabela mockup geri bildirimi"] } ]},
+    { "id": "scale-pause-kill", "title": "15 · Uygulama Yaygınlaştırma (ECA)", "summary": "Nasıl yayılır?", "blocks": [ { "type": "eca", "id": "ECA-Brand", "event": "Brand book onaylandı", "condition": "Ekip eğitimi tamam", "action": "Tüm kanal + şubelere yay; denetimle sürdür" } ]},
+    { "id": "kvkk-risk", "title": "16 · Risk ve Uyum", "summary": "Riskler.", "blocks": [ { "type": "list", "items": ["Logo/marka tescili (bkz. 09 — IP sahipliği netleşmeli).", "Telifli font/görsel kullanımı.", "Tutarsız uygulama → kılavuz + denetim."] } ]},
+    { "id": "plan-30-60-90", "title": "17 · 30/60/90 Günlük Plan", "summary": "Takvim.", "blocks": [ { "type": "timeline", "items": [ { "when": "0-30", "what": "Marka özü + görsel sistem taslağı (grafiker işe alım sonrası)", "owner": "Grafiker" }, { "when": "30-60", "what": "Ses tonu + şablon kütüphanesi", "owner": "Grafiker+Tolga" }, { "when": "60-90", "what": "Brand book yayını + ekip/şube eğitimi", "owner": "Grafiker" } ] } ]},
+    { "id": "raci", "title": "18 · RACI", "summary": "Rol.", "blocks": [ { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [ ["Kimlik sistemi", "Grafiker", "Tolga", "Danışman", "GM"], ["Ses tonu", "Tolga", "GM", "Grafiker", "—"], ["Yaygınlaştırma", "Grafiker", "Tolga", "Operasyon", "GM"] ] } ]},
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [ { "type": "list", "items": ["01 vizyon/misyon/değerler", "02 grafiker istihdamı (Ay 3)", "09 marka/IP sahipliği doğrulaması", "tüm kanallar kimliği kullanır"] } ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [ { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds marka/varlık gözlemi (Coffee Ride teması; tutarsızlık)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" } ] } ]}
   ]
 }

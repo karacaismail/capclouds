@@ -1,28 +1,50 @@
 {
+  "__handAuthored": true,
   "id": "05j",
   "icon": "ph-target",
   "baslik": "05j · Remarketing Stratejisi",
-  "ozet": "Geri kazanım hunisi.",
-  "amac": "Geri kazanım hunisi.",
+  "ozet": "Gezeni geri kazan: segment bazlı, düşük maliyetli geri dönüş hunisi.",
+  "amac": "Site/profil/form ziyaretçisini segmentleyip düşük maliyetle dönüşüme çevirmek.",
+  "status": "GO",
+  "kritikKPI": "Geri dönüş ROAS · frekans kontrol",
+  "owner": "Dijital Pazarlama Uzmanı (adayı)",
+  "decisionOwner": "Genel Müdür",
+  "layer": "icra",
   "sections": [
-    {
-      "id": "genel",
-      "title": "Genel Bakış",
-      "summary": "Geri kazanım hunisi.",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Segment bazlı geri kazanım: site ziyaretçisi, sepeti terk eden, franchise formunu yarıda bırakan."
-        },
-        {
-          "type": "list",
-          "ordered": false,
-          "items": [
-            "Frekans/kapak (frequency cap) ile bıkkınlık önlenir.",
-            "Meta + Google retargeting ile düşük maliyetli geri dönüş."
-          ]
-        }
-      ]
-    }
+    { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Hangi kararı üretir?", "blocks": [
+      { "type": "paragraph", "text": "İlk ziyarette dönüşmeyenlerin çoğu geri gelir. Remarketing, **Meta + Google** ile bunları segment bazlı ve düşük maliyetle geri çağırır. Piksel/kitle hazır olunca hemen açılır (GO)." }
+    ]},
+    { "id": "is-gerekcesi", "title": "2 · İş Gerekçesi", "summary": "Neden remarketing?", "blocks": [
+      { "type": "list", "items": ["En düşük maliyetli dönüşüm kanalı (sıcak kitle).", "Franchise formunu yarıda bırakanı geri kazanmak yüksek değerli.", "Devler bunu semt düzeyinde yapmaz — bizim avantajımız."] }
+    ]},
+    { "id": "mevcut-durum", "title": "3 · Mevcut Durum ve Eksikler", "summary": "Bugün ne var?", "blocks": [
+      { "type": "evidence", "items": [ { "claim": "Google remarketing izleri var (kısmi), Meta pikseli yok", "confidence": "fact", "sourceId": "S1" }, { "claim": "Segmentli kitle yapısı yok", "confidence": "estimate" } ] }
+    ]},
+    { "id": "hedef-kitle", "title": "4 · Segmentler", "summary": "Kimi geri çağırıyoruz?", "blocks": [
+      { "type": "table", "headers": ["Segment", "Sinyal", "Mesaj"], "rows": [ ["Site/menü ziyaretçisi", "sayfa görüntüleme", "Yakındaki şube/menü"], ["Sepeti terk (Faz 4)", "add_to_cart, purchase yok", "Ürünü hatırlat"], ["Franchise formu terk", "form başladı, bitmedi", "Getiri/teşvik hatırlat"], ["Etkileşen (IG/TikTok)", "video/profil etkileşimi", "Topluluk/ziyaret"] ] }
+    ]},
+    { "id": "funnel-gorevi", "title": "5 · Funnel Görevi", "summary": "Aşama.", "blocks": [ { "type": "paragraph", "text": "Değerlendirme'den kaçanı Aksiyon'a geri getirir; huninin 'geri kazanım' katmanı." } ]},
+    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne gerekli?", "blocks": [ { "type": "list", "items": ["Meta Pixel + Google Ads remarketing etiketi", "Kitle tanımları + minimum kitle boyutu", "Consent (izinli retargeting)"] } ]},
+    { "id": "hesap-yetki", "title": "7 · Hesap ve Yetki", "summary": "Kim?", "blocks": [ { "type": "table", "headers": ["Rol", "Erişim"], "rows": [ ["Uzman", "Kitle + kampanya ops"], ["Tolga", "Etiket/kitle mimarisi"], ["GM", "Bütçe"] ] } ]},
+    { "id": "kurulum", "title": "8 · Kurulum Adımları", "summary": "Sıra.", "blocks": [ { "type": "list", "ordered": true, "items": ["Piksel/etiketleri doğrula (05d, 05c).", "Segment kitlelerini tanımla (süre pencereleri ile).", "Frekans kapağı + dışlama (dönüşenleri çıkar) kur.", "Küçük bütçeyle başlat, geri dönüşü ölç."] } ]},
+    { "id": "kampanya-mimarisi", "title": "9 · Kitle & Kampanya Mimarisi", "summary": "Hangi segment, hangi mesaj?", "blocks": [
+      { "type": "paragraph", "text": "Her segment ayrı kitle + mesaj + frekans." }
+    ], "sections": [
+      { "id": "ziyaretci", "title": "Site/Menü Ziyaretçisi", "summary": "En geniş sıcak kitle.", "blocks": [ { "type": "list", "items": ["Pencere: 30 gün.", "Mesaj: yakındaki şube + menü.", "Dışlama: dönüşenler.", "Ölçüm: geri dönüş oranı."] } ]},
+      { "id": "franchise-terk", "title": "Franchise Formu Terk", "summary": "Yüksek değerli.", "blocks": [ { "type": "list", "items": ["Sinyal: form başladı, generate_lead yok.", "Mesaj: getiri/teşvik hatırlatma.", "Ölçüm: nitelikli aday geri dönüşü.", "Karar: GM (yüksek değer)."] } ]},
+      { "id": "etkilesim", "title": "Sosyal Etkileşim", "summary": "IG/TikTok etkileşenleri.", "blocks": [ { "type": "list", "items": ["Kaynak: video/profil etkileşimi.", "Mesaj: topluluk/mekân ziyareti.", "Ölçüm: ziyaret/etkileşim."] } ]},
+      { "id": "sepet-terk", "title": "Sepeti Terk (Faz 4)", "summary": "E-ticaret sonrası.", "blocks": [ { "type": "callout", "variant": "warn", "text": "Sepet terk retargeting **online mağaza** gerektirir; e-ticaret (Faz 4) sonrası devreye alınır." } ]}
+    ]},
+    { "id": "tracking", "title": "10 · Tracking", "summary": "Ne ölçülür?", "blocks": [ { "type": "list", "items": ["Kitle boyutu + dolum hızı", "Geri dönüş dönüşümü (attribution penceresi)", "Frekans/bıkkınlık göstergesi"] } ]},
+    { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler.", "blocks": [ { "type": "table", "headers": ["Terim", "Anlam"], "rows": [ ["Frequency cap", "Kişi başı gösterim sınırı"], ["Exclusion", "Kitle dışlama (dönüşen)"], ["Lookback", "Geriye dönük pencere"] ] } ]},
+    { "id": "butce", "title": "12 · Bütçe", "summary": "Ne kadar?", "blocks": [ { "type": "callout", "variant": "warn", "text": "Ayrı büyük bütçe değil; Meta/Google bütçesi içinde %15-25 remarketing payı (planlama varsayımı). Yüksek verim, düşük harcama." } ]},
+    { "id": "kpi", "title": "13 · KPI ve Hedefler", "summary": "Başarı.", "blocks": [ { "type": "kpi", "rows": [ { "metric": "Geri dönüş ROAS", "baseline": "—", "target": "prospecting'den yüksek", "frequency": "Haftalık", "owner": "Uzman" }, { "metric": "Franchise geri kazanım", "baseline": "—", "target": "artan nitelikli aday", "frequency": "Aylık", "owner": "Uzman" } ] } ]},
+    { "id": "test-backlog", "title": "14 · Test Backlog'u", "summary": "Neyi test?", "blocks": [ { "type": "list", "items": ["Pencere süresi (7 vs 30 gün)", "Mesaj: hatırlatma vs teşvik", "Frekans kapağı seviyeleri"] } ]},
+    { "id": "scale-pause-kill", "title": "15 · Scale / Pause / Kill", "summary": "ECA.", "blocks": [ { "type": "eca", "id": "ECA-RMKT", "event": "Frekans yükseldi + geri dönüş ROAS düştü", "condition": "Bıkkınlık doğrulandı", "action": "Frekans kapağını sık, kitleyi yenile veya duraklat" } ]},
+    { "id": "kvkk-risk", "title": "16 · KVKK ve Risk", "summary": "Uyum.", "blocks": [ { "type": "list", "items": ["İzinli retargeting (consent) zorunlu.", "Aşırı takip algısı (creepiness) → frekans + mesaj tonu.", "Dönüşenleri dışla (israf + rahatsızlık)."] } ]},
+    { "id": "plan-30-60-90", "title": "17 · 30/60/90 Günlük Plan", "summary": "Takvim.", "blocks": [ { "type": "timeline", "items": [ { "when": "0-30", "what": "Piksel/kitle + ziyaretçi + franchise-terk retargeting", "owner": "Uzman" }, { "when": "30-60", "what": "Sosyal etkileşim segmenti + optimizasyon", "owner": "Uzman" }, { "when": "60-90", "what": "E-ticaret sonrası sepet-terk", "owner": "Uzman" } ] } ]},
+    { "id": "raci", "title": "18 · RACI", "summary": "Rol.", "blocks": [ { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [ ["Kitle/kampanya", "Uzman", "Tolga", "—", "GM"], ["Etiket/kitle mimarisi", "Tolga", "Tolga", "Uzman", "—"] ] } ]},
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [ { "type": "list", "items": ["05c Google Ads + 05d Meta (kitle/etiket)", "05k GTM (olay/kitle)", "Consent"] } ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [ { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds site denetimi (kısmi Google remarketing, Meta pixel yok)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" } ] } ]}
   ]
 }
