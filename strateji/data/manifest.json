@@ -44,8 +44,8 @@
       "id": "04",
       "icon": "ph-users-three",
       "baslik": "04 · Rakip & Rekabet Analizi",
-      "ozet": "Pazar katmanları, rakip grupları, en yakın tehdit ve savunulabilir boşluk.",
-      "amac": "Kalabalık ortada boğuşmadan, tutulabilir bir konum ve ayrışma ekseni tanımlamak.",
+      "ozet": "Kaynaklı rakip verisi, portföy gerçekliği ve savunulabilir boşluk (4 Ağu 2026).",
+      "amac": "Kalabalık ortada boğuşmadan, kanıta dayalı tutulabilir bir konum ve ayrışma ekseni tanımlamak.",
       "status": "GO",
       "kritikKPI": "Savunulabilir dörtlü boşluk",
       "file": "04.json"
@@ -134,10 +134,10 @@
       "id": "05h",
       "icon": "ph-arrows-clockwise",
       "baslik": "05h · Criteo",
-      "ozet": "Dinamik ürün retargeting — e-ticaret açılınca (şimdilik HOLD).",
-      "amac": "Katalog bazlı dinamik retargeting ile sepet/ürün geri kazanımı.",
+      "ozet": "Dinamik ürün retargeting — feed/pixel entegrasyonu + hacim olunca (şimdilik HOLD).",
+      "amac": "Mevcut ikas kataloğu bazlı dinamik retargeting ile sepet/ürün geri kazanımı.",
       "status": "HOLD",
-      "kritikKPI": "Ön koşul: online mağaza + katalog",
+      "kritikKPI": "Ön koşul: ikas feed/pixel + yeterli trafik",
       "file": "05h.json"
     },
     {
@@ -147,7 +147,7 @@
       "ozet": "Çapraz platform retargeting — opsiyonel/ileri faz (şimdilik HOLD).",
       "amac": "Katalog bazlı çapraz platform retargeting (yalnız Meta/Google yetmezse).",
       "status": "HOLD",
-      "kritikKPI": "Ön koşul: e-ticaret + Meta/Google yetersizliği",
+      "kritikKPI": "Ön koşul: Meta/Google yetersizliği + hacim",
       "file": "05i.json"
     },
     {
@@ -173,11 +173,11 @@
     {
       "id": "05l",
       "icon": "ph-shopping-cart",
-      "baslik": "05l · WooCommerce & Web UI",
-      "ozet": "Site ne kadar değişmeli? Mobil hız + gerçek e-ticaret altyapısı.",
-      "amac": "Mevcut WordPress'i hızlandırıp WooCommerce ile online satışı açmak (gerçek mobil-öncelik).",
+      "baslik": "05l · E-Ticaret (ikas) & Web UI",
+      "ozet": "Mağaza ZATEN VAR (ikas); iş: ana siteyle bütünleştir, ölç, mobil hız.",
+      "amac": "Mevcut ikas mağazasını ana site + ölçüm mimarisine bağlamak ve gerçek mobil-öncelik hız.",
       "status": "CONDITIONAL_GO",
-      "kritikKPI": "Mobil hız + mağaza canlı",
+      "kritikKPI": "Çapraz-alan ölçüm + mobil hız",
       "file": "05l.json"
     },
     {

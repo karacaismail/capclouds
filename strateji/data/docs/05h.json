@@ -3,40 +3,40 @@
   "id": "05h",
   "icon": "ph-arrows-clockwise",
   "baslik": "05h · Criteo",
-  "ozet": "Dinamik ürün retargeting — e-ticaret açılınca (şimdilik HOLD).",
-  "amac": "Katalog bazlı dinamik retargeting ile sepet/ürün geri kazanımı.",
+  "ozet": "Dinamik ürün retargeting — feed/pixel entegrasyonu + hacim olunca (şimdilik HOLD).",
+  "amac": "Mevcut ikas kataloğu bazlı dinamik retargeting ile sepet/ürün geri kazanımı.",
   "status": "HOLD",
-  "kritikKPI": "Ön koşul: online mağaza + katalog",
+  "kritikKPI": "Ön koşul: ikas feed/pixel + yeterli trafik",
   "owner": "Dijital Pazarlama Uzmanı (adayı)",
   "decisionOwner": "Genel Müdür",
   "layer": "icra",
   "sections": [
     { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Neden HOLD?", "blocks": [
-      { "type": "callout", "variant": "warn", "title": "HOLD", "text": "Criteo **dinamik ürün reklamı** yapar; bu bir **ürün kataloğu ve online mağaza** gerektirir. Cups & Clouds'ta e-ticaret henüz yok (shop/cart 404). Bu yüzden HOLD." },
-      { "type": "decision", "gate": "HOLD", "rationale": "Ön koşul (katalog/e-ticaret) yok; erken kurulum bütçe ve emek israfı olur.", "condition": "Online mağaza + ürün feed'i canlı olunca yeniden değerlendir (Faz 4).", "owner": "Uzman", "reopen": "WooCommerce + Merchant/katalog feed'i hazır olduğunda" }
+      { "type": "callout", "variant": "warn", "title": "HOLD", "text": "Criteo **dinamik ürün reklamı** yapar; bu bir **ürün feed'i + pixel + yeterli trafik** gerektirir. Cups & Clouds'ın online mağazası **var** (shop.cupsandclouds.com, ikas), ama feed/pixel entegrasyonu ve retargeting'i besleyecek trafik hacmi henüz hazır değil. Bu yüzden HOLD (mağaza yokluğu değil, hazırlık eksikliği)." },
+      { "type": "decision", "gate": "HOLD", "rationale": "Mağaza var ama ikas ürün feed'i + pixel entegrasyonu ve yeterli retargeting hacmi yok; erken kurulum bütçe/emek israfı olur.", "condition": "ikas feed + pixel + çapraz-alan ölçüm bağlanıp yeterli trafik oluşunca yeniden değerlendir.", "owner": "Uzman", "reopen": "ikas ürün feed'i + pixel + hacim eşiği sağlandığında" }
     ]},
     { "id": "is-gerekcesi", "title": "2 · İş Gerekçesi", "summary": "Ne zaman değerli?", "blocks": [
       { "type": "paragraph", "text": "E-ticaret açıldığında Criteo, 'baktığın ürünü' gösteren yüksek-ROAS dinamik format sunar. Öncesinde Meta/Google retargeting yeterlidir." }
     ]},
     { "id": "mevcut-durum", "title": "3 · Mevcut Durum", "summary": "Bugün ne var?", "blocks": [
-      { "type": "evidence", "items": [ { "claim": "Online mağaza yok (shop/cart 404)", "confidence": "fact", "sourceId": "S1" }, { "claim": "Ürün kataloğu yok", "confidence": "fact", "sourceId": "S1" } ] }
+      { "type": "evidence", "items": [ { "claim": "Online mağaza VAR (shop.cupsandclouds.com, ikas, ayrı alt alan adı)", "confidence": "fact", "sourceId": "S2", "note": "önceki denetim /shop 404'e bakıp yanlış 'yok' demişti; düzeltildi" }, { "claim": "ikas ürün kataloğu mevcut; Criteo/Meta feed'ine + pixel'e bağlanması gerekiyor", "confidence": "estimate", "sourceId": "S2" }, { "claim": "Retargeting'i besleyecek trafik hacmi henüz yetersiz", "confidence": "assumption" } ] }
     ]},
     { "id": "hedef-kitle", "title": "4 · Hedef Kitle", "summary": "Kim (gelecekte)?", "blocks": [ { "type": "paragraph", "text": "Ürün sayfasını/sepeti gezip satın almayan ziyaretçi (e-ticaret sonrası)." } ]},
     { "id": "funnel-gorevi", "title": "5 · Funnel İçindeki Görevi", "summary": "Aşama.", "blocks": [ { "type": "paragraph", "text": "Aksiyon/geri kazanım — yalnız transaksiyonel e-ticaret funnel'ında anlamlı." } ]},
-    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne gerekli?", "blocks": [ { "type": "list", "items": ["Online mağaza (WooCommerce)", "Ürün kataloğu / feed", "Criteo etiketi + ürün ID eşlemesi", "DataLayer e-ticaret olayları (view_item, add_to_cart, purchase)"] } ]},
+    { "id": "teknik-onkosul", "title": "6 · Teknik Ön Koşullar", "summary": "Ne gerekli?", "blocks": [ { "type": "list", "items": ["ikas ürün feed'i erişimi/dışa aktarımı", "Criteo etiketi + ürün ID eşlemesi", "ikas alt alan adında pixel + e-ticaret olayları (view_item, add_to_cart, purchase)", "Çapraz-alan (shop ↔ ana site) ölçüm"] } ]},
     { "id": "hesap-yetki", "title": "7 · Hesap ve Yetki", "summary": "Kim?", "blocks": [ { "type": "paragraph", "text": "Kurulunca: Uzman (ops), Tolga (etiket), GM (sözleşme/ödeme). Şimdilik N/A." } ]},
-    { "id": "kurulum", "title": "8 · Kurulum (gelecekte)", "summary": "Sıra.", "blocks": [ { "type": "list", "ordered": true, "items": ["E-ticaret + katalog canlıya alınır (Faz 4).", "Criteo etiketi + feed bağlanır.", "Dinamik kampanya küçük bütçeyle test edilir."] } ]},
+    { "id": "kurulum", "title": "8 · Kurulum (gelecekte)", "summary": "Sıra.", "blocks": [ { "type": "list", "ordered": true, "items": ["ikas ürün feed'i + pixel + çapraz-alan ölçüm entegre edilir.", "Criteo etiketi + feed bağlanır.", "Dinamik kampanya küçük bütçeyle test edilir."] } ]},
     { "id": "kampanya-mimarisi", "title": "9 · Kampanya Mimarisi", "summary": "Hangi format?", "blocks": [ { "type": "paragraph", "text": "Dinamik ürün retargeting (baktığı/sepetteki ürün). E-ticaret öncesi N/A." } ]},
     { "id": "tracking", "title": "10 · Tracking", "summary": "Ne ölçülür?", "blocks": [ { "type": "paragraph", "text": "purchase + value/currency (DataLayer). ROAS odaklı. E-ticaret sonrası." } ]},
     { "id": "veri-sozlugu", "title": "11 · Veri Sözlüğü", "summary": "Terimler.", "blocks": [ { "type": "table", "headers": ["Terim", "Anlam"], "rows": [ ["Feed", "Ürün kataloğu verisi"], ["Dinamik reklam", "Kullanıcıya özel ürün gösterimi"], ["ROAS", "Reklam getirisi"] ] } ]},
     { "id": "butce", "title": "12 · Bütçe", "summary": "Ne kadar?", "blocks": [ { "type": "callout", "variant": "warn", "text": "Şimdilik ₺0 (HOLD). E-ticaret sonrası ROAS'a göre bütçelenir (planlama varsayımı)." } ]},
     { "id": "kpi", "title": "13 · KPI", "summary": "Başarı (gelecekte).", "blocks": [ { "type": "kpi", "rows": [ { "metric": "Dinamik retargeting ROAS", "baseline": "—", "target": "e-ticaret sonrası tanımlanır", "frequency": "Haftalık", "owner": "Uzman" } ] } ]},
     { "id": "test-backlog", "title": "14 · Test Backlog'u", "summary": "Gelecekte.", "blocks": [ { "type": "list", "items": ["Criteo vs Meta dinamik retargeting karşılaştırması (e-ticaret sonrası)"] } ]},
-    { "id": "scale-pause-kill", "title": "15 · Scale / Pause / Kill", "summary": "ECA.", "blocks": [ { "type": "eca", "id": "ECA-Criteo", "event": "E-ticaret + katalog canlı ve yeterli trafik", "condition": "Meta/Google dinamik retargeting yetersiz kalıyor", "action": "Criteo pilotu başlat; ROAS < eşik ise durdur" } ]},
+    { "id": "scale-pause-kill", "title": "15 · Scale / Pause / Kill", "summary": "ECA.", "blocks": [ { "type": "eca", "id": "ECA-Criteo", "event": "ikas feed/pixel entegre + yeterli trafik", "condition": "Meta/Google dinamik retargeting yetersiz kalıyor", "action": "Criteo pilotu başlat; ROAS < eşik ise durdur" } ]},
     { "id": "kvkk-risk", "title": "16 · KVKK ve Risk", "summary": "Uyum.", "blocks": [ { "type": "list", "items": ["Consent + retargeting izni zorunlu.", "Üçüncü taraf çerez bağımlılığı riski → değerlendirilir."] } ]},
     { "id": "plan-30-60-90", "title": "17 · Plan", "summary": "Takvim.", "blocks": [ { "type": "paragraph", "text": "İlk 90 günde N/A (HOLD). Faz 4 (e-ticaret) planına bağlı." } ]},
     { "id": "raci", "title": "18 · RACI", "summary": "Rol.", "blocks": [ { "type": "paragraph", "text": "Aktifleşince: R Uzman, A Tolga, I GM." } ]},
-    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [ { "type": "list", "items": ["05l WooCommerce/e-ticaret", "Merchant Center / katalog feed", "05k DataLayer e-ticaret olayları"] } ]},
-    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [ { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds site denetimi (e-ticaret/katalog yok)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" } ] } ]}
+    { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [ { "type": "list", "items": ["05l ikas mağaza entegrasyonu (feed/pixel/çapraz-alan)", "Merchant/Criteo katalog feed", "05k DataLayer e-ticaret olayları"] } ]},
+    { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [ { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds site denetimi (önceki; e-ticaret 'yok' iddiası düzeltildi)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" }, { "id": "S2", "title": "shop.cupsandclouds.com doğrulaması (HTTP 200, ikas) + rakip analizi", "url": "https://shop.cupsandclouds.com/", "accessedDate": "2026-08-04" } ] } ]}
   ]
 }

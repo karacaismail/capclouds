@@ -52,8 +52,8 @@
       { "id": "benzer-kitle", "title": "Benzer Kitle (Lookalike)", "summary": "En iyi müşteriye benzeyeni bul.", "blocks": [
         { "type": "list", "items": ["**Kaynak:** dönüşen/etkileşen kitle (yeterli hacim gerekli).", "**Neden:** verimli ölçekleme.", "**Ölçüm:** yeni müşteri CVR/CAC.", "**Not:** kaynak kitle küçükse beklet."] }
       ]},
-      { "id": "katalog-dinamik", "title": "Katalog / Dinamik Reklam", "summary": "E-ticaret sonrası.", "blocks": [
-        { "type": "callout", "variant": "warn", "title": "Ön koşul", "text": "Dinamik ürün reklamı **online mağaza + katalog** gerektirir (Faz 4). O zamana kadar N/A; e-ticaret açılınca yeniden değerlendir." }
+      { "id": "katalog-dinamik", "title": "Katalog / Dinamik Reklam", "summary": "ikas feed + olay entegrasyonu sonrası.", "blocks": [
+        { "type": "callout", "variant": "warn", "title": "Ön koşul", "text": "Dinamik ürün reklamı ürün kataloğu + pixel olaylarını gerektirir. Mağaza + katalog **var** (shop.cupsandclouds.com, ikas); Meta katalog feed'i + ikas pixel/olay entegrasyonu ve yeterli hacim sağlanınca devreye alınır." }
       ]}
     ]},
     { "id": "tracking", "title": "10 · Tracking, Events ve Conversions", "summary": "Neyi ölçüyoruz?", "blocks": [

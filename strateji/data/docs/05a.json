@@ -18,7 +18,7 @@
       { "type": "list", "items": ["Bedava, sürdürülebilir, bileşik büyüyen trafik.", "Yerel arama doğrudan şubeye müşteri getirir (devlerin zayıf alanı).", "İçerik otoritesi markayı 'kahve otoritesi' konumuna taşır (Tier-3'e komşuluk)."] }
     ]},
     { "id": "mevcut-durum", "title": "3 · Mevcut Durum ve Eksikler", "summary": "Bugün ne var?", "blocks": [
-      { "type": "evidence", "items": [ { "claim": "SEO puanı ~42/100", "confidence": "fact", "sourceId": "S1", "formula": "8 kategori ort." }, { "claim": "robots.txt /en/ ve /ar/'ı engelliyor (hreflang ise işaret ediyor)", "confidence": "fact", "sourceId": "S1" }, { "claim": "Ana sayfa başlığı marka adını 2 kez tekrar; meta açıklama yok; 3 H1", "confidence": "fact", "sourceId": "S1" }, { "claim": "Şubeler için LocalBusiness şeması yok", "confidence": "fact", "sourceId": "S1" } ] }
+      { "type": "evidence", "items": [ { "claim": "SEO puanı ~42/100", "confidence": "fact", "sourceId": "S1", "formula": "8 kategori ort." }, { "claim": "robots.txt /en/ ve /ar/'ı engelliyor (sitemap ise bu sayfaları gönderiyor — çelişki)", "confidence": "fact", "sourceId": "S3" }, { "claim": "Ana sayfa başlığı marka adını 2 kez tekrar; meta açıklama yok; 3 H1", "confidence": "fact", "sourceId": "S1" }, { "claim": "Şubeler için LocalBusiness şeması yok", "confidence": "fact", "sourceId": "S1" }, { "claim": "Online mağaza ayrı alt alan adında (shop.cupsandclouds.com, ikas); ana sitemap_index'te ürün yok → arama/ölçüm parçalı", "confidence": "fact", "sourceId": "S3" }, { "claim": "Blog durgun: az sayıda yazı, son güncelleme ~Oca 2026", "confidence": "estimate", "sourceId": "S3" } ] }
     ]},
     { "id": "hedef-kitle", "title": "4 · Hedef Kitle ve Arama Niyetleri", "summary": "Kim, ne arıyor?", "blocks": [
       { "type": "table", "headers": ["Niyet", "Örnek sorgu", "Hedef sayfa"], "rows": [ ["Yerel", "yakınımda kahve, Ortaköy kahve", "Şube sayfası"], ["Marka", "cups and clouds menü", "Menü"], ["Bilgi", "third-wave kahve nedir", "Blog"], ["Franchise", "kahve franchise şartları", "Franchise"] ] }
@@ -79,10 +79,10 @@
       { "type": "table", "headers": ["Görev", "R", "A", "C", "I"], "rows": [ ["Teknik SEO", "Tolga", "Tolga", "—", "GM"], ["Şube sayfaları", "Tolga", "Tolga", "Grafiker", "Operasyon"], ["İçerik", "Grafiker", "Tolga", "—", "—"] ] }
     ]},
     { "id": "bagimliliklar", "title": "19 · Bağımlılıklar", "summary": "Neye bağlı?", "blocks": [
-      { "type": "list", "items": ["05b Programatik SEO (şube sayfası ölçeği)", "05k GTM (ölçüm)", "05l WooCommerce/UI (hız)", "05c Google Ads (arama verisiyle beslenme)"] }
+      { "type": "list", "items": ["05b Programatik SEO (şube sayfası ölçeği)", "05k GTM (ölçüm)", "05l E-ticaret (ikas) & UI (hız + çapraz-alan SEO)", "05c Google Ads (arama verisiyle beslenme)"] }
     ]},
     { "id": "kaynaklar", "title": "20 · Kaynaklar", "summary": "Kaynak.", "blocks": [
-      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds SEO denetimi (robots/başlık/meta/schema bulguları)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" }, { "id": "S2", "title": "Google Search Central — SEO başlangıç", "url": "https://developers.google.com/search", "accessedDate": "2026-08-04" } ] }
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds SEO denetimi (robots/başlık/meta/schema bulguları)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" }, { "id": "S2", "title": "Google Search Central — SEO başlangıç", "url": "https://developers.google.com/search", "accessedDate": "2026-08-04" }, { "id": "S3", "title": "Canlı doğrulama (robots.txt, shop.cupsandclouds.com/ikas, sitemap) + kaynaklı rakip analizi", "url": "https://cupsandclouds.com/robots.txt", "accessedDate": "2026-08-04" } ] }
     ]}
   ]
 }

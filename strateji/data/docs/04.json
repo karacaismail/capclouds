@@ -3,8 +3,8 @@
   "id": "04",
   "icon": "ph-users-three",
   "baslik": "04 · Rakip & Rekabet Analizi",
-  "ozet": "Pazar katmanları, rakip grupları, en yakın tehdit ve savunulabilir boşluk.",
-  "amac": "Kalabalık ortada boğuşmadan, tutulabilir bir konum ve ayrışma ekseni tanımlamak.",
+  "ozet": "Kaynaklı rakip verisi, portföy gerçekliği ve savunulabilir boşluk (4 Ağu 2026).",
+  "amac": "Kalabalık ortada boğuşmadan, kanıta dayalı tutulabilir bir konum ve ayrışma ekseni tanımlamak.",
   "status": "GO",
   "kritikKPI": "Savunulabilir dörtlü boşluk",
   "owner": "Tolga Akşen",
@@ -12,42 +12,61 @@
   "layer": "hazirlik",
   "sections": [
     { "id": "yonetici-ozeti", "title": "1 · Yönetici Özeti", "summary": "Nerede yarışırız?", "blocks": [
-      { "type": "paragraph", "text": "Türkiye zincir kahve pazarı büyük ve katmanlı. Cups & Clouds için savunulabilir boşluk: **butik his + erişilebilir fiyat + güçlü yerel topluluk + dijital verimlilik.** Rakiplerin hiçbiri bu dördünü aynı anda tutmuyor. İkinci cephe: franchise yatırımcısı için şeffaf getiri anlatısı." }
+      { "type": "paragraph", "text": "Türkiye zincir kahve pazarı büyük ve katmanlı. Cups & Clouds için savunulabilir boşluk: **butik his + erişilebilir fiyat + güçlü yerel topluluk + dijital verimlilik.** Rakiplerin hiçbiri bu dördünü aynı anda tutmuyor. İkinci cephe: franchise yatırımcısı için şeffaf getiri anlatısı." },
+      { "type": "callout", "variant": "warn", "title": "Veri kesim: 4 Ağustos 2026", "text": "Şube sayısı, fiyat, uygulama ve sosyal metrikler hızlı değişir; bu tarihten sonra okunuyorsa sayılar yeniden doğrulanmalı. Rakip sayıları çoğunlukla **şirket beyanıdır**, bağımsız doğrulanmamıştır." },
+      { "type": "callout", "variant": "info", "title": "Önceki analizin düzeltmesi", "text": "Eski denetimin bazı 'yok' iddiaları yanlıştı: online mağaza **var** (shop.cupsandclouds.com, ikas); mobil uygulama + sadakat programı **var** (iOS+Android). Eski sunumdaki kaynaksız rakip sayıları (ör. '~337/~343 şube') geçersizdir; aşağıdaki sayılar kaynaklı ve güven etiketlidir." }
     ]},
     { "id": "pazar-yapisi", "title": "2 · Pazar Yapısı", "summary": "Ne kadar kalabalık?", "blocks": [
-      { "type": "evidence", "items": [ { "claim": "~4.813 zincir şube; Avrupa'nın en kalabalık 4. pazarı", "confidence": "estimate", "sourceId": "S1", "note": "sektör mertebesi; kesin sayı doğrulanmalı" }, { "claim": "Pazar katmanlaşıyor (ulusal / değer+teknoloji / butik / bölgesel)", "confidence": "estimate", "sourceId": "S1" } ] },
-      { "type": "paragraph", "text": "Kalabalık pazar, farklılaşmayı zorunlu kılar; 'herkes gibi' olmak görünmez olmaktır." }
+      { "type": "evidence", "items": [ { "claim": "Pazar büyük ve dört katmana ayrışıyor (ulusal / değer+teknoloji / butik / bölgesel)", "confidence": "estimate", "sourceId": "S1" }, { "claim": "Kalabalık pazar; ör. tek bir İstanbul Havalimanı terminalinde 65+ marka, 120+ ünite", "confidence": "fact", "sourceId": "S2", "note": "İGA resmi dizini" } ] },
+      { "type": "paragraph", "text": "Kalabalık pazar, farklılaşmayı zorunlu kılar; 'herkes gibi' olmak görünmez olmaktır. Kontrollü erişim (havalimanı vb.) noktaları da rakipsiz değildir." }
     ]},
     { "id": "rakip-gruplari", "title": "3 · Rakip Grupları", "summary": "Dört küme, farklı oyun.", "blocks": [
       { "type": "paragraph", "text": "Rakipler tek liste değil, dört stratejik kümedir; her kümeyle rekabet biçimi farklıdır." }
     ], "sections": [
-      { "id": "ulusal-liderler", "title": "Ulusal Liderler", "summary": "Ölçek ve tanınırlık.", "blocks": [ { "type": "list", "items": ["Yüksek tanınırlık, geniş şube ağı, güçlü bütçe.", "Zayıf nokta: yerel/topluluk hissi ve çeviklik.", "Bizim oyun: onlarla ölçekte değil, yakınlık ve topluluğ­ta yarış."] } ]},
-      { "id": "deger-teknoloji", "title": "Değer + Teknoloji", "summary": "Fiyat/dijital güçlü.", "blocks": [ { "type": "list", "items": ["Fiyat bandımıza yakın; en güçlü yerli dijital pazarlama.", "En yakın tehdit bu kümede.", "Bizim oyun: dijital açığı hızla kapat + butik his ile ayrış."] } ]},
+      { "id": "ulusal-liderler", "title": "Ulusal Liderler", "summary": "Ölçek ve tanınırlık.", "blocks": [
+        { "type": "evidence", "items": [ { "claim": "Starbucks TR: 760+ mağaza, 59 şehir; Rewards 15 yıldız=ikram, 120 yıldız=Gold", "confidence": "estimate", "sourceId": "S2", "note": "resmi sayfa; tarih belirtilmemiş" }, { "claim": "Kahve Dünyası: TR'de franchise YOK; güncel mağaza sayısı çelişkili (resmi bulucu boş)", "confidence": "estimate", "sourceId": "S2" } ] },
+        { "type": "list", "items": ["Zayıf nokta: yerel/topluluk hissi ve çeviklik.", "Bizim oyun: onlarla ölçekte değil, yakınlık ve toplulukta yarış."] }
+      ]},
+      { "id": "deger-teknoloji", "title": "Değer + Teknoloji", "summary": "Fiyat/dijital güçlü.", "blocks": [
+        { "type": "evidence", "items": [ { "claim": "Coffy: 200 mağaza/44 il, 1,14M kayıtlı uygulama kullanıcısı, %39 aktiflik, %74 franchise", "confidence": "estimate", "sourceId": "S2", "note": "Nisan 2026, şirket beyanı" }, { "claim": "Coffy uygulaması App Store TR 4,7 / ~14B değerlendirme", "confidence": "fact", "sourceId": "S2" }, { "claim": "Espressolab: 23 ülkede 400+ mağaza (beyan); uygulama 1,6/5 (~2,7B değerlendirme)", "confidence": "estimate", "sourceId": "S2" } ] },
+        { "type": "list", "items": ["En yakın tehdit bu kümede (özellikle dijital tekrar-satın-alma altyapısı).", "Bizim oyun: dijital açığı hızla kapat + butik his + yerel topluluk ile ayrış."] }
+      ]},
       { "id": "butik", "title": "Butik / Bağımsız", "summary": "Kalite ve karakter.", "blocks": [ { "type": "list", "items": ["Yüksek ürün/atmosfer kalitesi, sadık çekirdek.", "Zayıf nokta: ölçek, tutarlılık, franchise sistemi.", "Bizim oyun: butik hissi koru ama erişilebilir fiyat + sistemle ölçekle."] } ]},
-      { "id": "bolgesel", "title": "Bölgesel Meydan Okuyanlar", "summary": "Bizim küme.", "blocks": [ { "type": "list", "items": ["Cups & Clouds burada: büyüyen şube ağı + franchise iştahı.", "Fırsat: dijital verimlilikle bu kümenin lideri olmak.", "Risk: dijitalde geç kalırsak değer+teknoloji kümesi bizi geçer."] } ]}
+      { "id": "bolgesel", "title": "Bölgesel & Franchise Yayılımcılar", "summary": "Yatırımcı havuzu.", "blocks": [
+        { "type": "evidence", "items": [ { "claim": "Arabica Coffee House: franchise formunda 8-14M₺ / 14M₺+ bütçe bandı elemesi; 2026 İstanbul 50 şube hedefi", "confidence": "estimate", "sourceId": "S2" }, { "claim": "Nevada Coffee: UFRAD kaydında 120+2 şube (tarihsiz, başka kaynaklar çok daha düşük)", "confidence": "assumption", "sourceId": "S2" } ] },
+        { "type": "list", "items": ["Cups & Clouds bu kümede: büyüyen ağ + franchise iştahı.", "Fırsat: dijital verimlilikle bu kümenin lideri olmak.", "Rakipler yatırımcıya net rakam veriyor; biz de eleyici bilgi vermeliyiz (bkz. 06)."] }
+      ]}
     ]},
-    { "id": "en-yakin-tehdit", "title": "4 · En Yakın Dijital Tehdit", "summary": "Kim, neden?", "blocks": [
-      { "type": "paragraph", "text": "Fiyat bandımıza yakın **ve** en güçlü yerli dijital oyuncu, en yakın tehdittir (değer+teknoloji kümesi). Onların dijital verimini referans alır, butik his + yerel topluluk + franchise sistemiyle ayrışırız." },
-      { "type": "callout", "variant": "warn", "text": "Stratejik dokümanda rakip adları anılmaz; konumlanma davranışla (içerik, fiyat algısı, yerellik) yönetilir." }
+    { "id": "rakip-verileri", "title": "4 · Kaynaklı Karşılaştırma", "summary": "Ölçek + dijital + sosyal (4 Ağu 2026).", "blocks": [
+      { "type": "table", "headers": ["Marka", "Bildirilen ağ", "Uygulama (App Store)", "Instagram"], "rows": [ ["Starbucks TR", "760+ / 59 şehir (resmi)", "var", "—"], ["Kahve Dünyası", "çelişkili (bulucu boş)", "var", "327B"], ["Espressolab", "400+ / 23 ülke (beyan)", "1,6 / ~2,7B", "190B"], ["Coffy", "200 / 44 il (beyan)", "4,7 / ~14B", "—"], ["Gloria Jean's TR", "240+ / 50+ il (resmi)", "—", "—"], ["Nevada", "120+2 (tarihsiz/çelişkili)", "—", "—"], ["Cups & Clouds", "~26 (25 açık + 3 yakında)", "3,5 / 8 (iOS); 1B+ indirme (Android)", "18,2B"] ] },
+      { "type": "callout", "variant": "warn", "text": "Bu tablonun işlevi 'kim daha büyük' değil, hangi rakibin hangi sahada karşımıza çıktığını ayırmaktır. Fiyat karşılaştırması **bilinçli olarak yok**: güvenilir, tarihli, karşılaştırılabilir çapraz-marka fiyat verisi bulunamadı (saha protokolü gerekir)." }
     ]},
-    { "id": "konum-haritasi", "title": "5 · Konum Haritası & Savunulabilir Boşluk", "summary": "Boş alan nerede?", "blocks": [
+    { "id": "en-yakin-tehdit", "title": "5 · En Yakın Dijital Tehdit", "summary": "Coffy: dijital operasyon rakibi.", "blocks": [
+      { "type": "paragraph", "text": "En yakın tehdit 'ucuz rakip' değil, **dijital operasyon rakibidir**: Coffy'nin beyan ettiği 1,14M kayıtlı uygulama kullanıcısı, %39 aktiflik ve %30+ dijital satış payı, güçlü bir tekrar-satın-alma altyapısına işaret eder (14B değerlendirmede 4,7 uygulama puanı bunu destekler). Onların dijital verimini referans alır; butik his + yerel topluluk + franchise sistemiyle ayrışırız." },
+      { "type": "callout", "variant": "info", "text": "Kaçınılacak hata: 'onlarda deneyim/topluluk yok' demek — sayısal sinyaller aksini gösteriyor. Fiyat savaşına da girilmez." }
+    ]},
+    { "id": "portfoy-icgorusu", "title": "6 · Portföy Gerçekliği (strateji çerçevesi)", "summary": "Nerede oynuyoruz?", "blocks": [
+      { "type": "evidence", "items": [ { "claim": "Görünür 25 açık noktanın ~15'i havalimanı/şehir hastanesi/üniversite kampüsü adlı (kontrollü erişim)", "confidence": "estimate", "sourceId": "S2", "note": "şube listesi olgu; konum tipi sınıflandırması çıkarım" }, { "claim": "Bu noktalar otomatik olarak 'münhasır' veya 'esir trafik' değildir", "confidence": "assumption", "sourceId": "S2", "note": "sözleşme koşulları incelenmedi" } ] },
+      { "type": "paragraph", "text": "Strateji 'İstanbul butik + semt araması' varsayımına kilitlenmemeli. İki paralel iş: (a) kontrollü erişim noktalarında deneyim/dönüşüm, (b) cadde/AVM noktalarında klasik yerel arama. **Maps/işletme profili hijyeni ise ayrım gözetmeksizin tüm noktalarda gereklidir** (bkz. 05a/05b)." }
+    ]},
+    { "id": "konum-haritasi", "title": "7 · Konum Haritası & Savunulabilir Boşluk", "summary": "Boş alan nerede?", "blocks": [
       { "type": "table", "headers": ["Eksen", "Ulusal", "Değer+Tekno", "Butik", "Cups & Clouds"], "rows": [ ["Butik his", "Düşük", "Orta", "Yüksek", "Yüksek"], ["Erişilebilir fiyat", "Düşük", "Yüksek", "Değişken", "Yüksek"], ["Yerel topluluk", "Düşük", "Orta", "Orta", "Yüksek (hedef)"], ["Dijital verim", "Yüksek", "Yüksek", "Düşük", "Yükseliyor (bu proje)"] ] },
       { "type": "paragraph", "text": "Dört ekseni **aynı anda** tutabilen tek konum bizimkidir; savunulabilirlik bu birleşimden gelir, tek eksenden değil." }
     ]},
-    { "id": "ayrisma-ekseni", "title": "6 · Ayrışma Ekseni", "summary": "Neyle farklıyız?", "blocks": [
+    { "id": "ayrisma-ekseni", "title": "8 · Ayrışma Ekseni", "summary": "Neyle farklıyız?", "blocks": [
       { "type": "list", "items": ["Yerellik & topluluk: mahalle/şehir hikâyesi, saha içeriği.", "Erişilebilir premium: kaliteyi elitizm olmadan sun.", "Dijital verim: ölçüm + test-önce + AI kaldıracı.", "Franchise sistemi: şeffaf, güvenilir büyüme modeli."] }
     ]},
-    { "id": "franchise-cephesi", "title": "7 · İkinci Cephe: Franchise Yatırımcısı", "summary": "Ayrı bir rekabet.", "blocks": [
-      { "type": "paragraph", "text": "Franchise adayları için rekabet, kahve müşterisinden farklıdır: kararı **güven + şeffaf getiri** belirler. Net model sayfası, gerçek başarı anlatısı ve profesyonel dijital görünüm burada belirleyicidir (bkz. 03 franchise hunisi, 06 lead ekonomisi)." }
+    { "id": "franchise-cephesi", "title": "9 · İkinci Cephe: Franchise Yatırımcısı", "summary": "Ayrı bir rekabet.", "blocks": [
+      { "type": "paragraph", "text": "Franchise adayları için rekabet, kahve müşterisinden farklıdır: kararı **güven + şeffaf getiri** belirler. Rakipler (Arabica, Nevada) yatırımcıya net rakam/bütçe bandı verirken Cups & Clouds franchise sayfasında henüz eleyici bilgi yok. Net model, gerçek başarı anlatısı ve profesyonel dijital görünüm belirleyicidir (bkz. 03 franchise hunisi, 06 lead ekonomisi)." }
     ]},
-    { "id": "izleme", "title": "8 · Rekabet İzleme", "summary": "Neyi düzenli izleriz?", "blocks": [
-      { "type": "list", "items": ["Rakip kampanya/kreatif temaları (reklam kütüphaneleri).", "Fiyat/menü hamleleri.", "Yerel arama görünürlüğü (harita/işletme profili).", "Sosyal büyüme ve etkileşim eğilimleri."] }
+    { "id": "izleme", "title": "10 · Rekabet İzleme", "summary": "Neyi düzenli izleriz?", "blocks": [
+      { "type": "list", "items": ["Rakip kampanya/kreatif temaları (reklam kütüphaneleri).", "Fiyat/menü hamleleri (saha fiyat protokolüyle).", "Yerel arama görünürlüğü (harita/işletme profili).", "Sosyal büyüme ve etkileşim eğilimleri.", "Rakiplerin kontrollü erişim (havalimanı/hastane/kampüs) varlığı."] }
     ]},
-    { "id": "riskler", "title": "9 · Rekabet Riskleri", "summary": "Neye dikkat?", "blocks": [
-      { "type": "risk", "rows": [ { "risk": "Değer+teknoloji kümesi dijitalde önde kalır", "signal": "Yerel aramada geride", "mitigation": "Hızlı ölçüm+SEO+test-önce", "severity": "high" }, { "risk": "Fiyat savaşı marjı erozyona uğratır", "signal": "İndirim baskısı", "mitigation": "Değer & topluluk iletişimi, sadakat", "severity": "med" }, { "risk": "Taklit edilebilir farklılaşma", "signal": "Rakip aynı dili benimser", "mitigation": "Topluluk & yerellik zor taklit edilir; derinleştir", "severity": "med" } ] }
+    { "id": "riskler", "title": "11 · Rekabet Riskleri", "summary": "Neye dikkat?", "blocks": [
+      { "type": "risk", "rows": [ { "risk": "Değer+teknoloji kümesi dijitalde önde kalır", "signal": "Yerel aramada geride", "mitigation": "Hızlı ölçüm+SEO+test-önce", "severity": "high" }, { "risk": "Kontrollü erişim noktalarında sözleşme/kiracı ilişkisi riski", "signal": "Yenileme kriteri/müşteri memnuniyeti karışık", "mitigation": "Sözleşme koşullarını incele (hipotez → çıkarım)", "severity": "med" }, { "risk": "Fiyat savaşı marjı erozyona uğratır", "signal": "İndirim baskısı", "mitigation": "Değer & topluluk iletişimi, sadakat", "severity": "med" }, { "risk": "Taklit edilebilir farklılaşma", "signal": "Rakip aynı dili benimser", "mitigation": "Topluluk & yerellik zor taklit edilir; derinleştir", "severity": "med" } ] }
     ]},
-    { "id": "kaynaklar", "title": "10 · Kaynaklar", "summary": "Kaynak.", "blocks": [
-      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds rakip & pazar gözlemi (sektör mertebeleri; kümeleme)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" } ] }
+    { "id": "kaynaklar", "title": "12 · Kaynaklar", "summary": "Kaynak.", "blocks": [
+      { "type": "sources", "sources": [ { "id": "S1", "title": "Cups & Clouds rakip & pazar gözlemi (sektör mertebeleri; kümeleme)", "publishedDate": "2026-08-03", "accessedDate": "2026-08-04" }, { "id": "S2", "title": "Kaynaklı rakip analizi — birincil marka/platform kayıtları (App Store, Google Play, Instagram, İGA, resmi siteler); şirket beyanları belirtilmiş; kendi canlı doğrulamamla teyit", "publishedDate": "2026-08-04", "accessedDate": "2026-08-04" } ] }
     ]}
   ]
 }
